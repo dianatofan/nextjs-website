@@ -4,7 +4,8 @@ import * as THREE from 'three'
 import React, { Suspense, useEffect, useState, useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { PerspectiveCamera, Environment, MeshDistortMaterial, ContactShadows } from '@react-three/drei'
-import { a, useSpring } from '@react-spring/three'
+import { useSpring } from '@react-spring/core'
+import { a } from '@react-spring/three'
 
 // React-spring animates native elements, in this case <mesh/> etc,
 // but it can also handle 3rd–party objs, just wrap them in "app".
