@@ -1,0 +1,43 @@
+@import "../colors.scss";
+
+nav {
+  background: $text-color;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+
+  &.open {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(0);
+  }
+
+  &.hidden {
+    display: none;
+  }
+
+  a {
+    font-size: 2rem;
+    text-transform: lowercase;
+    padding: 2rem 0;
+    letter-spacing: 0.5rem;
+    color: $white;
+    text-decoration: none;
+    transition: color 0.3s linear;
+
+    @media (max-width: 800px) {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    &:hover {
+      color: $bright-blue;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+@import "../colors.scss";
+
+.burgerMenuNavigation {
+  button {
+    position: relative;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 1.6rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    div {
+      width: 2rem;
+      height: 0.15rem;
+      border-radius: 10px;
+      transition: all 0.3s linear;
+      position: relative;
+      transform-origin: 4px;
+      background: $text-color;
+    }
+
+    &.open {
+      :first-child {
+        background: $white;
+        transform: rotate(45deg);
+        height: 0.12rem;
+      }
+      :nth-child(2) {
+        opacity: 0;
+        transform: translateX(20px);
+        height: 0.12rem;
+      }
+      :nth-child(3) {
+        background: $white;
+        transform: rotate(-45deg);
+        height: 0.12rem;
+      }
+    }
+
+    &.hidden {
+      :first-child {
+        transform: rotate(0);
+      }
+      :nth-child(2) {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      :nth-child(3) {
+        transform: rotate(0);
+      }
+    }
+  }
+}
