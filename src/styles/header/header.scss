@@ -66,20 +66,27 @@
   flex-direction: column;
   padding: 0;
   align-items: flex-end;
+
   > li a {
     color: $text-color;
     text-decoration: none;
     font-size: var(--font-size-smm);
     font-weight: 400;
+
     &:hover {
       text-decoration: underline;
     }
   }
+
   > .active a {
     font-weight: 500;
     // background: #eeeeee;
     // padding: 4px 8px;
     // color: $link-color-pink;
+
+    > li p {
+      margin: 0
+    }
   }
 }
 
@@ -100,6 +107,7 @@
 .navigation > li {
   text-transform: lowercase;
   font-weight: 500;
+
   &:first-of-type {
     margin: 3rem 0 0.2rem 0;
   }

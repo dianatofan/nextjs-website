@@ -27,7 +27,7 @@
       transition: all 0.3s linear;
       position: relative;
       transform-origin: 4px;
-      background: $text-color;
+      //background: $text-color;
     }
 
     &.open {
@@ -36,11 +36,13 @@
         transform: rotate(45deg);
         height: 0.12rem;
       }
+
       :nth-child(2) {
         opacity: 0;
         transform: translateX(20px);
         height: 0.12rem;
       }
+
       :nth-child(3) {
         background: $white;
         transform: rotate(-45deg);
@@ -52,10 +54,12 @@
       :first-child {
         transform: rotate(0);
       }
+
       :nth-child(2) {
         opacity: 1;
         transform: translateX(0);
       }
+
       :nth-child(3) {
         transform: rotate(0);
       }

@@ -6,7 +6,8 @@ import {useSpring} from '@react-spring/core';
 import {a} from '@react-spring/web';
 import Overlay from '@/components/Overlay';
 import Header from '@/components/header/Header';
-import "@/styles/styles.css"
+import "@/styles/styles.scss"
+import "animate.css";
 
 const NoSSRCanvas = dynamic(() => import('@/components/Canvas'), {ssr: false});
 
@@ -16,13 +17,18 @@ export default function App() {
         fill: '#202020',
     }, []);
     console.log("heyyy")
+
     return (
-        <a.main style={{background}}>
+        <div className="app flex flex-col">
             <Header fill={fill}/>
-            <div className="content">
-                <NoSSRCanvas setBg={set}/>
-                <Overlay fill={fill}/>
-            </div>
-        </a.main>
+            <a.main style={{background}} className="overflow-x-hidden items-center md:flex-row ">
+                <section
+                    className="container mx-auto max-w-screen-xl lg:max-w-screen-lg h-full flex flex-col  md:flex-row items-center">
+                    <NoSSRCanvas setBg={set}/>
+                    <Overlay fill={fill}/>
+                </section>
+            </a.main>
+        </div>
+
     );
 }

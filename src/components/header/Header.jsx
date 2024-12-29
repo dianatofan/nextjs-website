@@ -15,7 +15,7 @@ export default function Header({location, fill}) {
     const activePage = location?.pathname;
 
     return (
-        <header className="header animate__animated animate__fadeIn" id="header">
+        <header className="header animate-fadeIn" id="header">
             <div>
                 <a.svg fill={fill} width={30} height={30} viewBox="0 0 251 239">
                     <path
@@ -34,7 +34,7 @@ export default function Header({location, fill}) {
                 <ul className="navigation">
                     <li className={activePage === "/" ? "active" : ""}>
                         <Link href="/">
-                            <p>Home</p>
+                            <a.p style={{color: fill}}>Projects</a.p>
                         </Link>
                     </li>
                     <li
@@ -45,7 +45,7 @@ export default function Header({location, fill}) {
                         }
                     >
                         <Link href="/about">
-                            <p>About</p>
+                            <a.p style={{color: fill}}>About</a.p>
                         </Link>
                     </li>
                     {/* <li className={activePage === "/resume" || activePage === "/resume/" ? "active" : ""}>
@@ -53,7 +53,7 @@ export default function Header({location, fill}) {
           </li> */}
                 </ul>
                 <div className="burgerMenuNavigation">
-                    <Burger open={isOpen} setOpen={setOpen}/>
+                    <Burger open={isOpen} setOpen={setOpen} fill={fill}/>
                     <Menu open={isOpen} setOpen={setOpen}/>
                 </div>
             </div>
