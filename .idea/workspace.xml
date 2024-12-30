@@ -5,44 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="721b2078-e459-4257-8e32-71ab93b9970a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/fonts/Aeonik/Aeonik-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/Aeonik/Aeonik-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/Aeonik/Aeonik-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/icons/copy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/icons/copywhite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/logos/art.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/logos/dribbble.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/logos/email (1).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/logos/email.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/logos/email.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/logos/email1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/logos/g12.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/logos/github.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/logos/github.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/logos/linkedin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/logos/linkedin.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/logos/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/logos/logoNew.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/logos/strava.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/logos/twitter.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/send.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/thumbnail5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Card.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Footer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/card.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/footer.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/famly.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/thumbnail1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/thumbnail2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/thumbnail3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/thumbnail4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ScrollProgressBar.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Canvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Canvas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Overlay.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Overlay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Hamburger.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Hamburger.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/fonts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/fonts.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Menu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Menu.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/colors.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/header/hamburger.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/header/hamburger.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/header/menu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/header/menu.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +115,7 @@
       <workItem from="1734858891972" duration="1687000" />
       <workItem from="1735545456772" duration="10000" />
       <workItem from="1735545474142" duration="60000" />
-      <workItem from="1735545539005" duration="21573000" />
+      <workItem from="1735545539005" duration="32518000" />
     </task>
     <servers />
   </component>

@@ -32,7 +32,7 @@
 
     &.open {
       :first-child {
-        background: $white;
+        //background: $white;
         transform: rotate(45deg);
         height: 0.12rem;
       }
@@ -44,7 +44,7 @@
       }
 
       :nth-child(3) {
-        background: $white;
+        //background: $white;
         transform: rotate(-45deg);
         height: 0.12rem;
       }

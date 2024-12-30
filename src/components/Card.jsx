@@ -14,15 +14,15 @@ export default function Card({
   const router = useRouter();
 
   return (
-    <div className="rectangle bg-white rounded-xl relative">
+    <div className="rectangle bg-white rounded-xl relative h-full">
       <Image
         src={image}
         alt="Description of the image"
         layout="responsive"
         width={400}
-        height={300}
+        height={600}
         objectFit="cover"
-        className="rounded-t-xl"
+        className="rounded-t-xl h-full"
       />
       <div className="p-4">
         <div className="mb-1 text-xl font-semibold text-primary">{title}</div>

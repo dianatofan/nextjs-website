@@ -4,6 +4,7 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 import { useSpring } from '@react-spring/core';
 import { a } from '@react-spring/web';
+import ScrollProgressBar from '@/components/ScrollProgressBar';
 
 import Overlay from '@/components/Overlay';
 import Card from '@/components/Card';
@@ -30,7 +31,8 @@ export default function App() {
 
   return (
     <div className="">
-      <Header fill={fill} />
+      <ScrollProgressBar />
+      <Header fill={fill} background={background} />
       <a.main
         style={{ background }}
         className="overflow-x-hidden items-center flex-col"
@@ -53,28 +55,28 @@ export default function App() {
                 title="Famly's Redesign"
                 description="Shaping a design system for a mature product"
                 role="UX/UI DESIGN | USER RESEARCH"
-                image="/images/thumbnail5.png"
+                image="/images/famly.png"
                 url="famly"
               />
               <Card
                 title="Racefinder App"
                 description="Optimizing the racebooking process to help runners find their next race easier"
                 role="UX/UI DESIGN | USER RESEARCH"
-                image="/images/thumbnail5.png"
+                image="/images/thumbnail3.png"
                 url="racefinder"
               />
               <Card
                 title="Sustainable E-Commerce"
                 description="Reimagining the checkout flow to reduce packaging waste in online orders"
                 role="UX/UI DESIGN | USER RESEARCH"
-                image="/images/thumbnail5.png"
+                image="/images/thumbnail2.png"
                 url="sustainability"
               />
               <Card
                 title="Visual Exploration of Time Series in Healthcare"
                 description="Generate medical charts given patient data"
                 role="DATA VISUALIZATION | UX/UI DESIGN"
-                image="/images/thumbnail5.png"
+                image="/images/thumbnail1.png"
                 url="time-series"
               />
             </div>

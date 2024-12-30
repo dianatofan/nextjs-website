@@ -11,11 +11,11 @@ import Link from 'next/link';
 import Burger from './Hamburger';
 import Menu from './Menu';
 
-export default function Header({ location, fill }) {
+export default function Header({ location, fill, background }) {
   const [isOpen, setOpen] = useState(false);
   const router = useRouter();
   const activePage = router.pathname;
-  
+
   return (
     <header className="header animate-fadeIn" id="header">
       <div>
@@ -36,7 +36,7 @@ export default function Header({ location, fill }) {
               <a.p
                 style={{
                   color: fill,
-                  fontWeight: activePage === '/' ? 600 : 400,
+                  fontWeight: activePage === '/' || !activePage ? 600 : 400,
                 }}
               >
                 Work
@@ -46,8 +46,10 @@ export default function Header({ location, fill }) {
           <li>
             <Link href="/about">
               <a.p
-                className={`${activePage === '/about' ? 'font-medium' : 'font-normal'} text-base`}
-                style={{ color: fill }}
+                style={{
+                  color: fill,
+                  fontWeight: activePage === '/about' ? 600 : 400,
+                }}
               >
                 About
               </a.p>
@@ -58,7 +60,12 @@ export default function Header({ location, fill }) {
           </li> */}
         </ul>
         <div className="burgerMenuNavigation">
-          <Burger open={isOpen} setOpen={setOpen} fill={fill} />
+          <Burger
+            open={isOpen}
+            setOpen={setOpen}
+            fill={fill}
+            background={background}
+          />
           <Menu open={isOpen} setOpen={setOpen} />
         </div>
       </div>
