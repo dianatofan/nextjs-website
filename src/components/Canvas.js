@@ -10,7 +10,7 @@ export default function CanvasComponent({setBg}) {
     console.log("canvas")
 
     return (
-        <Canvas className="canvas animate-fadeIn2s w-full h-full" dpr={[1, 2]}
+        <Canvas className="canvas animate-fadeIn2s w-full h-[100vh]" dpr={[1, 2]}
                 shadows>
             <Scene setBg={setBg}/>
             <OrbitControls enablePan={false} enableZoom={false} maxPolarAngle={Math.PI / 2}
