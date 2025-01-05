@@ -1,0 +1,153 @@
+@import "colors";
+@import "fonts";
+
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+
+* {
+  font-family: 'Metropolis', sans-serif;
+}
+.about-me-page {
+  max-width: 70vw;
+  margin: 14rem auto 6rem auto;
+  &.content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 48px;
+    color: $text-color;
+    .gatsby-image-wrapper {
+      flex: 1;
+    }
+  }
+}
+
+.columns {
+  display: flex;
+  margin: 0 6vw;
+}
+
+.about-me-text {
+  text-align: left;
+  font-size: 1.2rem;
+  line-height: 30px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 56%;
+
+  > div {
+    margin: 1rem 0;
+  }
+
+  > h1 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    // line-height: 30px;
+  }
+}
+
+.caption {
+  font-family: "Architects Daughter", cursive;
+  position: relative;
+  bottom: 70px;
+  text-align: center;
+}
+
+.picsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6%;
+  margin-bottom: 100px;
+
+  div {
+    width: calc(200px + 8vw);
+  }
+}
+
+section {
+  max-width: 70vw;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1595px) {
+  .about-me-page {
+    &.content {
+      display: block;
+      .gatsby-image-wrapper {
+        width: 60%;
+        margin: 0 auto;
+      }
+    }
+  }
+  .about-me-text {
+    width: 100%;
+    margin-top: 24px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .about-me-page {
+    &.content {
+      .gatsby-image-wrapper {
+        width: 100%;
+      }
+    }
+  }
+  .instaPics {
+    max-width: 90vw !important;
+  }
+  .picsGrid div {
+    width: 94% !important;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .about-me-text {
+    max-width: none;
+  }
+  .instaPics {
+    max-width: 90vw;
+  }
+}
+
+@media only screen and (max-width: 1595px) {
+  .picsGrid {
+    gap: 12%;
+    div {
+      width: calc(350px + 8vw);
+    }
+  }
+}
+
+@media only screen and (max-width: 632px) {
+  .picsGrid {
+    display: flex;
+    justify-content: center;
+    div {
+      width: 90%;
+    }
+  }
+}
+
+.instaPics {
+  margin-bottom: 60px;
+  max-width: 70vw;
+  margin: 0 auto;
+  h2 {
+    color: black;
+    font-size: var(--font-size-md);
+    font-weight: 600;
+  }
+}
+
+@media only screen and (max-width: 632px) {
+  .instaPics {
+    max-width: 100vw;
+  }
+}
+
+@media only screen and (min-width: 2300px) {
+  .about-me-page {
+    max-width: 50vw;
+  }
+}

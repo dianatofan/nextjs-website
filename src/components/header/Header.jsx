@@ -2,10 +2,10 @@ import '@/styles/header.scss';
 import '@/styles/fonts.scss';
 import 'animate.css';
 
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { a } from '@react-spring/web';
 import { Menu as MenuIcon, X } from 'react-feather';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 import Burger from './Hamburger';
@@ -13,8 +13,8 @@ import Menu from './Menu';
 
 export default function Header({ location, fill, background }) {
   const [isOpen, setOpen] = useState(false);
+  const activePage = usePathname();
   const router = useRouter();
-  const activePage = router.pathname;
 
   return (
     <header className="header animate-fadeIn" id="header">
@@ -36,7 +36,7 @@ export default function Header({ location, fill, background }) {
               <a.p
                 style={{
                   color: fill,
-                  fontWeight: activePage === '/' || !activePage ? 600 : 400,
+                  fontWeight: activePage === '/' ? 600 : 400,
                 }}
               >
                 Work

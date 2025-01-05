@@ -33,7 +33,7 @@ export default function Footer() {
   };
 
   return (
-    <footer id="footer" className="text-white bg-black p-10">
+    <footer id="footer" className="text-white bg-black p-10 w-screen">
       <div className="flex flex-col items-center">
         <div className="lg:text-2xl text-xl font-semibold m-8">
           Let's get in touch

@@ -5,25 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="721b2078-e459-4257-8e32-71ab93b9970a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/famly.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/thumbnail1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/thumbnail2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/thumbnail3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/thumbnail4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ScrollProgressBar.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/about/architecture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/about/art.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/about/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/about/me.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/about/mountain.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/about/museum.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/about/nature.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/about/ride.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/about/running.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/about/sunset.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/about/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Chip.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Grid.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Layout.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Polaroid.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/about.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/Aeonik/Aeonik-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/Aeonik/Aeonik-Medium.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/Aeonik/Aeonik-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/favicon.ico" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Overlay.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Overlay.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/Hamburger.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Hamburger.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/Menu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Menu.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/colors.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/header/hamburger.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/header/hamburger.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/header/menu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/header/menu.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +76,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/dianatofan/Documents/Projects/next-js-portfolio/public/images",
+    "last_opened_file_path": "/Users/dianatofan/Documents/Projects/next-js-portfolio/public/images/about",
     "list.type.of.created.stylesheet": "SCSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -83,17 +92,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/images/about" />
       <recent name="$PROJECT_DIR$/public/images" />
       <recent name="$PROJECT_DIR$/public/images/icons" />
       <recent name="$PROJECT_DIR$/src/styles" />
       <recent name="$PROJECT_DIR$/public/fonts/Aeonik" />
-      <recent name="$PROJECT_DIR$/src/components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
+      <recent name="$PROJECT_DIR$/src/app/about" />
       <recent name="$PROJECT_DIR$/public/images/icons" />
       <recent name="$PROJECT_DIR$/public/fonts/Aeonik" />
       <recent name="$PROJECT_DIR$/src/app" />
-      <recent name="$PROJECT_DIR$/src/styles" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -115,7 +125,7 @@
       <workItem from="1734858891972" duration="1687000" />
       <workItem from="1735545456772" duration="10000" />
       <workItem from="1735545474142" duration="60000" />
-      <workItem from="1735545539005" duration="32518000" />
+      <workItem from="1735545539005" duration="72060000" />
     </task>
     <servers />
   </component>

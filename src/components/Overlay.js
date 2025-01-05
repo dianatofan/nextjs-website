@@ -32,15 +32,15 @@ export default function Overlay({ fill }) {
   }, []);
 
   return (
-    <div className="overlay animate-fadeIn lg:w-1/2 lg:p-4 mx-8">
+    <div className="overlay animate__animated animate__fadeIn lg:w-1/2 lg:p-4 mx-8">
       <span className="inline-block mt-4 mb-2 text-sm md:mb-3 md:text-base text-tertiary font-normal">
         ✨ Hello! I&apos;m Diana Tofan
       </span>
       <a.h1
-        className="text-4xl antialiased tracking-tighter lg:leading-headers md:text-5xl text-primary font-semibold lg:max-w-sm"
+        className="text-4xl antialiased tracking-tighter lg:leading-headers md:text-5xl text-primary font-semibold lg:max-w-lg"
         style={{ color: fill }}
       >
-        Transforming the world one pixel at a time
+        I'm a UX designer with frontend superpowers who loves bringing ideas to life.
       </a.h1>
       <a.span
         className="role inline-block mt-4 mb-2 text-sm md:mb-3 md:text-base font-normal text-primary"
