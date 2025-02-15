@@ -88,6 +88,7 @@ export default function Footer() {
             <IconItem
               href="https://github.com/dianatofan/"
               src="/images/logos/github.png"
+              my
               alt="Github"
             />
           </li>

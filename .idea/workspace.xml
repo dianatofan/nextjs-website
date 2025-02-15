@@ -5,34 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="721b2078-e459-4257-8e32-71ab93b9970a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/about/architecture.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/about/art.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/about/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/about/me.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/about/mountain.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/about/museum.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/about/nature.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/about/ride.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/about/running.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/about/sunset.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/about/page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Chip.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Grid.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Layout.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Polaroid.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/about.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/about/me2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/about/photo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/bars.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/keyboard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/rocket.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/smile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/squiggle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/users.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/logos/famly.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/logos/google.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/logos/googleLogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/logos/maersk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/logos/tactileLogo.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/about/LinkItem.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/about/Quote.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/Aeonik/Aeonik-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/Aeonik/Aeonik-Medium.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/Aeonik/Aeonik-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/about/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/about/page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Grid.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Grid.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Overlay.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Overlay.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/card.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +58,7 @@
     <option name="myRunOnSave" value="true" />
   </component>
   <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="2qP56YL04WrqcaFCqcaZJ2mQE7E" />
@@ -73,47 +71,47 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/dianatofan/Documents/Projects/next-js-portfolio/public/images/about",
-    "list.type.of.created.stylesheet": "SCSS",
+    "last_opened_file_path": "/Users/dianatofan/Documents/Projects/next-js-portfolio/public/images/icons",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "/Users/dianatofan/Documents/Projects/next-js-portfolio/node_modules/prettier",
-    "rearrange.code.on.save": "true",
     "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Color Scheme Font",
-    "ts.external.directory.path": "/private/var/folders/p6/wgpcgyy11_51tlt8qk8p8h800000gn/T/AppTranslocation/EC2F6CBC-07F1-438E-A1EA-99DF903239AB/d/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/images/icons" />
+      <recent name="$PROJECT_DIR$/src/components/about" />
+      <recent name="$PROJECT_DIR$/public/images/logos" />
       <recent name="$PROJECT_DIR$/public/images/about" />
       <recent name="$PROJECT_DIR$/public/images" />
-      <recent name="$PROJECT_DIR$/public/images/icons" />
-      <recent name="$PROJECT_DIR$/src/styles" />
-      <recent name="$PROJECT_DIR$/public/fonts/Aeonik" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/images/logos" />
       <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src/app/about" />
       <recent name="$PROJECT_DIR$/public/images/icons" />
       <recent name="$PROJECT_DIR$/public/fonts/Aeonik" />
-      <recent name="$PROJECT_DIR$/src/app" />
     </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-WS-243.22562.222" />
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-WS-243.23654.157" />
       </set>
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="721b2078-e459-4257-8e32-71ab93b9970a" name="Changes" comment="" />
@@ -125,7 +123,13 @@
       <workItem from="1734858891972" duration="1687000" />
       <workItem from="1735545456772" duration="10000" />
       <workItem from="1735545474142" duration="60000" />
-      <workItem from="1735545539005" duration="72060000" />
+      <workItem from="1735545539005" duration="78529000" />
+      <workItem from="1738920098521" duration="27000" />
+      <workItem from="1738920159282" duration="617000" />
+      <workItem from="1739551497487" duration="68000" />
+      <workItem from="1739551616251" duration="242000" />
+      <workItem from="1739551885804" duration="79000" />
+      <workItem from="1739551976802" duration="19413000" />
     </task>
     <servers />
   </component>

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { a } from '@react-spring/web';
 import 'animate.css';
 
@@ -40,7 +40,8 @@ export default function Overlay({ fill }) {
         className="text-4xl antialiased tracking-tighter lg:leading-headers md:text-5xl text-primary font-semibold lg:max-w-lg"
         style={{ color: fill }}
       >
-        I'm a UX designer with frontend superpowers who loves bringing ideas to life.
+        I'm a UX designer with frontend superpowers who loves bringing ideas to
+        life.
       </a.h1>
       <a.span
         className="role inline-block mt-4 mb-2 text-sm md:mb-3 md:text-base font-normal text-primary"
@@ -50,7 +51,9 @@ export default function Overlay({ fill }) {
         Scroll to explore{' '}
         <a.div
           className="icon-scroll"
-          style={{ boxShadow: `inset 0 0 0 1.5px ${fill}` }}
+          style={{
+            boxShadow: `inset 0 0 0 1.5px ${fill}`,
+          }}
         />
       </a.span>
     </div>

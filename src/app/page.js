@@ -4,12 +4,9 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 import { useSpring } from '@react-spring/core';
 import { a } from '@react-spring/web';
-import ScrollProgressBar from '@/components/ScrollProgressBar';
 
 import Overlay from '@/components/Overlay';
 import Card from '@/components/Card';
-import Header from '@/components/header/Header';
-import Footer from '@/components/Footer';
 import Layout from '@/components/Layout';
 
 import '@/styles/styles.scss';
@@ -31,7 +28,7 @@ export default function App() {
   console.log('heyyy');
 
   return (
-    <Layout>
+    <Layout fill={fill}>
       <a.main
         style={{ background }}
         className="overflow-x-hidden items-center flex-col"

@@ -11,10 +11,12 @@
   position: relative;
   cursor: pointer;
   border-radius: 16px;
+
   &:hover {
     img {
       transform: scale(1.1);
     }
+
     &:before {
       content: "";
       width: 100%;
@@ -25,16 +27,17 @@
       position: absolute;
       z-index: 1;
     }
+
     &:after {
       background-color: transparent;
     }
   }
+
   &:hover {
     // &:before {
     //   background: rgb(0, 0, 0, 0.4);
     // }
-    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👀</text></svg>")
-    16 0,
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👀</text></svg>") 16 0,
     auto; /*!emojicursor.app*/
   }
 }
@@ -88,4 +91,17 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+@keyframes morph {
+  0% {
+    d: path('M16,6 a10,10 0 1,0 0,20 a10,10 0 1,0 0,-20');
+  }
+  100% {
+    d: path('M4,4 h24 a4,4 0 0,1 4,4 v16 a4,4 0 0,1 -4,4 h-24 a4,4 0 0,1 -4,-4 v-16 a4,4 0 0,1 4,-4');
+  }
+}
+
+.morphing-cursor path {
+  animation: morph 2s forwards;
 }
