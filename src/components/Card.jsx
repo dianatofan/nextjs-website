@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+import Chip from '@/components/Chip';
 import React, { useEffect, useState } from 'react';
 import '../styles/card.scss';
 
@@ -7,9 +9,8 @@ export default function Card({
   image,
   title,
   description,
-  role,
-  url,
-  inProgress,
+  label,
+  isPasswordProtected,
 }) {
   const [icon, showIcon] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
@@ -33,30 +34,36 @@ export default function Card({
   }, [isHovered]);
 
   return (
-    <div className="rectangle bg-white rounded-xl relative">
-      <div
-        style={{
-          position: 'relative',
-          width: 'auto',
-          height: '320px',
-          overflow: 'hidden',
-        }}
-      >
-        <Image
-          src={image}
-          alt={description}
-          layout="fill"
-          style={{ objectFit: 'cover' }}
-          className="rounded-t-xl object-cover transform transition-transform duration-500 hover:scale-110"
-          unoptimized
-          priority
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        />
-      </div>
-      <div className="p-4">
-        <div className="mb-1 text-xl font-semibold text-primary">{title}</div>
-        <div className="block mb-1 text-md text-primary">{description}</div>
+    <div className="rectangle rounded-xl relative">
+      <Link href="project/google-travel">
+        <div
+          style={{
+            position: 'relative',
+            width: 'auto',
+            height: '320px',
+            overflow: 'hidden',
+          }}
+        >
+          <Image
+            src={image}
+            alt={description}
+            layout="fill"
+            style={{ objectFit: 'cover' }}
+            className="rounded-xl object-cover transform transition-transform duration-500 hover:scale-110"
+            unoptimized
+            priority
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          />
+        </div>
+      </Link>
+      <div className="py-4">
+        <div className="flex align-center mb-2 gap-2">
+          <div className="text-xl font-semibold text-primary">{title}</div>
+          <Chip label={label} />
+          {isPasswordProtected && <Chip isPasswordProtected />}
+        </div>
+        <div className="block text-base text-gray-500">{description}</div>
       </div>
     </div>
   );

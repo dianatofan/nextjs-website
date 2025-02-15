@@ -45,9 +45,8 @@ export default function Page() {
             feasability and{' '}
             <span className="text-tertiary">business goals</span> to fuel
             growth. Having a deep understanding of both sides of the product
-            lifecycle, I can{' '}
-            <span className="text-tertiary">communicate clearly</span> with all
-            types of stakeholders, regardless of their background.
+            lifecycle, I can communicate clearly with all types of stakeholders,
+            regardless of their background, to ensure great output.
           </h1>
           {/*<p className="text-gray-400 text-lg">/dee · uh · nah/</p>*/}
           {/*<p className="text-3xl font-semibold">*/}
@@ -156,11 +155,11 @@ export default function Page() {
               className="w-12 h-12  mb-4"
             />
             <h2 className="text-xl font-semibold mb-2">
-              Human-first experiences
+              Human-centered design
             </h2>
             <p className="text-base text-gray-600">
-              I prioritize user needs while balancing technical feasibility and
-              business goals, ensuring optimal and sustainable design solutions.
+              I prioritize human needs while balancing technical feasibility and
+              business goals, crafting intuitive and scalable solutions.
             </p>
           </div>
           <div className="flex flex-col items-center text-center">

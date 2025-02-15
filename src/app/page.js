@@ -20,7 +20,7 @@ const NoSSRCanvas = dynamic(() => import('@/components/Canvas'), {
 export default function App() {
   const [{ background, fill }, set] = useSpring(
     {
-      background: '#f0f0f0',
+      background: '#fff',
       fill: '#202020',
     },
     []
@@ -39,13 +39,15 @@ export default function App() {
         </section>
         <section className="animate__animated animate__fadeIn animate__delay-1s w-full ml-8 mr-8 flex justify-center">
           <div className="max-w-screen-xl">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:p-4 mx-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:p-4 mx-8">
               <Card
                 title="An Enhanced Travel Experience"
                 description="Making Google Search the most loved tool for travellers"
                 role="UX/UI DESIGN"
                 image="/images/thumbnail5.png"
                 url="explore"
+                label="In development"
+                isPasswordProtected
               />
               <Card
                 title="Famly's Redesign"
@@ -53,6 +55,7 @@ export default function App() {
                 role="UX/UI DESIGN | USER RESEARCH"
                 image="/images/famly.png"
                 url="famly"
+                label="Shipped"
               />
               <Card
                 title="Racefinder App"
@@ -60,6 +63,7 @@ export default function App() {
                 role="UX/UI DESIGN | USER RESEARCH"
                 image="/images/thumbnail1.png"
                 url="racefinder"
+                label="Side project"
               />
               <Card
                 title="Sustainable E-Commerce"
@@ -67,6 +71,7 @@ export default function App() {
                 role="UX/UI DESIGN | USER RESEARCH"
                 image="/images/thumbnail3.png"
                 url="sustainability"
+                label="Side project"
               />
               <Card
                 title="Visual Exploration of Time Series in Healthcare"
@@ -74,6 +79,7 @@ export default function App() {
                 role="DATA VISUALIZATION | UX/UI DESIGN"
                 image="/images/thumbnail2.png"
                 url="time-series"
+                label="Research"
               />
             </div>
           </div>

@@ -1,20 +1,22 @@
 @import "colors";
 @import "fonts";
-
 @import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
 
 * {
   font-family: 'Metropolis', sans-serif;
 }
+
 .about-me-page {
   max-width: 70vw;
   margin: 14rem auto 6rem auto;
+
   &.content {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 48px;
     color: $text-color;
+
     .gatsby-image-wrapper {
       flex: 1;
     }
@@ -65,7 +67,7 @@
 }
 
 section {
-  max-width: 70vw;
+  //max-width: 70vw;
   margin: 0 auto;
 }
 
@@ -73,6 +75,7 @@ section {
   .about-me-page {
     &.content {
       display: block;
+
       .gatsby-image-wrapper {
         width: 60%;
         margin: 0 auto;
@@ -113,6 +116,7 @@ section {
 @media only screen and (max-width: 1595px) {
   .picsGrid {
     gap: 12%;
+
     div {
       width: calc(350px + 8vw);
     }
@@ -123,6 +127,7 @@ section {
   .picsGrid {
     display: flex;
     justify-content: center;
+
     div {
       width: 90%;
     }
@@ -133,6 +138,7 @@ section {
   margin-bottom: 60px;
   max-width: 70vw;
   margin: 0 auto;
+
   h2 {
     color: black;
     font-size: var(--font-size-md);
