@@ -228,6 +228,7 @@ export default function Page() {
           <Quote quote="A problem well stated is a problem half solved" />
         </div>
       </section>
+      {/*<Carousel />*/}
     </Layout>
   );
 }

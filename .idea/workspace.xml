@@ -5,33 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="721b2078-e459-4257-8e32-71ab93b9970a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/explore/cover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/explore/currentUx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/explore/firstscreen-grindelwald.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/explore/firstscreen-selected.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/explore/flights.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/explore/getInspired.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/explore/lastscreen.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/explore/naomi.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/explore/rediscover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/explore/secondscreen-flights.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/explore/stateOfArt1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/explore/stateOfArt2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/explore/stateOfArt3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/explore/stats.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/explore/tripExploration.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/explore/uxideal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/explore/uxnow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/project/google-travel/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/get-password.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Carousel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/about/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/about/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Chip.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chip.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/about/Quote.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/about/Quote.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/about.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/about.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/header/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/header/header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProtectedRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProtectedRoute.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +20,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="SCSS File" />
-        <option value="JavaScript File" />
         <option value="JSX File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -75,7 +53,7 @@
   "keyToString": {
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/dianatofan/Documents/Projects/next-js-portfolio/public/images",
+    "last_opened_file_path": "/Users/dianatofan/Documents/Projects/next-js-portfolio/public",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -89,18 +67,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/public/images" />
       <recent name="$PROJECT_DIR$/src/app/project/google-travel" />
       <recent name="$PROJECT_DIR$/public/images/icons" />
       <recent name="$PROJECT_DIR$/src/components/about" />
-      <recent name="$PROJECT_DIR$/public/images/logos" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/public/images/logos" />
       <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src/app/about" />
-      <recent name="$PROJECT_DIR$/public/images/icons" />
-      <recent name="$PROJECT_DIR$/public/fonts/Aeonik" />
     </key>
   </component>
   <component name="SharedIndexes">
