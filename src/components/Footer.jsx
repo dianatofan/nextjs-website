@@ -22,7 +22,7 @@ function IconItem({ href, src, alt }) {
   );
 }
 
-export default function Footer() {
+export default function Footer({ isProjectPage }) {
   const [copied, setCopied] = useState(false);
   const [hovered, setHovered] = useState(false);
 
@@ -33,6 +33,8 @@ export default function Footer() {
     });
   };
 
+  const imagePath = isProjectPage ? '../images' : './images';
+
   return (
     <footer id="footer" className="text-white bg-black p-10 w-screen">
       <div className="flex flex-col items-center">
@@ -41,7 +43,7 @@ export default function Footer() {
         </div>
         <div className="flex items-center gap-2 relative m-1">
           <Image
-            src="./images/send.png"
+            src={`${imagePath}/send.png`}
             alt=""
             className="send-icon"
             width={WIDTH / 2}
@@ -76,25 +78,25 @@ export default function Footer() {
           <li>
             <IconItem
               href="https://www.linkedin.com/in/diana-tofan-43730013b/"
-              src="./images/logos/linkedin.png"
+              src={`${imagePath}/logos/linkedin.png`}
               alt="Linkedin"
             />
           </li>
           <li>
             <IconItem
               href="https://dribbble.com/dianatofan/"
-              src="./images/logos/dribbble.png"
+              src={`${imagePath}/logos/dribbble.png`}
               alt="Dribbble"
             />
           </li>
           <li>
             <IconItem
               href="https://github.com/dianatofan/"
-              src="./images/logos/github.png"
+              src={`${imagePath}/logos/github.png`}
               alt="Github"
             />
           </li>
-        </ul>{' '}
+        </ul>
         <div className="line" />
         <div className="text-sm flex dianatofan.dt@gmail.com flex-col items-center opacity-50 leading-loose text-center">
           <span className={metropolis.className}>

@@ -19,7 +19,7 @@ export default function Page() {
   }, []);
 
   return (
-    <Layout>
+    <Layout isProjectPage>
       <Image
         src="../images/famly/cover.png"
         alt="cover"

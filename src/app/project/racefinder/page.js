@@ -11,7 +11,7 @@ import { metropolis } from '@/app/utils/local-font';
 
 export default function Page() {
   return (
-    <Layout>
+    <Layout isProjectPage>
       <Image
         src="../images/racefinder/coverblue.png"
         alt="cover"

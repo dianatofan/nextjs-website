@@ -89,6 +89,7 @@ export default function App() {
                 url="time-series"
                 label="Research"
                 fill={fill}
+                project="time-series"
               />
             </div>
           </div>

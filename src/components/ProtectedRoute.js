@@ -15,7 +15,7 @@ const ProtectedRoute = ({ children, location }) => {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    if (password === 'testPassword') {
+    if (password === 'sasayaku') {
       setPasswordCorrect(true);
     } else {
       document.getElementById('button').classList.add('animate__shakeX');

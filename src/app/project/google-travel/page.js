@@ -12,7 +12,7 @@ import { metropolis } from '@/app/utils/local-font';
 export default function Page() {
   return (
     <ProtectedRoute>
-      <Layout>
+      <Layout isProjectPage>
         <Image
           src="../images/explore/cover.png"
           alt="cover"

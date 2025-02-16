@@ -11,7 +11,7 @@ import { Carousel } from 'nuka-carousel';
 
 export default function Page() {
   return (
-    <Layout>
+    <Layout isProjectPage>
       <Image
         src="../images/sustainability/cover.png"
         alt="cover"
