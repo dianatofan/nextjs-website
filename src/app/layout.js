@@ -1,33 +1,4 @@
-import localFont from 'next/font/local';
-
-const metropolis = localFont({
-  src: [
-    {
-      path: '/fonts/Metropolis/Metropolis-Regular.otf',
-      weight: '400',
-      style: 'normal',
-      format: 'opentype',
-    },
-    {
-      path: './fonts/Metropolis/Metropolis-Medium.otf',
-      weight: '500',
-      style: 'normal',
-      format: 'opentype',
-    },
-    {
-      path: './fonts/Metropolis/Metropolis-SemiBold.otf',
-      weight: '600',
-      style: 'normal',
-      format: 'opentype',
-    },
-    {
-      path: './fonts/Metropolis/Metropolis-Bold.otf',
-      weight: '700',
-      style: 'normal',
-      format: 'opentype',
-    },
-  ],
-});
+import { metropolis } from './utils/local-font';
 
 export default function RootLayout({ children }) {
   return (
