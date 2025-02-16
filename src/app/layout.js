@@ -1,5 +1,6 @@
 import { metropolis } from './utils/local-font';
 import '../../node_modules/image-compare-viewer/dist/image-compare-viewer.min.css';
+import 'animate.css';
 
 export default function RootLayout({ children }) {
   return (
