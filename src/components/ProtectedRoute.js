@@ -13,7 +13,7 @@ const ProtectedRoute = ({ children, location }) => {
     if (typeof window !== 'undefined') {
     }
   }, [passwordCorrect]);
-  g;
+  
   const onSubmit = (event) => {
     event.preventDefault();
     if (password === process.env.NEXT_PUBLIC_PASSWORD) {
