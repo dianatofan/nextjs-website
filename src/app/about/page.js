@@ -25,7 +25,7 @@ export default function Page() {
       <div className="container w-screen p-4 my-[14rem] mb-[6rem] max-w-screen-xl flex items-start  flex-col lg:flex-row gap-12 animate__animated animate__fadeIn">
         <div className="w-full lg:w-[45%]">
           <Image
-            src="/images/about/me2.png"
+            src="./images/about/me2.png"
             alt="Picture with me"
             className="animate__animated animate__fadeIn"
             layout="responsive"
@@ -60,25 +60,25 @@ export default function Page() {
                 title="Tactile Games"
                 description="Product Designer"
                 link="https://tactilegames.com/"
-                image="/images/logos/tactileLogo.jpeg"
+                image="./images/logos/tactileLogo.jpeg"
               />
               <LinkItem
                 title="Google"
                 description="UX Engineer"
                 link="https://google.com/"
-                image="/images/logos/googleLogo.png"
+                image="./images/logos/googleLogo.png"
               />
               <LinkItem
                 title="Famly"
                 description="UX/UI Designer"
                 link="https://famly.co/"
-                image="/images/logos/famly.png"
+                image="./images/logos/famly.png"
               />
               <LinkItem
                 title="Maersk"
                 description="Frontend Engineer"
                 link="https://maersk.com/"
-                image="/images/logos/maersk.png"
+                image="./images/logos/maersk.png"
               />
             </ul>
             {/*<p>*/}
@@ -109,7 +109,7 @@ export default function Page() {
         <div className="container mx-auto p-4 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="flex flex-col items-center text-center">
             <img
-              src="/images/icons/squiggle.png"
+              src="./images/icons/squiggle.png"
               alt="Profile"
               className="w-12 h-12 mb-4"
             />
@@ -121,7 +121,7 @@ export default function Page() {
           </div>
           <div className="flex flex-col items-center text-center">
             <img
-              src="/images/icons/rocket.png"
+              src="./images/icons/rocket.png"
               alt="Profile"
               className="w-12 h-12  mb-4"
             />
@@ -134,7 +134,7 @@ export default function Page() {
           </div>
           <div className="flex flex-col items-center text-center">
             <img
-              src="/images/icons/users.png"
+              src="./images/icons/users.png"
               alt="Profile"
               className="w-12 h-12  mb-4"
             />
@@ -150,7 +150,7 @@ export default function Page() {
         <div className="container mx-auto p-4 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="flex flex-col items-center text-center">
             <img
-              src="/images/icons/smile.png"
+              src="./images/icons/smile.png"
               alt="Profile"
               className="w-12 h-12  mb-4"
             />
@@ -164,7 +164,7 @@ export default function Page() {
           </div>
           <div className="flex flex-col items-center text-center">
             <img
-              src="/images/icons/keyboard.png"
+              src="./images/icons/keyboard.png"
               alt="Profile"
               className="w-12 h-12 mb-4"
             />
@@ -179,7 +179,7 @@ export default function Page() {
           </div>
           <div className="flex flex-col items-center text-center">
             <img
-              src="/images/icons/bars.png"
+              src="./images/icons/bars.png"
               alt="Profile"
               className="w-12 h-12  mb-4"
             />

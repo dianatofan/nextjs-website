@@ -9,7 +9,7 @@ const Grid = () => {
             <img
               alt="gallery"
               className="block h-full w-full rounded-lg 2xl:rounded-2xl object-cover object-center"
-              src="/images/about/bike.jpg"
+              src="./images/about/bike.jpg"
             />
           </div>
           <div className="w-full lg:w-1/2 p-1 md:p-2">

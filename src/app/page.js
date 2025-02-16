@@ -44,7 +44,7 @@ export default function App() {
                 title="An Enhanced Travel Experience"
                 description="Making Google Search the most loved tool for travellers"
                 role="UX/UI DESIGN"
-                image="/images/thumbnail5.png"
+                image="./images/thumbnail5.png"
                 url="explore"
                 label="In development"
                 isPasswordProtected
@@ -53,7 +53,7 @@ export default function App() {
                 title="Famly's Redesign"
                 description="Shaping a design system for a mature product"
                 role="UX/UI DESIGN | USER RESEARCH"
-                image="/images/famly.png"
+                image="./images/famly.png"
                 url="famly"
                 label="Shipped"
               />
@@ -61,7 +61,7 @@ export default function App() {
                 title="Racefinder App"
                 description="Optimizing the racebooking process to help runners find their next race easier"
                 role="UX/UI DESIGN | USER RESEARCH"
-                image="/images/thumbnail1.png"
+                image="./images/thumbnail1.png"
                 url="racefinder"
                 label="Side project"
               />
@@ -69,7 +69,7 @@ export default function App() {
                 title="Sustainable E-Commerce"
                 description="Reimagining the checkout flow to reduce packaging waste in online orders"
                 role="UX/UI DESIGN | USER RESEARCH"
-                image="/images/thumbnail3.png"
+                image="./images/thumbnail3.png"
                 url="sustainability"
                 label="Side project"
               />
@@ -77,7 +77,7 @@ export default function App() {
                 title="Visual Exploration of Time Series in Healthcare"
                 description="Generate medical charts given patient data"
                 role="DATA VISUALIZATION | UX/UI DESIGN"
-                image="/images/thumbnail2.png"
+                image="./images/thumbnail2.png"
                 url="time-series"
                 label="Research"
               />

@@ -13,7 +13,7 @@ export default function Page() {
     <ProtectedRoute>
       <Layout>
         <Image
-          src="/images/explore/cover.png"
+          src="./images/explore/cover.png"
           alt="cover"
           width={1920}
           height={1080}
@@ -122,7 +122,7 @@ export default function Page() {
                   our assumptions and made some key discoveries:
                 </p>
                 <Image
-                  src="/images/explore/stats.png"
+                  src="./images/explore/stats.png"
                   alt="cover"
                   width={1920}
                   height={1080}
@@ -142,7 +142,7 @@ export default function Page() {
                 Today's search experience
               </h1>
               <Image
-                src="/images/explore/currentUx.png"
+                src="./images/explore/currentUx.png"
                 alt="cover"
                 width={1920}
                 height={1080}
@@ -162,7 +162,7 @@ export default function Page() {
             </div>
             <div className="max-w-screen-lg">
               <Image
-                src="/images/explore/uxnow.png"
+                src="./images/explore/uxnow.png"
                 alt="cover"
                 width={1920}
                 height={1080}
@@ -182,7 +182,7 @@ export default function Page() {
             </div>
             <div className="max-w-screen-lg">
               <Image
-                src="/images/explore/uxideal.png"
+                src="./images/explore/uxideal.png"
                 alt="cover"
                 width={1920}
                 height={1080}
@@ -216,7 +216,7 @@ export default function Page() {
                 </p>
                 <div className="flex justify-center items-center">
                   <Image
-                    src="/images/explore/naomi.jpeg"
+                    src="./images/explore/naomi.jpeg"
                     alt="cover"
                     width={1920}
                     height={1080}
@@ -238,7 +238,7 @@ export default function Page() {
             </div>
             <div className="max-w-screen-xl">
               <Image
-                src="/images/explore/tripExploration.png"
+                src="./images/explore/tripExploration.png"
                 alt="cover"
                 width={1920}
                 height={1080}
@@ -258,7 +258,7 @@ export default function Page() {
             </div>
             <div className="max-w-screen-lg">
               <Image
-                src="/images/explore/getInspired.png"
+                src="./images/explore/getInspired.png"
                 alt="cover"
                 width={1920}
                 height={1080}
@@ -306,7 +306,7 @@ export default function Page() {
                 </p>
                 <div className="flex justify-center">
                   <Image
-                    src="/images/explore/firstscreen-grindelwald.gif"
+                    src="./images/explore/firstscreen-grindelwald.gif"
                     alt="cover"
                     width={320}
                     height={560}
@@ -322,7 +322,7 @@ export default function Page() {
                 </p>
                 <div className="flex justify-center">
                   <Image
-                    src="/images/explore/firstscreen-selected.gif"
+                    src="./images/explore/firstscreen-selected.gif"
                     alt="cover"
                     width={320}
                     height={560}
@@ -350,7 +350,7 @@ export default function Page() {
             </div>
             <div className="max-w-screen-lg">
               <Image
-                src="/images/explore/flights.png"
+                src="./images/explore/flights.png"
                 alt="cover"
                 width={1920}
                 height={1080}
@@ -392,7 +392,7 @@ export default function Page() {
                 </p>
                 <div className="flex justify-center">
                   <Image
-                    src="/images/explore/secondscreen-flights.gif"
+                    src="./images/explore/secondscreen-flights.gif"
                     alt="cover"
                     width={320}
                     height={560}
@@ -419,7 +419,7 @@ export default function Page() {
             </div>
             <div className="max-w-screen-lg">
               <Image
-                src="/images/explore/rediscover.png"
+                src="./images/explore/rediscover.png"
                 alt="cover"
                 width={1920}
                 height={1080}
@@ -463,7 +463,7 @@ export default function Page() {
                 </p>
                 <div className="flex justify-center">
                   <Image
-                    src="/images/explore/lastscreen.gif"
+                    src="./images/explore/lastscreen.gif"
                     alt="cover"
                     width={320}
                     height={560}

@@ -40,7 +40,7 @@ export default function Footer() {
         </div>
         <div className="flex items-center gap-2 relative m-1">
           <Image
-            src="/images/send.png"
+            src="./images/send.png"
             alt=""
             className="send-icon"
             width={WIDTH / 2}
@@ -73,21 +73,21 @@ export default function Footer() {
           <li>
             <IconItem
               href="https://www.linkedin.com/in/diana-tofan-43730013b/"
-              src="/images/logos/linkedin.png"
+              src="./images/logos/linkedin.png"
               alt="Linkedin"
             />
           </li>
           <li>
             <IconItem
               href="https://dribbble.com/dianatofan/"
-              src="/images/logos/dribbble.png"
+              src="./images/logos/dribbble.png"
               alt="Dribbble"
             />
           </li>
           <li>
             <IconItem
               href="https://github.com/dianatofan/"
-              src="/images/logos/github.png"
+              src="./images/logos/github.png"
               my
               alt="Github"
             />
