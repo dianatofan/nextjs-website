@@ -8,13 +8,9 @@ const __dirname = path.dirname(__filename);
  * @type {import('next').NextConfig}
  */
 const nextConfig = {
-  reactStrictMode: true,
+  output: 'export',
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
-  },
-  output: 'export',
-  images: {
-    domains: ['https://dianatofan.github.io/nextjs-website'],
   },
 };
 
