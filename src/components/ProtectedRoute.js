@@ -13,20 +13,7 @@ const ProtectedRoute = ({ children, location }) => {
     if (typeof window !== 'undefined') {
     }
   }, [passwordCorrect]);
-
-  useEffect(() => {
-    const fetchPassword = async () => {
-      const response = await fetch('/api/get-password');
-      if (response.ok) {
-        const data = await response.json();
-        setPasswordShould(data.password);
-      } else {
-        console.error('Failed to fetch password');
-      }
-    };
-    fetchPassword();
-  });
-
+  g;
   const onSubmit = (event) => {
     event.preventDefault();
     if (password === process.env.NEXT_PUBLIC_PASSWORD) {
