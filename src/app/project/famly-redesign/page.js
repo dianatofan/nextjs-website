@@ -21,7 +21,7 @@ export default function Page() {
   return (
     <Layout>
       <Image
-        src="/images/famly/cover.png"
+        src="../images/famly/cover.png"
         alt="cover"
         width={1920}
         height={1080}
@@ -301,7 +301,7 @@ export default function Page() {
             <div className="max-w-screen-lg">
               <p className={`text-lg mb-4 ${metropolis.className}`}>
                 From our research, we defined a clear problem statement:
-                <blockquote className="p-4 my-4 border-s-4 border-gray-300 bg-gray-50 dark:border-gray-500 dark:bg-gray-800">
+                <blockquote className="p-4 my-4 border-s-4 border-gray-300 bg-gray-50 ">
                   <p
                     className={`${metropolis.className} text-xl italic font-medium leading-relaxed text-gray-900 dark:text-white`}
                   >
