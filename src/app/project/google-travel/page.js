@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import ProtectedRoute from '@/components/ProtectedRoute';
+import 'animate.css';
 
 import '@/styles/about.scss';
 import '@/styles/styles.scss';

@@ -7,6 +7,7 @@ import '@/styles/about.scss';
 import '@/styles/styles.scss';
 import Layout from '@/components/Layout';
 import { User, Users } from 'react-feather';
+import 'animate.css';
 
 import { metropolis } from '@/app/utils/local-font';
 

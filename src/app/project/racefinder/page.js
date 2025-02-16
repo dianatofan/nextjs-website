@@ -8,6 +8,7 @@ import '@/styles/about.scss';
 import '@/styles/styles.scss';
 import Layout from '@/components/Layout';
 import { metropolis } from '@/app/utils/local-font';
+import 'animate.css';
 
 export default function Page() {
   return (

@@ -8,6 +8,7 @@ import '@/styles/styles.scss';
 import Layout from '@/components/Layout';
 import { metropolis } from '@/app/utils/local-font';
 import ImageCompare from 'image-compare-viewer';
+import 'animate.css';
 
 export default function Page() {
   useEffect(() => {
