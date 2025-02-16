@@ -69,6 +69,7 @@ export default function App() {
                 url="racefinder"
                 label="Side project"
                 fill={fill}
+                project="racefinder"
               />
               <Card
                 title="Sustainable E-Commerce"

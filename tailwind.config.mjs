@@ -20,6 +20,7 @@ export default {
         lightPurple: '#EFEEFE',
         green: '#509b3c',
         lightGreen: '#E8F5E2',
+        grayRace: '#F0F0F0',
       },
       keyframes: {
         fadeIn: {

@@ -5,9 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="721b2078-e459-4257-8e32-71ab93b9970a" name="Changes" comment="Remove image path">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/racefinder/coveeerBig.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/racefinder/cover.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/racefinder/coverbig.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/racefinder/coverblue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/racefinder/coversmall.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/racefinder/map.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/racefinder/midFidelity.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/racefinder/midFidelityRounded.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/racefinder/onboarding.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/racefinder/persona1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/racefinder/persona2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/racefinder/profileAndHistory.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/racefinder/refinements.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/racefinder/research.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/racefinder/runnerType1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/racefinder/runnerType2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/racefinder/runnerType3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/racefinder/runnerType4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/racefinder/signUpFlow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/racefinder/usabilityTest.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/racefinder/wireframes1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/racefinder/wireframes2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/project/racefinder/page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/project/famly-redesign/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/project/famly-redesign/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/project/google-travel/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/project/google-travel/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.mjs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,36 +74,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/dianatofan/Documents/Projects/next-js-portfolio/public&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/dianatofan/Documents/Projects/next-js-portfolio/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Color Scheme Font&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/dianatofan/Documents/Projects/next-js-portfolio/public/images",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/Users/dianatofan/Documents/Projects/next-js-portfolio/node_modules/prettier",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Color Scheme Font",
+    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/public/images" />
+      <recent name="$PROJECT_DIR$/src/app/project" />
+      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/src/app/project/google-travel" />
       <recent name="$PROJECT_DIR$/public/images/icons" />
-      <recent name="$PROJECT_DIR$/src/components/about" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/images" />
+      <recent name="$PROJECT_DIR$/src/app" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/public/static" />
-      <recent name="$PROJECT_DIR$/src/app" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/public/images/logos" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -108,7 +135,7 @@
       <workItem from="1739551616251" duration="242000" />
       <workItem from="1739551885804" duration="79000" />
       <workItem from="1739551976802" duration="38006000" />
-      <workItem from="1739705033841" duration="97000" />
+      <workItem from="1739705033841" duration="25389000" />
     </task>
     <task id="LOCAL-00001" summary="Remove image path">
       <option name="closed" value="true" />

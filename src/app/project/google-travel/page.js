@@ -14,7 +14,7 @@ export default function Page() {
     <ProtectedRoute>
       <Layout>
         <Image
-          src=".//images/explore/cover.png"
+          src="../images/explore/cover.png"
           alt="cover"
           width={1920}
           height={1080}

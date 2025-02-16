@@ -191,20 +191,20 @@ export default function Page() {
           </div>
         </section>
         {/* Quote Section */}
-        <section className="bg-black text-white py-12 w-lg xl:flex items-center justify-center w-screen px-8">
+        <section className="text-primary py-12 w-lg xl:flex items-center justify-center w-screen bg-black px-8">
           <blockquote className="text-center">
             <p
-              className={`text-5xl antialiased tracking-tighter lg:leading-tight md:text-8xl font-semibold mb-6 text-left ${metropolis.className}`}
+              className={`text-5xl text-white antialiased tracking-tighter lg:leading-tight md:text-8xl font-semibold mb-6 text-left ${metropolis.className}`}
             >
               “
             </p>
             <p
-              className={`text-5xl antialiased tracking-tighter lg:leading-tight md:text-6xl text-white font-semibold max-w-screen-md mx-auto ${metropolis.className}`}
+              className={`text-5xl antialiased tracking-tighter lg:leading-tight md:text-6xl text-white  font-semibold max-w-screen-md mx-auto ${metropolis.className}`}
             >
               How can we ensure consistency across the platform?
             </p>
             <p
-              className={`text-6xl antialiased tracking-tighter lg:leading-tight md:text-8xl font-semibold text-right ${metropolis.className}`}
+              className={`text-6xl text-white antialiased tracking-tighter lg:leading-tight md:text-8xl font-semibold text-right ${metropolis.className}`}
             >
               ”
             </p>
@@ -303,7 +303,7 @@ export default function Page() {
                 From our research, we defined a clear problem statement:
                 <blockquote className="p-4 my-4 border-s-4 border-gray-300 bg-gray-50 ">
                   <p
-                    className={`${metropolis.className} text-xl italic font-medium leading-relaxed text-gray-900 dark:text-white`}
+                    className={`${metropolis.className} text-xl italic font-medium leading-relaxed text-primary`}
                   >
                     We need a design system that standardizes UI and UX
                     components, optimizes development workflows, and enhances
