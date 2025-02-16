@@ -6,17 +6,16 @@ import VideoBackground from '@/components/VideoBackground';
 
 const ProtectedRoute = ({ children, location }) => {
   const [password, setPassword] = useState('');
-  const [passwordShould, setPasswordShould] = useState('');
   const [passwordCorrect, setPasswordCorrect] = useState(false);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
     }
   }, [passwordCorrect]);
-  
+
   const onSubmit = (event) => {
     event.preventDefault();
-    if (password === process.env.NEXT_PUBLIC_PASSWORD) {
+    if (password === 'testPassword') {
       setPasswordCorrect(true);
     } else {
       document.getElementById('button').classList.add('animate__shakeX');
