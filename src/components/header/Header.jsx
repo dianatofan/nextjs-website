@@ -4,9 +4,9 @@ import 'animate.css';
 
 import { usePathname, useRouter } from 'next/navigation';
 import { a } from '@react-spring/web';
-import { Menu as MenuIcon, X } from 'react-feather';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
+import { metropolis } from '@/app/utils/local-font';
 
 import Burger from './Hamburger';
 import Menu from './Menu';
@@ -38,6 +38,7 @@ export default function Header({ location, fill, background }) {
                   color: fill,
                   fontWeight: activePage === '/' ? 600 : 400,
                 }}
+                className={metropolis.className}
               >
                 Work
               </a.p>
@@ -50,6 +51,7 @@ export default function Header({ location, fill, background }) {
                   color: fill,
                   fontWeight: activePage === '/about' ? 600 : 400,
                 }}
+                className={metropolis.className}
               >
                 About
               </a.p>

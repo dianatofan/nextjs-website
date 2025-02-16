@@ -39,7 +39,7 @@ export default function App() {
         </section>
         <section className="animate__animated animate__fadeIn animate__delay-1s w-full ml-8 mr-8 flex justify-center">
           <div className="max-w-screen-xl">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:p-4 mx-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:p-4 mx-4">
               <Card
                 title="An Enhanced Travel Experience"
                 description="Making Google Search the most loved tool for travellers"
@@ -48,6 +48,7 @@ export default function App() {
                 url="explore"
                 label="In development"
                 isPasswordProtected
+                fill={fill}
               />
               <Card
                 title="Famly's Redesign"
@@ -56,6 +57,7 @@ export default function App() {
                 image="./images/famly.png"
                 url="famly"
                 label="Shipped"
+                fill={fill}
               />
               <Card
                 title="Racefinder App"
@@ -64,6 +66,7 @@ export default function App() {
                 image="./images/thumbnail1.png"
                 url="racefinder"
                 label="Side project"
+                fill={fill}
               />
               <Card
                 title="Sustainable E-Commerce"
@@ -72,6 +75,7 @@ export default function App() {
                 image="./images/thumbnail3.png"
                 url="sustainability"
                 label="Side project"
+                fill={fill}
               />
               <Card
                 title="Visual Exploration of Time Series in Healthcare"
@@ -80,6 +84,7 @@ export default function App() {
                 image="./images/thumbnail2.png"
                 url="time-series"
                 label="Research"
+                fill={fill}
               />
             </div>
           </div>

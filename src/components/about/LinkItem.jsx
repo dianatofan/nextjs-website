@@ -1,4 +1,5 @@
 import React from 'react';
+import { metropolis } from '@/app/utils/local-font';
 
 export default function LinkItem({ title, description, image, link }) {
   return (
@@ -8,10 +9,12 @@ export default function LinkItem({ title, description, image, link }) {
     >
       <div className="flex items-center">
         <img src={image} alt="Profile" className="w-8 h-8 rounded-full mr-4" />
-        <span className="font-semibold">{title}</span>
+        <span className={`${metropolis.className} font-semibold`}>{title}</span>
       </div>
       <div className="flex items-center">
-        <span className="text-gray-500 mr-2">{description}</span>
+        <span className={`${metropolis.className} text-gray-500 mr-2`}>
+          {description}
+        </span>
         <a
           href="https://example.com"
           target="_blank"

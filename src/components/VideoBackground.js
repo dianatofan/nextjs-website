@@ -2,6 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft } from 'react-feather';
+import { metropolis } from '@/app/utils/local-font';
 
 const VideoBackground = ({ children }) => {
   return (
@@ -13,14 +14,19 @@ const VideoBackground = ({ children }) => {
         playsInline
         className="w-full h-full object-cover z-[-1]"
       >
-        <source src="/background.mp4" type="video/mp4" />
+        <source src="./background.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center z-10">
         {children}
       </div>
-      <div className="text-sm opacity-50 absolute top-8 left-8 lg:top-16 lg:left-16 text-white z-10">
-        <Link className="inline-flex gap-1 hover:underline" href="/">
+      <div
+        className={`${metropolis.className} text-sm opacity-50 absolute top-8 left-8 lg:top-16 lg:left-16 text-white z-10`}
+      >
+        <Link
+          className={`${metropolis.className} inline-flex gap-1 hover:underline`}
+          href="/"
+        >
           <ArrowLeft width={20} height={20} strokeWidth={2} />
           Go back
         </Link>

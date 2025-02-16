@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Copy } from 'react-feather';
 import Image from 'next/image';
 import '@/styles/footer.scss';
+import { metropolis } from '@/app/utils/local-font';
 
 const WIDTH = 32;
 const HEIGHT = 32;
@@ -47,7 +48,7 @@ export default function Footer() {
             height={HEIGHT / 2}
           />
           <span
-            className="text-base hover:underline cursor-pointer"
+            className={`${metropolis.className} text-base hover:underline cursor-pointer`}
             id="copyEmail"
             onClick={handleCopy}
             onMouseEnter={() => setHovered(true)}
@@ -58,13 +59,15 @@ export default function Footer() {
           {hovered && !copied && (
             <Copy
               size={16}
-              className="absolute -right-24 text-sm text-white opacity-50"
+              className={`${metropolis.className} absolute -right-24 text-sm text-white opacity-50`}
             >
               Copy
             </Copy>
           )}
           {copied && (
-            <span className="text-sm text-white absolute -right-60 opacity-50 animate-disappear">
+            <span
+              className={`${metropolis.className} text-sm text-white absolute -right-60 opacity-50 animate-disappear`}
+            >
               Copied!
             </span>
           )}
@@ -88,15 +91,18 @@ export default function Footer() {
             <IconItem
               href="https://github.com/dianatofan/"
               src="./images/logos/github.png"
-              my
               alt="Github"
             />
           </li>
         </ul>{' '}
         <div className="line" />
-        <div className="text-sm flex flex-col items-center opacity-50 leading-loose text-center">
-          <span>&copy; {`${new Date().getFullYear()}`} Diana Tofan</span>
-          <span>Built with Next.js, Tailwind and a sprinkle of 3D magic</span>
+        <div className="text-sm flex dianatofan.dt@gmail.com flex-col items-center opacity-50 leading-loose text-center">
+          <span className={metropolis.className}>
+            &copy; {`${new Date().getFullYear()}`} Diana Tofan
+          </span>
+          <span className={metropolis.className}>
+            Built with Next.js, Tailwind and a sprinkle of 3D magic
+          </span>
         </div>
       </div>
     </footer>

@@ -1,9 +1,12 @@
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import Chip from '@/components/Chip';
 import React, { useEffect, useState } from 'react';
 import '../styles/card.scss';
+import { metropolis } from '@/app/utils/local-font';
+
+import { a } from '@react-spring/web';
+import Chip from '@/components/Chip';
 
 export default function Card({
   image,
@@ -11,6 +14,7 @@ export default function Card({
   description,
   label,
   isPasswordProtected,
+  fill,
 }) {
   const [icon, showIcon] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
@@ -43,6 +47,7 @@ export default function Card({
             height: '320px',
             overflow: 'hidden',
           }}
+          className="rounded-xl"
         >
           <Image
             src={image}
@@ -58,12 +63,23 @@ export default function Card({
         </div>
       </Link>
       <div className="py-4">
-        <div className="flex align-center mb-2 gap-2">
-          <div className="text-xl font-semibold text-primary">{title}</div>
-          <Chip label={label} />
-          {isPasswordProtected && <Chip isPasswordProtected />}
+        <div className="flex flex-col md:flex-row align-center mb-2 gap-2">
+          <a.div
+            className={`${metropolis.className} text-xl font-semibold text-primary`}
+            style={{ color: fill }}
+          >
+            {title}
+          </a.div>
+          <div className="inline-flex gap-2 items-center">
+            <Chip label={label} />
+            {isPasswordProtected && <Chip isPasswordProtected />}
+          </div>
         </div>
-        <div className="block text-base text-gray-500">{description}</div>
+        <div
+          className={`${metropolis.className} block text-base text-gray-500`}
+        >
+          {description}
+        </div>
       </div>
     </div>
   );
