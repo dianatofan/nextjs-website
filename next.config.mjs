@@ -6,10 +6,12 @@ const __dirname = path.dirname(__filename);
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    reactStrictMode: true,
-    sassOptions: {
-        includePaths: [path.join(__dirname, 'styles')],
-    },
+  reactStrictMode: true,
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles')],
+  },
+  output: 'export',
+  basePath: '/nextjs-website',
 };
 
 export default nextConfig;

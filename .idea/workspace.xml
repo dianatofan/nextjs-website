@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="721b2078-e459-4257-8e32-71ab93b9970a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/api/get-password.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Carousel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/about/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/about/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProtectedRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProtectedRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,5 +113,16 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
