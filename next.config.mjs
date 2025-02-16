@@ -12,7 +12,7 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
-  basePath: isProduction ? '/nextjs-portfolio' : '',
+  basePath: isProduction ? '/nextjs-website' : '',
 };
 
 export default nextConfig;
