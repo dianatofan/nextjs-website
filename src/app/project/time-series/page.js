@@ -83,7 +83,9 @@ export default function Page() {
                 Healthcare professionals need an easy-to-use tool for analyzing
                 their patients' data.{' '}
               </h1>
-              <p className={`text-lg mb-4 mt-4 ${metropolis.className}`}>
+              <p
+                className={`text-lg max-w-75ch mb-4 mt-4 ${metropolis.className}`}
+              >
                 Sharing self-tracked data with others to seek treatment or
                 solutions to a problem led to an ever growing number of
                 healthcare professionals who must rely on time-dependent
@@ -99,7 +101,7 @@ export default function Page() {
                 Goal
               </h3>
               <h1
-                className={`text-4xl antialiased tracking-tighter lg:leading-tight md:text-5xl text-primary font-semibold ${metropolis.className}`}
+                className={`text-4xl max-w-75ch antialiased tracking-tighter lg:leading-tight md:text-5xl text-primary font-semibold ${metropolis.className}`}
               >
                 Deliver a web application capable of generating time series
                 visualizations rich in information and easy to interact with.
@@ -193,7 +195,7 @@ export default function Page() {
               >
                 Use-case scenario
               </p>
-              <p className={`text-lg mb-4 ${metropolis.className}`}>
+              <p className={`text-lg max-w-75ch mb-4 ${metropolis.className}`}>
                 This application primarily focuses on solving problems from the
                 healthcare industry and helps medical entities diagnose and
                 treat their patients. For instance it could be used by a PTSD
@@ -229,7 +231,7 @@ export default function Page() {
               >
                 System overview
               </p>
-              <p className={`text-lg mb-4 ${metropolis.className}`}>
+              <p className={`text-lg max-w-75ch mb-4 ${metropolis.className}`}>
                 Each dataset belongs to a real person who - at some point -
                 tracked specific events in his/her life. The data was recorded
                 with the help of a one-button device that when pressed, stored
@@ -245,7 +247,7 @@ export default function Page() {
                   className="w-full animate__animated animate__fadeIn"
                 />
               </div>
-              <p className={`text-lg mb-4 ${metropolis.className}`}>
+              <p className={`text-lg max-w-75ch  mb-4 ${metropolis.className}`}>
                 A timestamp is a sequence of characters encoding time-oriented
                 information. In this project, all timestamps have a common
                 structure: <code>YYYY-MM-DDTHH:mm:ss</code>, where{' '}
@@ -253,7 +255,7 @@ export default function Page() {
                 <code>HH:mm:ss </code>is the hour when the observation occurred.
               </p>
               <p
-                className={`text-2xl mb-4 font-semibold ${metropolis.className}`}
+                className={`text-2xl max-w-75ch mb-4 font-semibold ${metropolis.className}`}
               >
                 By relying on data visualization techniques, the main goal of
                 the system is to help users quickly identify patterns, reflect
@@ -264,7 +266,7 @@ export default function Page() {
               >
                 Use-case scenario
               </p>
-              <p className={`text-lg mb-4 ${metropolis.className}`}>
+              <p className={`text-lg max-w-75ch mb-4 ${metropolis.className}`}>
                 This application primarily focuses on solving problems from the
                 healthcare industry and helps medical entities diagnose and
                 treat their patients. For instance it could be used by a PTSD
@@ -312,7 +314,7 @@ export default function Page() {
               <ul className="mt-2 p-8 border-l-2 border-l-gray-300 bg-gray-200">
                 <li className={`text-lg mb-4 ${metropolis.className}`}>
                   <span
-                    className={`text-lg font-semibold mb-4 ${metropolis.className}`}
+                    className={`text-lg  max-w-75ch font-semibold mb-4 ${metropolis.className}`}
                   >
                     &rarr; Calendar heatmap&nbsp;
                   </span>
@@ -365,7 +367,7 @@ export default function Page() {
               >
                 Setting the stage
               </p>
-              <p className={`text-lg mb-4 ${metropolis.className}`}>
+              <p className={`text-lg max-w-75ch  mb-4 ${metropolis.className}`}>
                 The usability test was carried out on four persons and two
                 datasets were used. In the first one, 5,743 observations were
                 recorded, whereas the second presented 647 timestamps. Both
@@ -377,7 +379,7 @@ export default function Page() {
               >
                 The tasks
               </p>
-              <p className={`text-lg mb-4 ${metropolis.className}`}>
+              <p className={`text-lg max-w-75ch mb-4 ${metropolis.className}`}>
                 The survey consisted of 10 questions which covered most of the
                 functionalities implemented in the visualization. The first half
                 of the questions was based on the first dataset and the rest on
@@ -386,7 +388,7 @@ export default function Page() {
                 thinking while answering the questions, they were asked to think
                 out loud and explain their actions.
               </p>
-              <p className={`text-lg mb-4 ${metropolis.className}`}>
+              <p className={`text-lg max-w-75ch  mb-4 ${metropolis.className}`}>
                 On the whole, the users enjoyed playing with the visualization
                 and completed the survey without experiencing major
                 difficulties.
@@ -396,7 +398,7 @@ export default function Page() {
               >
                 Analysis of the results
               </p>
-              <p className={`text-lg mb-4 ${metropolis.className}`}>
+              <p className={`text-lg max-w-75ch  mb-4 ${metropolis.className}`}>
                 Overall, the calendar heatmap was intuitive and posed no major
                 problems. In terms of the bar chart, it was easy to interpret
                 the meaning of each bar, and the subjects enjoyed the animation
@@ -404,12 +406,12 @@ export default function Page() {
                 radial chart served its purpose too.
               </p>
               <p
-                className={`text-3xl lg:text-4xl font-semibold mb-4 ${metropolis.className}`}
+                className={`text-3xl max-w-75ch  lg:text-4xl font-semibold mb-4 ${metropolis.className}`}
               >
                 The most challenges were faced during the interaction with the
                 area graph, plotted over the bar chart.
               </p>
-              <p className={`text-lg mb-4 ${metropolis.className}`}>
+              <p className={`text-lg max-w-75ch  mb-4 ${metropolis.className}`}>
                 Although the participants were informed what kind of values it
                 displayed, they were reluctant to use it during the evaluation
                 and would rather rely on the heatmap or bar chart to find the
@@ -427,7 +429,7 @@ export default function Page() {
               Lessons learned
             </h1>
             <div className="max-w-screen-lg">
-              <p className={`text-lg mb-4 ${metropolis.className}`}>
+              <p className={`text-lg max-w-75ch  mb-4 ${metropolis.className}`}>
                 Reflecting on the survey results, it can be deduced that even
                 though the time-series visualization looks simple at first
                 sight, it is actually not so easy to decipher the meaning of all

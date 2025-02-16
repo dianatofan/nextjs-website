@@ -589,7 +589,7 @@ export default function Page() {
                 The implementation of Famly’s design system yielded significant
                 improvements:
               </p>
-              <ul className="mt-2 p-8 border-l-2 border-l-gray-300 bg-gray-100">
+              <ul className="mt-2 p-8 border-l-2 border-l-gray-300 bg-lightPurple">
                 <li className={`text-lg mb-4 ${metropolis.className}`}>
                   <span
                     className={`text-lg font-semibold mb-4 ${metropolis.className}`}

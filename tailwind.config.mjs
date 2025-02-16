@@ -57,6 +57,9 @@ export default {
       borderRadius: {
         '32px': '32px',
       },
+      maxWidth: {
+        '75ch': '75ch',
+      },
     },
   },
   plugins: [],

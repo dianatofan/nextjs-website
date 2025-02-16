@@ -555,15 +555,15 @@ export default function Page() {
               </p>
               <ul className="mt-4 px-8">
                 <li className={`text-lg mb-4 ${metropolis.className}`}>
-                  add numerical statistics or illustrations instead of textual
-                  facts to increase awareness
+                  &rarr; add numerical statistics or illustrations instead of
+                  textual facts to increase awareness
                 </li>
                 <li className={`text-lg mb-4 ${metropolis.className}`}>
-                  find a way to reduce the number of checkout screens
+                  &rarr; find a way to reduce the number of checkout screens
                 </li>
                 <li className={`text-lg mb-4 ${metropolis.className}`}>
-                  replace the tooltips with fullscreen modals to include more
-                  facts
+                  &rarr; replace the tooltips with fullscreen modals to include
+                  more facts
                 </li>
               </ul>
             </div>

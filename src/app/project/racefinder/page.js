@@ -79,7 +79,7 @@ export default function Page() {
               >
                 Finding races leaves much to be desired.
               </h1>
-              <p className={`text-lg mb-4 ${metropolis.className}`}>
+              <p className={`text-lg mb-4 ${metropolis.className} max-w-75ch`}>
                 Despite the growing popularity of running events, discovering
                 and registering for races remains a fragmented and inefficient
                 process. Existing platforms lack robust filtering options,

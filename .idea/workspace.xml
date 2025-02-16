@@ -6,7 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="721b2078-e459-4257-8e32-71ab93b9970a" name="Changes" comment="Remove image path">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/project/famly-redesign/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/project/famly-redesign/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/project/racefinder/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/project/racefinder/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/project/sustainable-ecommerce/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/project/sustainable-ecommerce/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/project/time-series/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/project/time-series/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.mjs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +112,7 @@
       <workItem from="1739551616251" duration="242000" />
       <workItem from="1739551885804" duration="79000" />
       <workItem from="1739551976802" duration="38006000" />
-      <workItem from="1739705033841" duration="31052000" />
+      <workItem from="1739705033841" duration="32331000" />
     </task>
     <task id="LOCAL-00001" summary="Remove image path">
       <option name="closed" value="true" />

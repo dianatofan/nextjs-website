@@ -28,7 +28,7 @@ export default function App() {
   console.log('heyyy');
 
   return (
-    <Layout fill={fill}>
+    <Layout fill={fill} isProjectPage={false}>
       <a.main
         style={{ background }}
         className="overflow-x-hidden items-center flex-col"
