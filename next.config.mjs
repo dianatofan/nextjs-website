@@ -16,6 +16,7 @@ const nextConfig = {
   images: {
     unoptimized: true, // Ensure images are not optimized for static export
   },
+  optimizeFonts: false,
 };
 
 export default nextConfig;
