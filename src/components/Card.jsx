@@ -15,6 +15,7 @@ export default function Card({
   label,
   isPasswordProtected,
   fill,
+  project,
 }) {
   const [icon, showIcon] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
@@ -39,7 +40,7 @@ export default function Card({
 
   return (
     <div className="rectangle rounded-xl relative">
-      <Link href="project/google-travel">
+      <Link href={`project/${project}`}>
         <div
           style={{
             position: 'relative',

@@ -49,6 +49,7 @@ export default function App() {
                 label="In development"
                 isPasswordProtected
                 fill={fill}
+                project="google-travel"
               />
               <Card
                 title="Famly's Redesign"
@@ -58,6 +59,7 @@ export default function App() {
                 url="famly"
                 label="Shipped"
                 fill={fill}
+                project="famly-redesign"
               />
               <Card
                 title="Racefinder App"
