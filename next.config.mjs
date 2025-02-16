@@ -13,6 +13,10 @@ const nextConfig = {
     includePaths: [path.join(__dirname, 'styles')],
   },
   basePath: isProduction ? '/nextjs-website' : '',
+  images: {
+    unoptimized: true, // Ensure images are not optimized for static export
+  },
+  optimizeFonts: false,
 };
 
 export default nextConfig;
