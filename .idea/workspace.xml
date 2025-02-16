@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="721b2078-e459-4257-8e32-71ab93b9970a" name="Changes" comment="">
+    <list default="true" id="721b2078-e459-4257-8e32-71ab93b9970a" name="Changes" comment="Remove image path">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/publish.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/setup-node/action.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Grid.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Grid.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/ProtectedRoute.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ProtectedRoute.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,6 +113,15 @@
       <workItem from="1739551885804" duration="79000" />
       <workItem from="1739551976802" duration="38006000" />
     </task>
+    <task id="LOCAL-00001" summary="Remove image path">
+      <option name="closed" value="true" />
+      <created>1739699653495</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1739699653495</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,5 +137,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Remove image path" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove image path" />
   </component>
 </project>
