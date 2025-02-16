@@ -12,11 +12,8 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
-  output: 'export',
   basePath: '/nextjs-website',
-  images: {
-    domains: ['dianatofan.github.io'],
-  },
+  output: 'export',
 };
 
 export default nextConfig;
