@@ -10,6 +10,11 @@
   font-family: 'Metropolis', sans-serif;
 }
 
+::selection {
+  color: #fff;
+  background: #000;
+}
+
 html,
 body,
 #root,
