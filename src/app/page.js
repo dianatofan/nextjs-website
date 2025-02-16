@@ -10,7 +10,7 @@ import Card from '@/components/Card';
 import Layout from '@/components/Layout';
 
 import '@/styles/styles.scss';
-import '@/styles/fonts.scss';
+// import '@/styles/fonts.scss';
 import 'animate.css';
 
 const NoSSRCanvas = dynamic(() => import('@/components/Canvas'), {
