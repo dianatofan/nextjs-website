@@ -46,7 +46,7 @@ export default function App() {
                 role="UX/UI DESIGN"
                 image="./images/thumbnail5.png"
                 url="explore"
-                label="In development"
+                label="Shipped"
                 isPasswordProtected
                 fill={fill}
                 project="google-travel"
@@ -79,6 +79,7 @@ export default function App() {
                 url="sustainability"
                 label="Side project"
                 fill={fill}
+                project="sustainable-ecommerce"
               />
               <Card
                 title="Visual Exploration of Time Series in Healthcare"
