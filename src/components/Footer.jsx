@@ -33,7 +33,7 @@ export default function Footer({ isProjectPage }) {
     });
   };
 
-  const imagePath = isProjectPage ? '../images' : './images';
+  const imagePath = '../images';
 
   return (
     <footer id="footer" className="text-white bg-black p-10 w-screen">
