@@ -24,6 +24,7 @@ export default function Page() {
       <Image
         src="../images/famly/cover.png"
         alt="cover"
+        priority
         width={1920}
         height={1080}
         layout="responsive"

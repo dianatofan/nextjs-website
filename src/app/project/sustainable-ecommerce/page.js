@@ -430,6 +430,7 @@ export default function Page() {
               width={1920}
               height={1080}
               layout="responsive"
+              priority
               className="w-full mt-12 animate__animated animate__fadeIn"
             />
           </div>

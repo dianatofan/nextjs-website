@@ -18,6 +18,7 @@ export default function Page() {
         alt="cover"
         width={1920}
         height={1080}
+        priority
         layout="responsive"
         className="w-full animate__animated animate__fadeIn"
       />

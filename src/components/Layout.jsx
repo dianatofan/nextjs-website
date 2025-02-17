@@ -4,7 +4,7 @@ import ScrollProgressBar from '@/components/ScrollProgressBar';
 import Header from '@/components/header/Header';
 import Footer from '@/components/Footer';
 
-export default ({ location, children, fill, isProjectPage }) => {
+export default ({ location, children, fill }) => {
   return (
     <div className="flex flex-col items-center">
       <ScrollProgressBar />

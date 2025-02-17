@@ -20,6 +20,7 @@ export default function Page() {
         width={1920}
         height={1080}
         layout="responsive"
+        priority
         className="w-full animate__animated animate__fadeIn"
       />
       <div className="w-screen mt-8 items-center animate__animated animate__fadeIn">
