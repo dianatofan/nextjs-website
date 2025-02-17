@@ -23,11 +23,11 @@ export default function Page() {
   );
 
   return (
-    <Layout>
+    <Layout fill={fill} isProjectPage={false}>
       <div className="container w-screen p-4 my-[14rem] mb-[6rem] max-w-screen-xl flex items-start  flex-col lg:flex-row gap-12 animate__animated animate__fadeIn">
         <div className="w-full lg:w-[45%]">
           <Image
-            src="./images/about/me2.png"
+            src="./images/about/me.jpg"
             alt="Picture with me"
             layout="responsive"
             className="animate__animated animate__fadeIn"

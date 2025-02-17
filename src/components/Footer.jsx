@@ -33,7 +33,7 @@ export default function Footer({ isProjectPage }) {
     });
   };
 
-  const imagePath = !!isProjectPage ? '../images' : './images';
+  const imagePath = isProjectPage ? '../images' : './images';
 
   return (
     <footer id="footer" className="text-white bg-black p-10 w-screen">
@@ -103,7 +103,7 @@ export default function Footer({ isProjectPage }) {
             &copy; {`${new Date().getFullYear()}`} Diana Tofan
           </span>
           <span className={metropolis.className}>
-            Built with Next.js, Tailwind and a sprinkle of 3D magic
+            Handcrafted with Next.js, Tailwind and a sprinkle of 3D magic
           </span>
         </div>
       </div>

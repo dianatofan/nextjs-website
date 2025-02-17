@@ -9,10 +9,16 @@ export default function LinkItem({ title, description, image, link }) {
     >
       <div className="flex items-center">
         <img src={image} alt="Profile" className="w-8 h-8 rounded-full mr-4" />
-        <span className={`${metropolis.className} font-semibold`}>{title}</span>
+        <span
+          className={`${metropolis.className} text-sm md:text-base font-semibold`}
+        >
+          {title}
+        </span>
       </div>
       <div className="flex items-center">
-        <span className={`${metropolis.className} text-gray-500 mr-2`}>
+        <span
+          className={`${metropolis.className} text-gray-500 text-sm md:text-base  mr-2`}
+        >
           {description}
         </span>
         <a

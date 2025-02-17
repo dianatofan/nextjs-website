@@ -20,7 +20,6 @@ export default function Overlay({ fill }) {
             ).scrollTop;
 
       setScrollTop(scrollTop);
-      console.log(scrollTop);
       document.getElementById('scroll-to-explore').style.opacity =
         1 - scrollTop / 400;
     };

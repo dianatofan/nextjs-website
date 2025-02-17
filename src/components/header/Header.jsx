@@ -11,7 +11,7 @@ import { metropolis } from '@/app/utils/local-font';
 import Burger from './Hamburger';
 import Menu from './Menu';
 
-export default function Header({ location, fill, background }) {
+export default function Header({ fill, background }) {
   const [isOpen, setOpen] = useState(false);
   const activePage = usePathname();
   const router = useRouter();
@@ -57,9 +57,6 @@ export default function Header({ location, fill, background }) {
               </a.p>
             </Link>
           </li>
-          {/* <li className={activePage === "/resume" || activePage === "/resume/" ? "active" : ""}>
-            <div to="/resume">Resume</div>
-          </li> */}
         </ul>
         <div className="burgerMenuNavigation">
           <Burger
