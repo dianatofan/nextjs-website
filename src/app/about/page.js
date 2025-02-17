@@ -30,6 +30,7 @@ export default function Page() {
             src="./images/about/me.jpg"
             alt="Picture with me"
             layout="responsive"
+            priority
             className="animate__animated animate__fadeIn"
             width={420}
             height={580}
