@@ -15,10 +15,6 @@ const nextConfig = {
   },
   assetPrefix: isProduction ? '/nextjs-website' : '',
   basePath: isProduction ? '/nextjs-website' : '',
-  images: {
-    unoptimized: true, // Ensure images are not optimized for static export
-  },
-  optimizeFonts: false,
 };
 
 export default nextConfig;
