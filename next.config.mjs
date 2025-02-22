@@ -13,8 +13,8 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
-  assetPrefix: isProduction ? '/nextjs-website' : '',
-  basePath: isProduction ? '/nextjs-website' : '',
+  assetPrefix: isProduction ? 'https://dianatofan.net/' : '',
+  basePath: '',
 };
 
 export default nextConfig;
