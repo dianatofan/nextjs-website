@@ -3,6 +3,7 @@ import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
 const isProduction = process.env.NODE_ENV === 'production';
 /**
  * @type {import('next').NextConfig}
@@ -12,6 +13,7 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
+  assetPrefix: isProduction ? '/nextjs-website' : '',
   basePath: isProduction ? '/nextjs-website' : '',
   images: {
     unoptimized: true, // Ensure images are not optimized for static export
