@@ -1,10 +1,12 @@
 'use client';
 
 import React from 'react';
+import dynamic from 'next/dynamic';
 import { OrbitControls } from '@react-three/drei';
-import Scene from '@/components/Scene';
 import { Canvas } from '@react-three/fiber';
 import '@/styles/styles.scss';
+
+const Scene3D = dynamic(() => import('@/components/Scene'), { ssr: false });
 
 export default function CanvasComponent({ setBg }) {
   return (
@@ -13,7 +15,7 @@ export default function CanvasComponent({ setBg }) {
       dpr={[1, 2]}
       shadows
     >
-      <Scene setBg={setBg} />
+      <Scene3D setBg={setBg} />
       <OrbitControls
         enablePan={false}
         enableZoom={false}
