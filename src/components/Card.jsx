@@ -4,8 +4,6 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import '../styles/card.scss';
 import { metropolis } from '@/app/utils/local-font';
-
-import { a } from '@react-spring/web';
 import Chip from '@/components/Chip';
 
 export default function Card({
@@ -48,34 +46,36 @@ export default function Card({
             height: '320px',
             overflow: 'hidden',
           }}
-          className="rounded-xl"
+          className="rounded-xl group"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
         >
           <Image
             src={image}
-            alt={description}
+            alt={title}
             layout="fill"
             style={{ objectFit: 'cover' }}
-            className="rounded-xl object-cover transform transition-transform duration-500 hover:scale-110"
+            className="rounded-xl object-cover transform transition-transform duration-500 group-hover:scale-110"
             unoptimized
             priority
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
           />
+          <div
+            className={`absolute left-0 bottom-0 w-full flex items-center justify-center
+    transition-all duration-300
+    ${isHovered ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'}
+  `}
+          >
+            <span className="w-full px-6 py-4 text-lg font-medium text-white flex justify-between items-center rounded-b-xl relative bg-gradient-to-t from-black/80 to-transparent">
+              <span>{title}</span>
+              <span className="inline-flex gap-2 items-center">
+                <Chip label={label} />
+                {isPasswordProtected && <Chip isPasswordProtected />}
+              </span>
+            </span>
+          </div>
         </div>
       </Link>
       <div className="py-4">
-        <div className="flex flex-col md:flex-row align-center mb-2 gap-2">
-          <a.div
-            className={`${metropolis.className} text-xl font-semibold text-primary`}
-            style={{ color: fill }}
-          >
-            {title}
-          </a.div>
-          <div className="inline-flex gap-2 items-center">
-            <Chip label={label} />
-            {isPasswordProtected && <Chip isPasswordProtected />}
-          </div>
-        </div>
         <div
           className={`${metropolis.className} block text-base text-gray-500`}
         >

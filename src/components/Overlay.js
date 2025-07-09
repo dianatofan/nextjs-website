@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { a } from '@react-spring/web';
 import 'animate.css';
-import { metropolis } from '@/app/utils/local-font';
+import { metropolis, nauryz } from '@/app/utils/local-font';
 
 export default function Overlay({ fill }) {
   const [scrollTop, setScrollTop] = useState(0);
@@ -34,30 +34,16 @@ export default function Overlay({ fill }) {
   return (
     <div className="overlay animate__animated animate__fadeIn lg:w-1/2 lg:p-4 mx-8">
       <span
-        className={`${metropolis.className} inline-block mt-4 mb-2 text-sm md:mb-3 md:text-base text-tertiary font-normal`}
+        className={`${metropolis.className} inline-block mt-4 mb-4 lg:text-3xl md:mb-6 md:text-base text-primary opacity-70 tracking-tighter font-semibold`}
       >
-        ✨ Hello! I&apos;m Diana Tofan
+        Hello! I&apos;m Diana Tofan
       </span>
       <a.h1
-        className={`${metropolis.className} text-4xl antialiased tracking-tighter lg:leading-headers md:text-5xl text-primary font-semibold lg:max-w-lg`}
+        className={`${nauryz.className} lg:text-8xl md:text-7xl text-6xl antialiased tracking-tighter lg:leading-headers text-primary font-semibold lg:max-w-lg`}
         style={{ color: fill }}
       >
-        I'm a UX designer with frontend superpowers who loves bringing ideas to
-        life.
+        UX Designer & Frontend Engineer
       </a.h1>
-      <a.span
-        className={`${metropolis.className} role inline-block mt-4 mb-2 text-sm md:mb-3 md:text-base font-normal text-primary`}
-        id="scroll-to-explore"
-        style={{ color: fill }}
-      >
-        Scroll to explore{' '}
-        <a.div
-          className="icon-scroll"
-          style={{
-            boxShadow: `inset 0 0 0 1.5px ${fill}`,
-          }}
-        />
-      </a.span>
     </div>
   );
 }

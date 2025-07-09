@@ -1,8 +1,9 @@
 import '@/styles/ProtectedRoute.scss';
-
 import { ArrowRight } from 'react-feather';
 import React, { useEffect, useState } from 'react';
 import VideoBackground from '@/components/VideoBackground';
+
+const ONE_HOUR = 60 * 60 * 1000;
 
 const ProtectedRoute = ({ children, location }) => {
   const [password, setPassword] = useState('');
@@ -10,13 +11,32 @@ const ProtectedRoute = ({ children, location }) => {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
+      const loggedIn = window.localStorage.getItem('loggedIn');
+      if (loggedIn) {
+        try {
+          const { value, expires } = JSON.parse(loggedIn);
+          if (value && Date.now() < expires) {
+            setPasswordCorrect(true);
+          } else {
+            window.localStorage.removeItem('loggedIn');
+          }
+        } catch {
+          window.localStorage.removeItem('loggedIn');
+        }
+      }
     }
-  }, [passwordCorrect]);
+  }, []);
 
   const onSubmit = (event) => {
     event.preventDefault();
     if (password === 'sasayaku') {
       setPasswordCorrect(true);
+      if (typeof window !== 'undefined') {
+        window.localStorage.setItem(
+          'loggedIn',
+          JSON.stringify({ value: true, expires: Date.now() + ONE_HOUR })
+        );
+      }
     } else {
       document.getElementById('button').classList.add('animate__shakeX');
       setTimeout(function () {
@@ -28,9 +48,7 @@ const ProtectedRoute = ({ children, location }) => {
 
   return (
     <>
-      {passwordCorrect ||
-      (typeof window !== 'undefined' &&
-        window.localStorage.getItem('loggedIn') === 'true') ? (
+      {passwordCorrect ? (
         <>{children}</>
       ) : (
         <VideoBackground>

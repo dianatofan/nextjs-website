@@ -12,6 +12,7 @@ import Layout from '@/components/Layout';
 import '@/styles/styles.scss';
 // import '@/styles/fonts.scss';
 import 'animate.css';
+import { metropolis } from '@/app/utils/local-font';
 
 const NoSSRCanvas = dynamic(() => import('@/components/Canvas'), {
   ssr: false,
@@ -36,14 +37,29 @@ export default function App() {
           <NoSSRCanvas setBg={set} />
           <Overlay fill={fill} />
         </section>
+        <section className="animate__animated animate__fadeIn animate__delay-1s w-full h-[10vh] text-center flex items-center justify-center">
+          <a.span
+            className={`${metropolis.className} role inline-block mt-4 mb-2 text-sm md:mb-3 md:text-base font-normal text-primary`}
+            id="scroll-to-explore"
+            style={{ color: fill }}
+          >
+            <a.div
+              className="icon-scroll"
+              style={{
+                boxShadow: `inset 0 0 0 1.5px ${fill}`,
+              }}
+            />
+          </a.span>
+        </section>
+
         <section className="animate__animated animate__fadeIn animate__delay-1s w-full ml-8 mr-8 flex justify-center">
           <div className="max-w-screen-xl">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:p-4 mx-4">
               <Card
-                title="An Enhanced Travel Experience"
+                title="Google Search for Travellers"
                 description="Making Google Search the most loved tool for travellers"
                 role="UX/UI DESIGN"
-                image="./images/thumbnail5.png"
+                image="./images/thumbnail5v2.png"
                 url="explore"
                 label="Shipped"
                 isPasswordProtected
@@ -51,10 +67,10 @@ export default function App() {
                 project="google-travel"
               />
               <Card
-                title="Famly's Redesign"
+                title="Famly's First-Ever Design System"
                 description="Shaping a design system for a mature product"
                 role="UX/UI DESIGN | USER RESEARCH"
-                image="./images/famly.png"
+                image="./images/famlyThumbnail.png"
                 url="famly"
                 label="Shipped"
                 fill={fill}
