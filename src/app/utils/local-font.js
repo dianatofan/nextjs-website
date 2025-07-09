@@ -29,13 +29,12 @@ export const metropolis = localFont({
   ],
 });
 
-// export const nauryz = localFont({
-//   src: [
-//     {
-//       path: '../fonts/Nauryz/Nauryz.ttf',
-//       weight: '400',
-//       style: 'normal',
-//       format: 'truetype',
-//     },
-//   ],
-// });
+export const nauryz = localFont({
+  src: [
+    {
+      path: '../fonts/Nauryz/Nauryz.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+  ],
+});
