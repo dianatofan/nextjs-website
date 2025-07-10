@@ -10,7 +10,7 @@ import TravelStatistics from '@/app/project/google-travel/travel-statistics';
 import '@/styles/about.scss';
 import '@/styles/styles.scss';
 import Layout from '@/components/Layout';
-import { metropolis } from '@/app/utils/local-font';
+import { metropolis, nauryz } from '@/app/utils/local-font';
 
 const labels = [
   { text: 'Google' },
@@ -142,7 +142,7 @@ export default function Page() {
                 Why it mattered?
               </h2>
               <h3
-                className={`text-4xl md:text-5xl lg:text-6xl font-medium leading-tighter tracking-tighter mb-8 ${metropolis.className}`}
+                className={`text-4xl md:text-5xl lg:text-6xl font-semibold leading-tighter tracking-tighter mb-8 ${metropolis.className}`}
               >
                 Trip planning on Google felt fragmented and overwhelming.
               </h3>
@@ -184,12 +184,17 @@ export default function Page() {
               </div>
             </div>
           </section>
-          <section className="bg-black text-white py-40 md:py-56 text-center  w-lg xl:flex items-center justify-center w-screen px-8">
+          <section className="bg-black text-white py-40 md:py-56 text-center  w-lg xl:flex flex-col items-center justify-center w-screen px-8 gap-3">
             <p
-              className={`text-6xl antialiased tracking-tighter lg:leading-tight md:text-7xl text-white font-semibold max-w-6xl mx-auto ${metropolis.className}`}
+              className={`text-7xl antialiased tracking-tighter lg:leading-tight md:text-8xl text-white font-semibold max-w-6xl mx-auto ${nauryz.className}`}
             >
-              How might we help travellers narrow down their choices when
-              planning a vacation?
+              How might we
+            </p>
+            <p
+              className={`text-6xl antialiased tracking-tighter lg:leading-tighter md:text-7xl text-white font-semibold max-w-5xl mx-auto ${metropolis.className}`}
+            >
+              help travellers narrow down their choices when planning a
+              vacation?
             </p>
           </section>
           <section className="relative z-10 px-6 md:px-8 py-16 md:py-24 max-w-7xl mx-auto">
