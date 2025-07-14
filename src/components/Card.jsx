@@ -3,13 +3,11 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import '../styles/card.scss';
-import { metropolis } from '@/app/utils/local-font';
 import Chip from '@/components/Chip';
 
 export default function Card({
   image,
   title,
-  description,
   label,
   isPasswordProtected,
   fill,
@@ -37,12 +35,12 @@ export default function Card({
   }, [isHovered]);
 
   return (
-    <div className="rectangle rounded-xl relative">
-      <Link href={`project/${project}`}>
+    <Link href={`project/${project}`}>
+      <div className="rectangle rounded-xl relative">
         <div
           style={{
             position: 'relative',
-            width: 'auto',
+            width: '100%',
             height: '320px',
             overflow: 'hidden',
           }}
@@ -54,8 +52,8 @@ export default function Card({
             src={image}
             alt={title}
             layout="fill"
-            style={{ objectFit: 'cover' }}
-            className="rounded-xl object-cover transform transition-transform duration-500 group-hover:scale-110"
+            style={{ objectFit: 'cover', objectPosition: 'top' }}
+            className="rounded-xl object-fill transform transition-transform duration-500 group-hover:scale-110"
             unoptimized
             priority
           />
@@ -74,14 +72,7 @@ export default function Card({
             </span>
           </div>
         </div>
-      </Link>
-      <div className="py-4">
-        <div
-          className={`${metropolis.className} block text-base text-gray-500`}
-        >
-          {description}
-        </div>
       </div>
-    </div>
+    </Link>
   );
 }

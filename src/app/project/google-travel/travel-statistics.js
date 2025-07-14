@@ -2,7 +2,7 @@
 
 export default function TravelStatistics() {
   return (
-    <div className="min-h-screen p-8 md:p-16">
+    <div>
       <style jsx>{`
         @keyframes wobble1 {
           0%,

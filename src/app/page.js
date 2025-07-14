@@ -53,13 +53,13 @@ export default function App() {
         </section>
 
         <section className="animate__animated animate__fadeIn animate__delay-1s w-full ml-8 mr-8 flex justify-center">
-          <div className="max-w-screen-xl">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:p-4 mx-4">
+          <div className="max-w-screen-xl w-full py-8 mx-4 lg:mx-0">
+            <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-6">
               <Card
                 title="Google Search for Travellers"
                 description="Making Google Search the most loved tool for travellers"
                 role="UX/UI DESIGN"
-                image="./images/thumbnail5v2.png"
+                image="./images/thumbnail5.png"
                 url="explore"
                 label="Shipped"
                 isPasswordProtected
