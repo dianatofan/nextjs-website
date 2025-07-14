@@ -39,7 +39,7 @@ export default function Overlay({ fill }) {
         Hello! I&apos;m Diana Tofan
       </span>
       <a.h1
-        className={`${nauryz.className} lg:text-8xl md:text-7xl text-6xl antialiased tracking-tighter lg:leading-headers text-primary font-semibold lg:max-w-lg`}
+        className={`${nauryz.className} lg:text-8xl md:text-7xl text-6xl antialiased tracking-tighter lg:leading-headers text-primary font-medium lg:max-w-lg`}
         style={{ color: fill }}
       >
         UX Designer & Frontend Engineer
