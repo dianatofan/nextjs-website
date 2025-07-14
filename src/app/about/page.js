@@ -58,10 +58,9 @@ export default function Page() {
             <span className={`${metropolis.className} text-tertiary`}>
               business goals
             </span>{' '}
-            to fuel growth. Having a deep understanding of both sides of the
-            product lifecycle, I can communicate clearly with all types of
-            stakeholders, regardless of their background, to ensure great
-            output.
+            to fuel growth. Having a deep understanding of the entire product
+            lifecycle, I can communicate clearly with all types of stakeholders,
+            regardless of their background, to ensure great output.
           </h1>
           {/*<p className="text-gray-400 text-lg">/dee · uh · nah/</p>*/}
           {/*<p className="text-3xl font-semibold">*/}
