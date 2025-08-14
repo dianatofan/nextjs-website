@@ -87,6 +87,14 @@ export default function Page() {
                   Background
                 </h3>
                 <p className={`text-lg mb-4 ${metropolis.className}`}>
+                  Most of the live content in a game—sales events, rewards,
+                  pricing, and timing—is stored in JSON files. Traditionally,
+                  only developers could edit these files. A JSON Editor brings
+                  this data into a user-friendly interface, so non-technical
+                  release managers can safely make changes without touching raw
+                  code.
+                </p>
+                <p className={`text-lg mb-4 ${metropolis.className}`}>
                   In a live game environment, timing is everything—whether it's
                   launching a seasonal event, adjusting pricing, or fixing
                   gameplay issues. But before the JSON Editor, release managers
