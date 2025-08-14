@@ -117,8 +117,8 @@ export default function Page() {
               End-to-end expertise
             </h2>
             <p className={`${metropolis.className} text-base text-gray-600`}>
-              I bridge the gap between design and development, ensuring seamless
-              integration from early concept to final product.
+              I bridge design and development to deliver smooth, cohesive
+              products.
             </p>
           </div>
           <div className="flex flex-col items-center text-center">
@@ -133,9 +133,7 @@ export default function Page() {
               Rapid prototyping
             </h2>
             <p className={`${metropolis.className} text-base text-gray-600`}>
-              I can deliver multiple versions of a concept quickly, moving fast
-              through iterations to refine and improve concepts based on
-              real-world feedback.
+              I iterate fast, using real feedback to refine concepts quickly.
             </p>
           </div>
           <div className="flex flex-col items-center text-center">
@@ -147,11 +145,10 @@ export default function Page() {
             <h2
               className={`${metropolis.className} text-xl font-semibold mb-2`}
             >
-              Collaboration & communication
+              Cross-functional collaboration
             </h2>
             <p className={`${metropolis.className} text-base text-gray-600`}>
-              I communicate effectively across teams, ensuring alignment and a
-              clear understanding of technical and design constraints.
+              I align teams through clear, effective communication.
             </p>
           </div>
         </div>
@@ -184,9 +181,8 @@ export default function Page() {
               Technical proficiency
             </h2>
             <p className={`${metropolis.className} text-base text-gray-600`}>
-              I’m able to create interactive prototypes with live data and
-              complex microinteractions, pushing beyond the limitations of tools
-              like Figma.
+              I translate designs into interactive prototypes with live data and
+              complex interactions.
             </p>
           </div>
           <div className="flex flex-col items-center text-center">

@@ -67,6 +67,17 @@ export default function App() {
                 project="google-travel"
               />
               <Card
+                title="JSON Editor UI"
+                description="Enabling faster, safer, developer-independent updates to live game content"
+                role="UX/UI DESIGN"
+                image="./images/thumbnail6.png"
+                url="json"
+                label="Shipped"
+                isPasswordProtected
+                fill={fill}
+                project="json"
+              />
+              <Card
                 title="Famly's First-Ever Design System"
                 description="Shaping a design system for a mature product"
                 role="UX/UI DESIGN | USER RESEARCH"
