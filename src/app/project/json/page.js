@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import ProtectedRoute from '@/components/ProtectedRoute';
 import 'animate.css';
@@ -9,6 +9,8 @@ import '@/styles/about.scss';
 import '@/styles/styles.scss';
 import Layout from '@/components/Layout';
 import { metropolis, nauryz } from '@/app/utils/local-font';
+import MethodsComparison from '@/app/project/json/methods-comparison';
+import ImageCompare from 'image-compare-viewer';
 
 const labels = [
   { text: 'Google' },
@@ -18,6 +20,14 @@ const labels = [
 ];
 
 export default function Page() {
+  useEffect(() => {
+    const viewers = document.querySelectorAll('.image-compare');
+
+    viewers?.forEach((element) => {
+      let view = new ImageCompare(element).mount();
+    });
+  }, []);
+
   return (
     <ProtectedRoute>
       <Layout isProjectPage>
@@ -86,14 +96,14 @@ export default function Page() {
                 >
                   Background
                 </h3>
-                <p className={`text-lg mb-4 ${metropolis.className}`}>
-                  Most of the live content in a game—sales events, rewards,
-                  pricing, and timing—is stored in JSON files. Traditionally,
-                  only developers could edit these files. A JSON Editor brings
-                  this data into a user-friendly interface, so non-technical
-                  release managers can safely make changes without touching raw
-                  code.
-                </p>
+                {/*<p className={`text-lg mb-4 ${metropolis.className}`}>*/}
+                {/*  Most of the live content in a game—sales events, rewards,*/}
+                {/*  pricing, and timing—is stored in JSON files. Traditionally,*/}
+                {/*  only developers could edit these files. A JSON Editor brings*/}
+                {/*  this data into a user-friendly interface, so non-technical*/}
+                {/*  release managers can safely make changes without touching raw*/}
+                {/*  code.*/}
+                {/*</p>*/}
                 <p className={`text-lg mb-4 ${metropolis.className}`}>
                   In a live game environment, timing is everything—whether it's
                   launching a seasonal event, adjusting pricing, or fixing
@@ -130,9 +140,9 @@ export default function Page() {
               >
                 In lives games, everything runs on JSON
               </h1>
-              <p className={`text-lg mt-4 mb-4 ${metropolis.className}`}>
-                including limited-time sale events👇
-              </p>
+              {/*<p className={`text-lg mt-4 mb-4 ${metropolis.className}`}>*/}
+              {/*  including limited-time sale events👇*/}
+              {/*</p>*/}
               <Image
                 src="/images/json/jsonInAGame.png"
                 alt="cover"
@@ -141,10 +151,10 @@ export default function Page() {
                 layout="responsive"
                 className="w-full mt-12 animate__animated animate__fadeIn"
               />
-              <p className={`text-lg mt-4 mb-4 ${metropolis.className}`}>
-                hence the need for a safe way of managing data without risking
-                stability
-              </p>
+              {/*<p className={`text-lg mt-4 mb-4 ${metropolis.className}`}>*/}
+              {/*  hence the need for a safe way of managing data without risking*/}
+              {/*  stability*/}
+              {/*</p>*/}
             </div>
           </section>
           <section className="bg-black text-white py-40 md:py-56 text-center  w-lg xl:flex flex-col items-center justify-center w-screen px-8 gap-3">
@@ -177,21 +187,93 @@ export default function Page() {
                 <h3
                   className={`font-semibold uppercase text-gray-400 text-sm mb-4 ${metropolis.className}`}
                 >
-                  User research
+                  Technical exploration
                 </h3>
                 <p className={`text-lg mb-6 ${metropolis.className}`}>
-                  I spoke with release managers to understand pain points,
-                  workflows, and the types of mistakes that commonly occurred
-                  when editing raw JSON.
+                  I didn’t start this project with formal user research—the pain
+                  was already well-known across the company, voiced daily in
+                  Slack and in conversations with release managers. As an
+                  engineering-minded designer, I focused instead on the
+                  solution. I began by investigating how to transform raw JSON
+                  files into readable, editable content in a web browser. My
+                  goal was to design an interface that made configuration data
+                  approachable for non-technical users, while still respecting
+                  the complexity of the underlying game systems.
                 </p>
-                <Image
-                  src="/images/json/research.png"
-                  alt="cover"
-                  width={1920}
-                  height={1080}
-                  layout="responsive"
-                  className="w-full mt-4 animate__animated animate__fadeIn"
-                />
+                <br />
+                <h3
+                  className={`font-semibold uppercase text-gray-400 text-sm mb-4 ${metropolis.className}`}
+                >
+                  Options considered
+                </h3>
+                <MethodsComparison />
+                <br />
+                <h3
+                  className={`font-semibold uppercase text-gray-400 text-sm mb-4 ${metropolis.className}`}
+                >
+                  Decision
+                </h3>
+                <p className={`text-lg mb-6 ${metropolis.className}`}>
+                  I chose the schema-driven approach using the&nbsp;
+                  <code className="text-tertiary">
+                    react-jsonschema-form
+                  </code>{' '}
+                  library. This gave us a scalable foundation while allowing me
+                  to design a custom interface layer to improve usability for
+                  release managers.
+                </p>
+              </div>
+            </div>
+          </section>
+          <section className="bg-white  py-12 flex items-center w-screen justify-center px-8">
+            <div className="xl:flex items-center justify-between w-screen max-w-screen-xl">
+              {/* Left column: Heading */}
+              <div className="xl:w-1/4 flex items-start xl:items-center">
+                <h1
+                  className={`text-lg xl:text-2xl text-gray-400 font-semibold ${metropolis.className}`}
+                  id="overview"
+                >
+                  Why it was hard
+                </h1>
+              </div>
+              {/* Right column: Paragraph + Image */}
+              <div className="xl:w-3/4 flex flex-col">
+                <p className={`text-lg mb-6 ${metropolis.className}`}>
+                  When I first explored using the &nbsp;
+                  <code className="text-tertiary">
+                    react-jsonschema-form
+                  </code>{' '}
+                  library, it looked like the perfect shortcut for turning JSON
+                  schemas into editable forms, but in practice the default UI
+                  was too rigid and clunky for real game data. Nested arrays,
+                  unclear errors, and a developer-centric layout made it
+                  unusable for release managers. I kept its schema-driven core
+                  for flexibility and validation, but built a custom interface
+                  layer on top — reorganizing fields, adding clear labels and
+                  guardrails, and streamlining flows so the tool felt intuitive
+                  and safe. In the end, the library provided the structure while
+                  my design system delivered the experience.
+                </p>
+              </div>
+            </div>
+          </section>
+          <section className="bg-white flex flex-col items-center w-screen justify-center px-8">
+            <div className="w-screen lg:px-64">
+              <div className="flex flex-wrap justify-center">
+                <div
+                  className="w-full md:w-1/2 lg:w-1/2 max-w-xs mx-auto image-compare"
+                  id="image-compare"
+                >
+                  <img src="../images/famly/before1.png" alt="" />
+                  <img src="../images/famly/after1.png" alt="" />
+                </div>
+                <div
+                  className="w-full md:w-1/2 lg:w-1/2 max-w-xs mx-auto image-compare"
+                  id="image-compare"
+                >
+                  <img src="../images/famly/before2.png" alt="" />
+                  <img src="../images/famly/after2.png" alt="" />
+                </div>
               </div>
             </div>
           </section>
