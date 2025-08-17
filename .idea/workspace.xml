@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="721b2078-e459-4257-8e32-71ab93b9970a" name="Changes" comment="Remove image path">
+      <change afterPath="$PROJECT_DIR$/public/images/json/boxes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/json/containers.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/json/figma.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/json/flow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/json/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/json/jsonSchema.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/project/json/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/project/json/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.mjs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +124,8 @@
       <workItem from="1745151718955" duration="609000" />
       <workItem from="1752479624800" duration="2313000" />
       <workItem from="1755099193346" duration="11505000" />
-      <workItem from="1755207551641" duration="752000" />
+      <workItem from="1755207551641" duration="7308000" />
+      <workItem from="1755457194662" duration="3829000" />
     </task>
     <task id="LOCAL-00001" summary="Remove image path">
       <option name="closed" value="true" />
@@ -147,5 +155,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Remove image path" />
     <option name="LAST_COMMIT_MESSAGE" value="Remove image path" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/project/famly-redesign/page.js</url>
+          <line>117</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

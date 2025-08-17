@@ -22,7 +22,7 @@ const labels = [
 export default function Page() {
   useEffect(() => {
     const viewers = document.querySelectorAll('.image-compare');
-
+    console.log('viewers', viewers);
     viewers?.forEach((element) => {
       let view = new ImageCompare(element).mount();
     });
@@ -260,21 +260,37 @@ export default function Page() {
           <section className="bg-white flex flex-col items-center w-screen justify-center px-8">
             <div className="w-screen lg:px-64">
               <div className="flex flex-wrap justify-center">
-                <div
-                  className="w-full md:w-1/2 lg:w-1/2 max-w-xs mx-auto image-compare"
-                  id="image-compare"
-                >
-                  <img src="../images/famly/before1.png" alt="" />
-                  <img src="../images/famly/after1.png" alt="" />
-                </div>
-                <div
-                  className="w-full md:w-1/2 lg:w-1/2 max-w-xs mx-auto image-compare"
-                  id="image-compare"
-                >
-                  <img src="../images/famly/before2.png" alt="" />
-                  <img src="../images/famly/after2.png" alt="" />
-                </div>
+                <Image
+                  src="/images/json/jsonSchema.png"
+                  alt="cover"
+                  width={1920}
+                  height={1080}
+                  layout="responsive"
+                  className="w-full mt-12 animate__animated animate__fadeIn"
+                />
+                <p className="text-left text-gray-500 mt-4 text-sm">
+                  react-json-schema-form default UI
+                </p>
               </div>
+            </div>
+          </section>
+          <br />
+          <section className="bg-black text-white w-lg xl:flex items-center justify-center w-screen px-8 al">
+            <div
+              className={`text-5xl antialiased tracking-tighter lg:leading-tight md:text-6xl text-white text-center font-semibold max-w-screen-md mx-auto py-32 ${metropolis.className}`}
+            >
+              <p
+                className={`text-7xl antialiased tracking-tighter lg:leading-tight md:text-8xl text-white font-medium max-w-6xl mx-auto ${nauryz.className}`}
+              >
+                Goal
+              </p>
+              <p
+                className={`text-6xl antialiased tracking-tighter lg:leading-tighter md:text-10xl text-white font-semibold max-w-8xl mx-auto ${metropolis.className}`}
+              >
+                Keep the power of a schema-driven approach while designing a{' '}
+                <span className="text-tertiary">custom UI layer</span> on top of
+                the 3rd party
+              </p>
             </div>
           </section>
 
@@ -290,37 +306,80 @@ export default function Page() {
           {/*</section>*/}
           {/* State-of-art Section */}
           <section className="bg-white py-12 flex flex-col items-center w-screen justify-center px-8">
-            <div className="w-screen p-8 lg:px-32 lg:py-8">
+            <div className="w-screen p-8 lg:px-32 lg:py-16">
               <h1
-                className={`max-w-screen-xl text-xl antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-3xl text-primary font-semibold ${metropolis.className}`}
+                className={`max-w-screen-xl text-lg antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-2xl text-gray-400 font-semibold ${metropolis.className}`}
                 id="overview"
               >
-                A typical user journey is... frustrating
+                Taking a step back
               </h1>
-            </div>
-            <div className="max-w-screen-lg">
               <Image
-                src="/images/explore/uxnow.png"
+                src="/images/json/boxes.png"
                 alt="cover"
                 width={1920}
                 height={1080}
                 layout="responsive"
                 className="w-full mt-12 animate__animated animate__fadeIn"
               />
+              <p className="text-center text-gray-500 mt-4 text-sm">
+                Left: Nested element, Right: Flat item
+              </p>
             </div>
           </section>
+          <section className="bg-white py-12 flex flex-col items-center w-screen justify-center px-8">
+            <div className="w-screen p-8 lg:px-32 lg:py-16">
+              <h1
+                className={`max-w-screen-xl text-lg antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-2xl text-gray-400 font-semibold ${metropolis.className}`}
+                id="overview"
+              >
+                Taking a step forward
+              </h1>
+              <Image
+                src="/images/json/containers.png"
+                alt="cover"
+                width={1920}
+                height={1080}
+                layout="responsive"
+                className="w-full mt-12 animate__animated animate__fadeIn"
+              />
+              <p className="text-center text-gray-500 mt-4 text-sm">
+                Left: Nested element, Right: Flat item
+              </p>
+            </div>
+          </section>
+          <section className="bg-figmaGray py-12 flex flex-col items-center w-screen justify-center px-8">
+            <div className="w-screen p-8 lg:px-32 lg:py-8">
+              <h1
+                className={`max-w-screen-xl text-xl antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-3xl  font-semibold ${metropolis.className}`}
+                id="overview"
+              >
+                Brainstorming
+              </h1>
+            </div>
+            <div className="max-w-screen-lg">
+              <Image
+                src="/images/json/figma.png"
+                alt="cover"
+                width={1920}
+                height={1080}
+                layout="responsive"
+                className="w-full mt-6 animate__animated animate__fadeIn"
+              />
+            </div>
+          </section>
+
           <section className="bg-white py-12 flex flex-col items-center w-screen justify-center px-8">
             <div className="w-screen p-8 lg:px-32 lg:py-8">
               <h1
                 className={`max-w-screen-xl text-xl antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-3xl text-primary font-semibold ${metropolis.className}`}
                 id="overview"
               >
-                An ideal user journey is... awesome
+                User flow
               </h1>
             </div>
             <div className="max-w-screen-lg">
               <Image
-                src="/images/explore/uxideal.png"
+                src="/images/json/flow.png"
                 alt="cover"
                 width={1920}
                 height={1080}
@@ -330,26 +389,7 @@ export default function Page() {
             </div>
           </section>
           {/* Quote Section */}
-          <section className="bg-black text-white w-lg xl:flex items-center justify-center w-screen px-8 al">
-            <div
-              className={`text-5xl antialiased tracking-tighter lg:leading-tight md:text-6xl text-white text-center font-semibold max-w-screen-md mx-auto py-32 ${metropolis.className}`}
-            >
-              <p
-                className={`text-7xl antialiased tracking-tighter lg:leading-tight md:text-8xl text-white font-medium max-w-6xl mx-auto ${nauryz.className}`}
-              >
-                Goal
-              </p>
-              <p
-                className={`text-6xl antialiased tracking-tighter lg:leading-tighter md:text-10xl text-white font-semibold max-w-8xl mx-auto ${metropolis.className}`}
-              >
-                Design a{' '}
-                <span className="text-tertiary">
-                  structured, intuitive JSON Editor UI
-                </span>{' '}
-                to allow users to safely edit game configurations
-              </p>
-            </div>
-          </section>
+
           <section className="bg-white py-12 flex items-center w-screen justify-center px-8">
             <div className="xl:flex items-center justify-between w-screen max-w-screen-xl gap-6">
               <h1

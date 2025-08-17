@@ -21,6 +21,7 @@ export default {
         green: '#509b3c',
         lightGreen: '#E8F5E2',
         grayRace: '#F0F0F0',
+        figmaGray: '#f6f6f6',
       },
       keyframes: {
         fadeIn: {
