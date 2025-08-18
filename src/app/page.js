@@ -97,16 +97,16 @@ export default function App() {
                 fill={fill}
                 project="racefinder"
               />
-              <Card
-                title="Sustainable E-Commerce"
-                description="Reimagining the checkout flow to reduce packaging waste in online orders"
-                role="UX/UI DESIGN | USER RESEARCH"
-                image="./images/thumbnail3.png"
-                url="sustainability"
-                label="Side project"
-                fill={fill}
-                project="sustainable-ecommerce"
-              />
+              {/*<Card*/}
+              {/*  title="Sustainable E-Commerce"*/}
+              {/*  description="Reimagining the checkout flow to reduce packaging waste in online orders"*/}
+              {/*  role="UX/UI DESIGN | USER RESEARCH"*/}
+              {/*  image="./images/thumbnail3.png"*/}
+              {/*  url="sustainability"*/}
+              {/*  label="Side project"*/}
+              {/*  fill={fill}*/}
+              {/*  project="sustainable-ecommerce"*/}
+              {/*/>*/}
               <Card
                 title="Visual Exploration of Time Series in Healthcare"
                 description="Generate medical charts given patient data"
