@@ -51,12 +51,13 @@ export default function Card({
           <Image
             src={image}
             alt={title}
-            layout="fill"
+            fill
             style={{ objectFit: 'cover', objectPosition: 'top' }}
             className="rounded-xl object-fill transform transition-transform duration-500 group-hover:scale-110"
             unoptimized
             priority
           />
+
           <div
             className={`absolute left-0 bottom-0 w-full flex items-center justify-center
     transition-all duration-300

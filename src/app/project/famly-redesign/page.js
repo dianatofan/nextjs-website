@@ -6,6 +6,7 @@ import Image from 'next/image';
 import '@/styles/about.scss';
 import '@/styles/styles.scss';
 import Layout from '@/components/Layout';
+import Tldr from '@/components/Tldr';
 import { metropolis } from '@/app/utils/local-font';
 import ImageCompare from 'image-compare-viewer';
 import 'animate.css';
@@ -19,16 +20,33 @@ export default function Page() {
     });
   }, []);
 
+  const tldrData = {
+    title: 'Direct Express Redesign',
+    summary:
+      'Direct Express is the only way unbanked federal benefit recipients can access their benefit money—via a digitally managed debit card—but often struggle due to difficulty using the app.',
+    problem:
+      '70% of Direct Express cardholders are unbanked and cannot receive their benefit dollars via direct deposit. Many of these users have low technology literacy, so a poorly designed app led to a 61% customer service call-rate as well as a 57% attrition rate.',
+    research:
+      'Surveys and interviews of over 1,200 users revealed that only 31% of users regularly opened the app, as most expected functionality akin to modern banking apps like Venmo and CashApp.',
+    solution:
+      'Redesigned the app from the inside-out, focusing on high-priority functionality: mobile bill-pay, ATM locator, and multi-user support (rep payees managing multiple cards).',
+    metrics: [
+      { value: '548+', label: 'screens designed' },
+      { value: '665', label: 'unique components' },
+      { value: '66 pages', label: 'product and brand guidelines' },
+    ],
+  };
+
   return (
     <Layout isProjectPage>
       <Image
-        src="../images/famly/cover.png"
+        src="/images/famly/cover.png"
         alt="cover"
         priority
         width={1920}
         height={1080}
-        layout="responsive"
         className="w-full animate__animated animate__fadeIn"
+        style={{ width: '100%', height: 'auto' }}
       />
       <div className="w-screen mt-8 items-center animate__animated animate__fadeIn">
         <section className="lg:flex items-center justify-between w-screen max-w-screen-xl">
@@ -68,6 +86,7 @@ export default function Page() {
               <div className={metropolis.className}>UX/UI designer</div>
             </div>
           </div>
+          <Tldr {...tldrData} />
         </section>
         {/* Overview Section */}
         <section className="bg-gray-100 py-12 flex items-center w-screen justify-center px-8">
@@ -239,7 +258,7 @@ export default function Page() {
               Part 1: Discovery
             </h1>
             <div className="max-w-screen-lg">
-              <p className={`text-lg mb-4 ${metropolis.className}`}>
+              <div className={`text-lg mb-4 ${metropolis.className}`}>
                 To understand the full scope of inconsistencies, I conducted an
                 exhaustive UI audit, mapping out all existing components and
                 design patterns. This revealed:
@@ -256,7 +275,7 @@ export default function Page() {
                     designs.
                   </li>
                 </ul>
-              </p>
+              </div>
               <div className={`text-lg mb-4 ${metropolis.className}`}>
                 To validate our findings and prioritize focus areas, I
                 facilitated interviews and workshops with frontend developers,
@@ -283,12 +302,12 @@ export default function Page() {
         <section className="bg-white flex flex-col items-center w-screen justify-center px-8">
           <div className="w-screen p-8 lg:px-32">
             <Image
-              src="../images/famly/phase1.png"
+              src="/images/famly/phase1.png"
               alt="cover"
               width={1920}
               height={1080}
-              layout="responsive"
               className="w-full mt-12 animate__animated animate__fadeIn"
+              style={{ width: '100%', height: 'auto' }}
             />
           </div>
         </section>
@@ -301,7 +320,7 @@ export default function Page() {
               Part 2: Definition
             </h1>
             <div className="max-w-screen-lg">
-              <p className={`text-lg mb-4 ${metropolis.className}`}>
+              <div className={`text-lg mb-4 ${metropolis.className}`}>
                 From our research, we defined a clear problem statement:
                 <blockquote className="p-4 my-4 border-s-4 border-gray-300 bg-gray-50 ">
                   <p
@@ -355,7 +374,7 @@ export default function Page() {
                     - Designed with the future in mind.
                   </li>
                 </ul>
-              </p>
+              </div>
               <div className={`text-lg mb-4 ${metropolis.className}`}>
                 To validate our findings and prioritize focus areas, I
                 facilitated interviews and workshops with frontend developers,
@@ -421,44 +440,44 @@ export default function Page() {
         <section className="bg-white flex flex-col items-center w-screen justify-center px-8">
           <div className="w-screen p-8 lg:px-32">
             <Image
-              src="../images/famly/styleguide1.png"
+              src="/images/famly/styleguide1.png"
               alt="cover"
               width={1920}
               height={1080}
-              layout="responsive"
               className="w-full animate__animated animate__fadeIn"
+              style={{ width: '100%', height: 'auto' }}
             />
             <Image
-              src="../images/famly/styleguide2.png"
+              src="/images/famly/styleguide2.png"
               alt="cover"
               width={1920}
               height={1080}
-              layout="responsive"
               className="w-full animate__animated animate__fadeIn"
+              style={{ width: '100%', height: 'auto' }}
             />
             <Image
-              src="../images/famly/styleguide3.png"
+              src="/images/famly/styleguide3.png"
               alt="cover"
               width={1920}
               height={1080}
-              layout="responsive"
               className="w-full animate__animated animate__fadeIn"
+              style={{ width: '100%', height: 'auto' }}
             />
             <Image
-              src="../images/famly/components1.png"
+              src="/images/famly/components1.png"
               alt="cover"
               width={1920}
               height={1080}
-              layout="responsive"
               className="w-full animate__animated animate__fadeIn"
+              style={{ width: '100%', height: 'auto' }}
             />
             <Image
-              src="../images/famly/components2.png"
+              src="/images/famly/components2.png"
               alt="cover"
               width={1920}
               height={1080}
-              layout="responsive"
               className="w-full animate__animated animate__fadeIn"
+              style={{ width: '100%', height: 'auto' }}
             />
           </div>
         </section>
@@ -471,7 +490,7 @@ export default function Page() {
               Part 4: Delivery and Adoption{' '}
             </h1>
             <div className="max-w-screen-lg">
-              <p className={`text-lg mb-4 ${metropolis.className}`}>
+              <div className={`text-lg mb-4 ${metropolis.className}`}>
                 <span
                   className={`text-lg font-semibold mb-4 ${metropolis.className}`}
                 >
@@ -509,7 +528,7 @@ export default function Page() {
                     about major changes.
                   </li>
                 </ul>
-              </p>
+              </div>
               <span
                 className={`text-lg font-semibold mb-4 ${metropolis.className}`}
               >
@@ -626,7 +645,7 @@ export default function Page() {
         <section className="bg-white py-12 flex items-center w-screen justify-center px-8">
           <div className="xl:flex items-center justify-between w-screen max-w-screen-xl gap-6">
             <h1
-              className={`max-w-screen-xl text-lg antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-2xl text-gray-400 font-semibold ${metropolis.className}`}
+              className={`max-w-screen-xl text-lg antialiased tracking-tighter lg:leading-headers md:text-2xl text-gray-400 font-semibold ${metropolis.className}`}
               id="overview"
             >
               Before/After
@@ -640,15 +659,15 @@ export default function Page() {
                 className="w-full md:w-1/2 lg:w-1/2 max-w-xs mx-auto image-compare"
                 id="image-compare"
               >
-                <img src="../images/famly/before1.png" alt="" />
-                <img src="../images/famly/after1.png" alt="" />
+                <img src="/images/famly/before1.png" alt="" />
+                <img src="/images/famly/after1.png" alt="" />
               </div>
               <div
                 className="w-full md:w-1/2 lg:w-1/2 max-w-xs mx-auto image-compare"
                 id="image-compare"
               >
-                <img src="../images/famly/before2.png" alt="" />
-                <img src="../images/famly/after2.png" alt="" />
+                <img src="/images/famly/before2.png" alt="" />
+                <img src="/images/famly/after2.png" alt="" />
               </div>
             </div>
           </div>
@@ -667,12 +686,12 @@ export default function Page() {
           <div className="w-screen lg:px-16">
             <div className="flex flex-wrap justify-center">
               <Image
-                src="../images/famly/ui.png"
+                src="/images/famly/ui.png"
                 alt="cover"
                 width={1920}
                 height={1080}
-                layout="responsive"
                 className="w-full mt-12 mb-12 animate__animated animate__fadeIn rounded-2xl"
+                style={{ width: '100%', height: 'auto' }}
               />
             </div>
           </div>
