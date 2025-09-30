@@ -34,7 +34,7 @@ export default function App() {
         className="overflow-x-hidden items-center flex-col"
       >
         <section className="container mx-auto max-w-screen-xl h-[80vh] flex flex-col  md:flex-row items-center">
-          {/*<NoSSRCanvas setBg={set} />*/}
+          <NoSSRCanvas setBg={set} />
           <Overlay fill={fill} />
         </section>
         <section className="animate__animated animate__fadeIn animate__delay-1s w-full h-[10vh] text-center flex items-center justify-center">

@@ -1,5 +1,7 @@
 import { metropolis } from '@/app/utils/local-font';
 
+``;
+
 export default ({
   title,
   summary,
@@ -11,7 +13,15 @@ export default ({
 }) => {
   return (
     <div
-      className={`max-w-6xl mx-auto p-8 bg-gray-50 rounded-lg ${className || ''} ${metropolis.className}`}
+      className={`w-full mx-auto p-8 rounded-lg ${className || ''} ${metropolis.className}`}
+      style={{
+        background: 'rgba(255,255,255,0.18)',
+        boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.12)',
+        backdropFilter: 'blur(32px) saturate(180%)',
+        WebkitBackdropFilter: 'blur(32px) saturate(180%)',
+        border: '1.5px solid rgba(255,255,255,0.25)',
+        borderRadius: '1.5rem',
+      }}
     >
       {/* Header */}
       <div className={`mb-8 ${metropolis.className}`}>

@@ -49,41 +49,43 @@ export default function Page() {
         style={{ width: '100%', height: 'auto' }}
       />
       <div className="w-screen mt-8 items-center animate__animated animate__fadeIn">
-        <section className="lg:flex items-center justify-between w-screen max-w-screen-xl">
-          <div className="p-8">
-            <h1
-              className={`text-3xl antialiased tracking-tighter lg:leading-headers md:text-4xl text-primary font-semibold ${metropolis.className}`}
-            >
-              Famly's Redesign
-            </h1>
-            <h3 className={`text-lg text-gray-500 ${metropolis.className}`}>
-              Shaping a design system for an already existing product
-            </h3>
-          </div>
-          <div className="flex flex-col gap-2 md:flex-row md:gap-12 px-8 pb-8 lg:p-0 lg:pb-0">
-            <div>
-              <div
-                className={`font-semibold uppercase text-gray-400 text-sm ${metropolis.className}`}
+        <section className="flex flex-col items-start justify-between w-screen max-w-screen-xl">
+          <div className="flex flex-col lg:flex-row w-full justify-between items-center">
+            <div className="py-8">
+              <h1
+                className={`text-3xl antialiased tracking-tighter lg:leading-headers md:text-4xl text-primary font-semibold ${metropolis.className}`}
               >
-                Duration
-              </div>
-              <div className={metropolis.className}>3 months</div>
+                Famly's Redesign
+              </h1>
+              <h3 className={`text-lg text-gray-500 ${metropolis.className}`}>
+                Shaping a design system for an already existing product
+              </h3>
             </div>
-            <div>
-              <div
-                className={`font-semibold uppercase text-gray-400 text-sm ${metropolis.className}`}
-              >
-                Type
+            <div className="flex flex-col gap-2 md:flex-row md:gap-12 px-8 pb-8 lg:p-0 lg:pb-0">
+              <div>
+                <div
+                  className={`font-semibold uppercase text-gray-400 text-sm ${metropolis.className}`}
+                >
+                  Duration
+                </div>
+                <div className={metropolis.className}>3 months</div>
               </div>
-              <div className={metropolis.className}>Work project</div>
-            </div>
-            <div>
-              <div
-                className={`font-semibold uppercase text-gray-400 text-sm ${metropolis.className}`}
-              >
-                Role
+              <div>
+                <div
+                  className={`font-semibold uppercase text-gray-400 text-sm ${metropolis.className}`}
+                >
+                  Type
+                </div>
+                <div className={metropolis.className}>Work project</div>
               </div>
-              <div className={metropolis.className}>UX/UI designer</div>
+              <div>
+                <div
+                  className={`font-semibold uppercase text-gray-400 text-sm ${metropolis.className}`}
+                >
+                  Role
+                </div>
+                <div className={metropolis.className}>UX/UI designer</div>
+              </div>
             </div>
           </div>
           <Tldr {...tldrData} />

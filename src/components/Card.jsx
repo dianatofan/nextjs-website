@@ -1,7 +1,8 @@
+import React, { useContext, useState } from 'react';
+import { CursorContext } from '@/context/CursorContext';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
 import '../styles/card.scss';
 import Chip from '@/components/Chip';
 
@@ -14,28 +15,25 @@ export default function Card({
   project,
 }) {
   const [icon, showIcon] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
+  const [isActive, setIsActive] = useState(false);
   const router = useRouter();
+  const { setIsHovered } = useContext(CursorContext);
 
-  useEffect(() => {
-    function handleHoverChange() {
-      console.log('Hover state changed:', isHovered);
-      // Add your custom logic here
-      // Change cursor on hovered state
-      document.body.style.cursor = !isHovered
-        ? `url('data:image/svg+xml;base64,${btoa(
-            '<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16,6 a10,10 0 1,0 0,20 a10,10 0 1,0 0,-20" fill="#E8B059"/></svg>'
-          )}'), auto`
-        : `url('data:image/svg+xml;base64,${btoa(
-            '<svg width="32" height="32" class="morphing-cursor" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4,4 h24 a4,4 0 0,1 4,4 v16 a4,4 0 0,1 -4,4 h-24 a4,4 0 0,1 -4,-4 v-16 a4,4 0 0,1 4,-4" fill="#E8B059"/><</svg>'
-          )}'), auto`;
-    }
-
-    // handleHoverChange();
-  }, [isHovered]);
+  //
+  // useEffect(() => {
+  //   function handleHoverChange() {
+  //     const size = isHovered ? 64 : 32;
+  //     const svg = isHovered
+  //       ? `<svg width="${size}" height="${size}" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="28" fill="#E8B059"/></svg>`
+  //       : `<svg width="${size}" height="${size}" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="10" fill="#E8B059"/></svg>`;
+  //     document.body.style.cursor = `url('data:image/svg+xml;base64,${btoa(svg)}'), auto`;
+  //   }
+  //
+  //   handleHoverChange();
+  // }, [isHovered]);
 
   return (
-    <Link href={`project/${project}`}>
+    <Link href={`project/${project}`} className="card-link">
       <div className="rectangle rounded-xl relative">
         <div
           style={{
@@ -45,8 +43,14 @@ export default function Card({
             overflow: 'hidden',
           }}
           className="rounded-xl group"
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
+          onMouseEnter={() => {
+            setIsHovered(true);
+            setIsActive(true);
+          }}
+          onMouseLeave={() => {
+            setIsHovered(false);
+            setIsActive(false);
+          }}
         >
           <Image
             src={image}
@@ -61,7 +65,7 @@ export default function Card({
           <div
             className={`absolute left-0 bottom-0 w-full flex items-center justify-center
     transition-all duration-300
-    ${isHovered ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'}
+    ${isActive ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'}
   `}
           >
             <span className="w-full px-6 py-4 text-lg font-medium text-white flex justify-between items-center rounded-b-xl relative bg-gradient-to-t from-black/80 to-transparent">

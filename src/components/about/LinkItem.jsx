@@ -25,7 +25,7 @@ export default function LinkItem({ title, description, image, link }) {
           href="https://example.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-500 underline"
+          className="text-gray-500 underline cursor-none"
         >
           <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
             <path d="M14 3h7v7h-2V6.414l-9.293 9.293-1.414-1.414L17.586 5H14V3zM5 5h4V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-4h-2v4H5V5z" />

@@ -1,3 +1,5 @@
+'use client';
+
 import * as THREE from 'three';
 import { DirectionalLightHelper } from 'three';
 import React, { Suspense, useEffect, useRef, useState } from 'react';
