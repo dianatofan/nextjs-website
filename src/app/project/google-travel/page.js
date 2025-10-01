@@ -10,6 +10,7 @@ import TravelStatistics from '@/app/project/google-travel/travel-statistics';
 import '@/styles/about.scss';
 import '@/styles/styles.scss';
 import Layout from '@/components/Layout';
+import Tldr from '@/components/Tldr';
 import { metropolis, nauryz } from '@/app/utils/local-font';
 
 const labels = [
@@ -20,10 +21,27 @@ const labels = [
 ];
 
 export default function Page() {
+  const tldrData = {
+    title: "Google Travel Search",
+    problem:
+      "Travellers used Google to plan trips, but the experience was text-heavy and overwhelming. Flexible users—often unsure about dates or destinations—struggled to compare options and make confident choices.",
+    research:
+      "We drew on insights from previous UX studies showing that most users are flexible (70% on dates, 50% on destinations) and often change plans mid-search. The main friction points were getting inspired, comparing alternatives, and resuming past searches. Our design sprint focused on solving these challenges while supporting Google’s shift toward more visual, interactive results with images, maps, and multimedia.",
+    solution:
+      "I built interactive prototypes in Figma and React to bring our ideas to life. In React, I implemented complex animations that Figma couldn’t support and integrated the Google Maps API to mimic realistic travel scenarios. The final design restructured the journey into three stages: Get Inspired (visual, cross-vertical content), Look into Alternatives (side-by-side suggestions with price/context), and Rediscover the Journey (personalized history with insights).",
+    metrics: [
+      { value: "3", label: "clear stages defined in the traveller journey framework" },
+      { value: "✔", label: "validated by UX leadership and adopted into 2024 roadmap" },
+      { value: "→", label: "contributed to Google Search\’s broader shift toward visual, multimedia results" },
+    ],
+  };
+  
+
+  
   return (
     <ProtectedRoute>
       <Layout isProjectPage>
-        <div className="relative w-full h-[100vh]">
+      <div className="relative w-full h-[100vh]">
           <Image
             src="/images/explore/cover.png"
             alt="cover"
@@ -31,22 +49,10 @@ export default function Page() {
             fill
             className="object-cover w-full h-full animate__animated animate__fadeIn"
           />
-          {/* Gradient overlay */}
-          <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black/80 to-transparent z-10" />
-          {/* Label */}
-          <div className="absolute bottom-4 left-4 flex items-center justify-around z-20">
-            {labels.map((label, idx) => (
-              <span
-                key={idx}
-                className="text-white px-3 py-1 rounded-lg text-md"
-              >
-                {label.text}
-              </span>
-            ))}
-          </div>
         </div>
-        <div className="w-screen mt-8 items-center animate__animated animate__fadeIn">
-          <section className="lg:flex items-center justify-between w-screen max-w-screen-xl">
+        <div className="w-screen mt-8 items-center align-center animate__animated animate__fadeIn">
+        <section className="flex flex-col align-center justify-between w-screen max-w-screen-xl">
+        <div className="flex flex-col md:align-center lg:items-center gap-2 md:flex-row md:gap-12 px-8 pb-8 lg:p-0 lg:pb-0">
             <div className="p-8">
               <h1
                 className={`text-3xl antialiased tracking-tighter lg:leading-headers md:text-4xl text-primary font-semibold ${metropolis.className}`}
@@ -83,6 +89,8 @@ export default function Page() {
                 <div className={metropolis.className}>UX/UI designer</div>
               </div>
             </div>
+            </div>
+            <Tldr {...tldrData} />
           </section>
           <section className="bg-gray-100 py-12 flex items-center w-screen justify-center px-8">
             <div className="xl:flex items-center justify-between w-screen max-w-screen-xl gap-6">
