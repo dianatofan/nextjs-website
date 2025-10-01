@@ -8,6 +8,7 @@ import 'animate.css';
 import '@/styles/about.scss';
 import '@/styles/styles.scss';
 import Layout from '@/components/Layout';
+import Tldr from '@/components/Tldr';
 import { metropolis, nauryz } from '@/app/utils/local-font';
 import MethodsComparison from '@/app/project/json/methods-comparison';
 import ImageCompare from 'image-compare-viewer';
@@ -28,6 +29,22 @@ export default function Page() {
     });
   }, []);
 
+  const tldrData = {
+    title: "JSON Editor UI",
+    problem:
+      "Release managers had no safe way to edit JSON game configs. Even minor changes required developers, causing delayed launches, broken events, and lost revenue while draining engineering time.",
+    research:
+      "The pain was well known across the company. Instead of formal user research, I ran a technical exploration: comparing custom-built UIs vs. schema-driven approaches. As a frontend developer, I identified the most suitable npm library (react-jsonschema-form) and designed a custom wrapper UI layer on top—balancing schema flexibility with usability.",
+    solution:
+      "I built a scalable, schema-driven JSON Editor that simplified complex nested configs with expand/collapse navigation and focused editing; translated technical validation errors into plain language; offered multiple view modes and flexible input types (toggles, selectors, pickers, dropdowns); and empowered release managers to make instant changes without developer intervention.",
+    metrics: [
+      { value: "0", label: "broken live events post-launch" },
+      { value: "80%", label: "faster content updates" },
+      { value: "~20%", label: "reduction in developer support work" },
+    ],
+  };
+
+  
   return (
     <ProtectedRoute>
       <Layout isProjectPage>
@@ -43,7 +60,8 @@ export default function Page() {
           {/* Label */}
         </div>
         <div className="w-screen mt-8 items-center animate__animated animate__fadeIn">
-          <section className="lg:flex items-center justify-between w-screen max-w-screen-xl">
+          <section className="flex flex-col items-start justify-between w-screen max-w-screen-xl">
+          <div className="flex flex-col lg:flex-row w-full justify-between items-center">
             <div className="p-8">
               <h1
                 className={`text-3xl antialiased tracking-tighter lg:leading-headers md:text-4xl text-primary font-semibold ${metropolis.className}`}
@@ -81,6 +99,8 @@ export default function Page() {
                 <div className={metropolis.className}>UX/UI designer</div>
               </div>
             </div>
+            </div>
+            <Tldr {...tldrData} />
           </section>
           <section className="bg-gray-100 py-12 flex items-center w-screen justify-center px-8">
             <div className="xl:flex items-center justify-between w-screen max-w-screen-xl gap-6">
@@ -330,7 +350,7 @@ export default function Page() {
                 className={`max-w-screen-xl text-lg antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-2xl text-gray-400 font-semibold ${metropolis.className}`}
                 id="overview"
               >
-                Custom UI Layer
+                The Custom UI Layer
               </h1>
               <Image
                 src="/images/json/customUILayer.png"

@@ -78,7 +78,7 @@ export default function App() {
                 project="json"
               />
               <Card
-                title="Famly's First-Ever Design System"
+                title="Famly's Redesign"
                 description="Shaping a design system for a mature product"
                 role="UX/UI DESIGN | USER RESEARCH"
                 image="./images/famlyThumbnail.png"

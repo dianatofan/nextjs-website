@@ -29,6 +29,7 @@ research: "I ran a complete UI audit and facilitated workshops with developers, 
     metrics: [
       { value: '35%', label: 'faster UI development' },
       { value: '18%', label: 'fewer support calls' },
+      { value: "↑", label: "design-dev alignment" },
     ],
   };
 
@@ -53,7 +54,7 @@ research: "I ran a complete UI audit and facilitated workshops with developers, 
                 Famly's Redesign
               </h1>
               <h3 className={`text-lg text-gray-500 ${metropolis.className}`}>
-                Shaping a design system for an already existing product
+                Shaping a design system for a mature product
               </h3>
             </div>
             <div className="flex flex-col gap-2 md:flex-row md:gap-12 px-8 pb-8 lg:p-0 lg:pb-0">
