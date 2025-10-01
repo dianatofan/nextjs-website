@@ -13,7 +13,7 @@ export default ({
 }) => {
   return (
     <div
-      className={`w-full mx-auto p-8 rounded-lg ${className || ''} ${metropolis.className}`}
+      className={`w-full mx-auto mb-16 p-8 rounded-lg ${className || ''} ${metropolis.className}`}
       style={{
         background: 'rgba(255,255,255,0.18)',
         boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.12)',
@@ -30,11 +30,11 @@ export default ({
         >
           tl;dr
         </h1>
-        <p
+        {/* <p
           className={`text-lg text-slate-700 leading-relaxed max-w-2xl ${metropolis.className}`}
         >
           {title}
-        </p>
+        </p> */}
       </div>
       {/* Main Content Grid */}
       <div
@@ -45,7 +45,7 @@ export default ({
             <h2
               className={`text-base font-medium text-gray-600 mb-4 ${metropolis.className}`}
             >
-              The Problem
+              Problem
             </h2>
             <p
               className={
@@ -59,7 +59,7 @@ export default ({
             <h2
               className={`text-base font-medium text-gray-600 mb-4 ${metropolis.className}`}
             >
-              The Research
+              Research
             </h2>
             <p
               className={
@@ -73,7 +73,7 @@ export default ({
             <h2
               className={`text-base font-medium text-gray-600 mb-4 ${metropolis.className}`}
             >
-              The Solution
+              Solution
             </h2>
             <p
               className={

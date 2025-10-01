@@ -40,12 +40,24 @@ export default function Overlay({ fill }) {
       >
         Hello! I&apos;m Diana Tofan
         </a.span>
-        <a.h1
-        className={`${nauryz.className} lg:text-8xl md:text-7xl text-6xl antialiased tracking-tighter lg:leading-headers text-primary font-medium lg:max-w-lg`}
-        style={{ color: fill }}
-      >
-        UX Designer & Frontend Engineer
-      </a.h1>
+        <a.div
+          className="inline-block rounded-2xl"
+          style={{
+            background: 'rgba(255,255,255,0.18)',
+            boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.12)',
+            backdropFilter: 'blur(16px) saturate(180%)',
+            WebkitBackdropFilter: 'blur(16px) saturate(180%)',
+            border: '1px solid rgba(255,255,255,0.25)',
+            padding: '0.5rem 1rem',
+          }}
+        >
+          <a.h1
+            className={`${nauryz.className} lg:text-8xl md:text-7xl text-6xl antialiased tracking-tighter lg:leading-headers text-primary font-medium lg:max-w-lg whitespace-nowrap`}
+            style={{ color: fill }}
+          >
+            UX Designer & Frontend Engineer
+          </a.h1>
+        </a.div>
     </div>
   );
 }

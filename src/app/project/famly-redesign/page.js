@@ -21,19 +21,14 @@ export default function Page() {
   }, []);
 
   const tldrData = {
-    title: 'Direct Express Redesign',
-    summary:
-      'Direct Express is the only way unbanked federal benefit recipients can access their benefit money—via a digitally managed debit card—but often struggle due to difficulty using the app.',
+    title: 'Famly\'s Redesign',
     problem:
-      '70% of Direct Express cardholders are unbanked and cannot receive their benefit dollars via direct deposit. Many of these users have low technology literacy, so a poorly designed app led to a 61% customer service call-rate as well as a 57% attrition rate.',
-    research:
-      'Surveys and interviews of over 1,200 users revealed that only 31% of users regularly opened the app, as most expected functionality akin to modern banking apps like Venmo and CashApp.',
-    solution:
-      'Redesigned the app from the inside-out, focusing on high-priority functionality: mobile bill-pay, ATM locator, and multi-user support (rep payees managing multiple cards).',
+"Famly\’s childcare management platform had years of design debt: inconsistent UI, duplicated components, and slow developer workflows caused by the lack of a unified design system.",
+research: "I ran a complete UI audit and facilitated workshops with developers, PMs, and support staff. Findings showed redundant patterns, poor accessibility, and rework cycles that made iteration slow and resource-heavy.",
+    solution: "I established a scalable design system using Figma, React, Material Design, and Storybook. The rollout included design tokens (typography, color, spacing, accessibility), standardized components, and detailed documentation. To drive adoption, I introduced weekly company-wide updates, training sessions, and email newsletters that kept all stakeholders informed of new components and guidelines.",
     metrics: [
-      { value: '548+', label: 'screens designed' },
-      { value: '665', label: 'unique components' },
-      { value: '66 pages', label: 'product and brand guidelines' },
+      { value: '35%', label: 'faster UI development' },
+      { value: '18%', label: 'fewer support calls' },
     ],
   };
 
