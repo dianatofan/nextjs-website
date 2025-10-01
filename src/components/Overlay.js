@@ -5,6 +5,7 @@ import { a } from '@react-spring/web';
 import 'animate.css';
 import { metropolis, nauryz } from '@/app/utils/local-font';
 
+
 export default function Overlay({ fill }) {
   const [scrollTop, setScrollTop] = useState(0);
 
@@ -33,12 +34,13 @@ export default function Overlay({ fill }) {
 
   return (
     <div className="overlay animate__animated animate__fadeIn lg:w-1/2 lg:p-4 mx-8">
-      <span
+      <a.span
         className={`${metropolis.className} inline-block mt-4 mb-4 lg:text-3xl md:mb-6 md:text-base text-primary opacity-70 tracking-tighter font-semibold`}
+        style={{ color: fill }}
       >
         Hello! I&apos;m Diana Tofan
-      </span>
-      <a.h1
+        </a.span>
+        <a.h1
         className={`${nauryz.className} lg:text-8xl md:text-7xl text-6xl antialiased tracking-tighter lg:leading-headers text-primary font-medium lg:max-w-lg`}
         style={{ color: fill }}
       >
