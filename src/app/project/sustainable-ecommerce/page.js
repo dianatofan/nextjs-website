@@ -7,7 +7,6 @@ import '@/styles/about.scss';
 import '@/styles/styles.scss';
 import Layout from '@/components/Layout';
 import { metropolis } from '@/app/utils/local-font';
-import { Carousel } from 'nuka-carousel';
 import 'animate.css';
 
 export default function Page() {
@@ -220,16 +219,16 @@ export default function Page() {
                 when shopping online for an item, that would benefit both user
                 segments.
               </p>
-              <Carousel enableKeyboardControls showArrows showDots>
-                <img
-                  src="../images/sustainability/persona1.png"
-                  alt="persona1"
-                />
-                <img
-                  src="../images/sustainability/persona2.png"
-                  alt="persona2"
-                />
-              </Carousel>
+              {/*<Carousel enableKeyboardControls showArrows showDots>*/}
+              {/*  <img*/}
+              {/*    src="../images/sustainability/persona1.png"*/}
+              {/*    alt="persona1"*/}
+              {/*  />*/}
+              {/*  <img*/}
+              {/*    src="../images/sustainability/persona2.png"*/}
+              {/*    alt="persona2"*/}
+              {/*  />*/}
+              {/*</Carousel>*/}
             </div>
           </div>
         </section>

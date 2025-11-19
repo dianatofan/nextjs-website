@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { Carousel } from 'nuka-carousel';
 
 import '@/styles/about.scss';
 import '@/styles/styles.scss';
@@ -337,10 +336,10 @@ export default function Page() {
                 frustrations. Throughout the rest of the design process, I
                 focused on solving their problems and come up with improvements.
               </p>
-              <Carousel enableKeyboardControls showArrows showDots>
-                <img src="../images/racefinder/persona1.png" alt="persona1" />
-                <img src="../images/racefinder/persona2.png" alt="persona2" />
-              </Carousel>
+              {/*<Carousel enableKeyboardControls showArrows showDots>*/}
+              {/*  <img src="../images/racefinder/persona1.png" alt="persona1" />*/}
+              {/*  <img src="../images/racefinder/persona2.png" alt="persona2" />*/}
+              {/*</Carousel>*/}
             </div>
           </div>
         </section>

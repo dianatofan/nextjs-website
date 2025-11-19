@@ -1,11 +1,8 @@
 'use client';
 
 import React from 'react';
-import dynamic from 'next/dynamic';
-import { useSpring } from '@react-spring/core';
-import { a } from '@react-spring/web';
-
-import Overlay from '@/components/Overlay';
+// import { useSpring } from '@react-spring/core';
+// import { a } from '@react-spring/web';
 import Card from '@/components/Card';
 import Layout from '@/components/Layout';
 
@@ -14,42 +11,33 @@ import '@/styles/styles.scss';
 import 'animate.css';
 import { metropolis } from '@/app/utils/local-font';
 
-const NoSSRCanvas = dynamic(() => import('@/components/Canvas'), {
-  ssr: false,
-});
+// const NoSSRCanvas = dynamic(() => import('@/components/Canvas'), {
+//   ssr: false,
+// });
 
 export default function App() {
-  const [{ background, fill }, set] = useSpring(
-    {
-      background: '#fff',
-      fill: '#202020',
-    },
-    []
-  );
+  // const [{ background, fill }, set] = useSpring(
+  //   {
+  //     background: '#fff',
+  //     fill: '#202020',
+  //   },
+  //   []
+  // );
 
   return (
-    <Layout fill={fill} isProjectPage={false}>
-      <a.main
-        style={{ background }}
-        className="overflow-x-hidden items-center flex-col"
-      >
+    <Layout isProjectPage={false}>
+      <main className="overflow-x-hidden items-center flex-col">
         <section className="container mx-auto max-w-screen-xl h-[80vh] flex flex-col  md:flex-row items-center">
-          <NoSSRCanvas setBg={set} />
-          <Overlay fill={fill} />
+          {/*<NoSSRCanvas setBg={set} />*/}
+          {/*<Overlay fill={fill} />*/}
         </section>
         <section className="animate__animated animate__fadeIn animate__delay-1s w-full h-[10vh] text-center flex items-center justify-center">
-          <a.span
+          <span
             className={`${metropolis.className} role inline-block mt-4 mb-2 text-sm md:mb-3 md:text-base font-normal text-primary`}
             id="scroll-to-explore"
-            style={{ color: fill }}
           >
-            <a.div
-              className="icon-scroll"
-              style={{
-                boxShadow: `inset 0 0 0 1.5px ${fill}`,
-              }}
-            />
-          </a.span>
+            <div className="icon-scroll" />
+          </span>
         </section>
 
         <section className="animate__animated animate__fadeIn animate__delay-1s w-full ml-8 mr-8 flex justify-center">
@@ -63,7 +51,6 @@ export default function App() {
                 url="explore"
                 label="Shipped"
                 isPasswordProtected
-                fill={fill}
                 project="google-travel"
               />
               <Card
@@ -74,7 +61,6 @@ export default function App() {
                 url="json"
                 label="Shipped"
                 isPasswordProtected
-                fill={fill}
                 project="json"
               />
               <Card
@@ -84,7 +70,6 @@ export default function App() {
                 image="./images/famlyThumbnail.png"
                 url="famly"
                 label="Shipped"
-                fill={fill}
                 project="famly-redesign"
               />
               <Card
@@ -94,7 +79,6 @@ export default function App() {
                 image="./images/thumbnail1.png"
                 url="racefinder"
                 label="Side project"
-                fill={fill}
                 project="racefinder"
               />
               {/*<Card*/}
@@ -114,13 +98,12 @@ export default function App() {
                 image="./images/thumbnail2.png"
                 url="time-series"
                 label="Research"
-                fill={fill}
                 project="time-series"
               />
             </div>
           </div>
         </section>
-      </a.main>
+      </main>
     </Layout>
   );
 }

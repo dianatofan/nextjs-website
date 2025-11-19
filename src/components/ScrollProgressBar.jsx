@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { animated, useSpring } from '@react-spring/web';
 
 const ScrollProgressBar = () => {
   const [scroll, setScroll] = useState(0);
@@ -19,7 +18,7 @@ const ScrollProgressBar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const props = useSpring({ width: `${scroll}%` });
+  // const props = useSpring({ width: `${scroll}%` });
 
   return (
     <div
@@ -33,7 +32,7 @@ const ScrollProgressBar = () => {
       }}
       className="scroll-progress"
     >
-      <animated.div style={{ ...props, height: '100%', background: '#000' }} />
+      {/*<div style={{ ...props, height: '100%', background: '#000' }} />*/}
     </div>
   );
 };

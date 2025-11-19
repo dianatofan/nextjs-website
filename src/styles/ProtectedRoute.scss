@@ -1,4 +1,4 @@
-@import "./colors.scss";
+@use './colors' as *;
 
 .password-protected-page {
   //background-image: url("./images/squiggle.png");

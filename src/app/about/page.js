@@ -2,8 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { useSpring } from '@react-spring/core';
-
+// import { useSpring } from '@react-spring/core';
 import Layout from '@/components/Layout';
 
 import '@/styles/about.scss';
@@ -14,16 +13,16 @@ import 'animate.css';
 import { metropolis } from '@/app/utils/local-font';
 
 export default function Page() {
-  const [{ background, fill }, set] = useSpring(
-    {
-      background: '#f0f0f0',
-      fill: '#202020',
-    },
-    []
-  );
+  // const [{ background, fill }, set] = useSpring(
+  //   {
+  //     background: '#f0f0f0',
+  //     fill: '#202020',
+  //   },
+  //   []
+  // );
 
   return (
-    <Layout fill={fill} isProjectPage={false}>
+    <Layout isProjectPage={false}>
       <div className="container w-screen p-4 my-[14rem] mb-[6rem] max-w-screen-xl flex items-start  flex-col lg:flex-row gap-12 animate__animated animate__fadeIn">
         <div className="w-full lg:w-[45%]">
           <Image

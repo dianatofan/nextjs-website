@@ -1,5 +1,6 @@
-@import "src/styles/colors";
-@import "src/styles/fonts";
+@use './colors' as *;
+@use './fonts' as *;
+
 
 .header {
   display: flex;
