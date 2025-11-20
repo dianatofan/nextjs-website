@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { a } from '@react-spring/web';
 import 'animate.css';
-import { metropolis, nauryz } from '@/app/utils/local-font';
+import { metropolis } from '@/app/utils/local-font';
 
 export default function Overlay({ fill }) {
   const [scrollTop, setScrollTop] = useState(0);
@@ -33,16 +33,19 @@ export default function Overlay({ fill }) {
 
   return (
     <div className="overlay animate__animated animate__fadeIn lg:w-1/2 lg:p-4 mx-8">
-      <span
-        className={`${metropolis.className} inline-block mt-4 mb-4 lg:text-3xl md:mb-6 md:text-base text-primary opacity-70 tracking-tighter font-semibold`}
+      <div
+        className={`${metropolis.className} inline-block mt-4 mb-4 lg:text-xl md:mb-6 md:text-base text-gray-600 opacity-100 tracking-tighter font-semibold`}
       >
+        <span className="inline-block inline-block origin-[70%_70%] animate-wave">
+          👋
+        </span>{' '}
         Hello! I&apos;m Diana Tofan
-      </span>
+      </div>
       <a.h1
-        className={`${nauryz.className} lg:text-8xl md:text-7xl text-6xl antialiased tracking-tighter lg:leading-headers text-primary font-medium lg:max-w-lg`}
+        className={`${metropolis.className} lg:text-6xl md:text-6xl text-5xl antialiased tracking-[-0.05em] lg:leading-headers text-primary font-semibold lg:max-w-lg`}
         style={{ color: fill }}
       >
-        UX Designer & Frontend Engineer
+        I untangle complex systems through design and code.
       </a.h1>
     </div>
   );

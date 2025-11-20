@@ -1,7 +1,8 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
+import mePhoto from '@/images/about/me.jpg'; // move `public/images/about/me.jpg` -> `src/images/about/me.jpg` for blur support
 import { useSpring } from '@react-spring/core';
 
 import Layout from '@/components/Layout';
@@ -21,28 +22,45 @@ export default function Page() {
     },
     []
   );
+  const [loaded, setLoaded] = useState(false);
 
   return (
     <Layout fill={fill} isProjectPage={false}>
       <div className="container w-screen p-4 my-[14rem] mb-[6rem] max-w-screen-xl flex items-start  flex-col lg:flex-row gap-12 animate__animated animate__fadeIn">
         <div className="w-full lg:w-[45%]">
-          <Image
-            src="/./images/about/me.jpg"
-            alt="Picture with me"
-            layout="responsive"
-            priority
-            className="animate__animated animate__fadeIn"
-            width={420}
-            height={580}
-            style={{ borderRadius: '16px' }}
-          />
+          <div
+            aria-hidden="true"
+            style={{
+              transition: 'opacity .36s ease, transform .36s ease',
+              opacity: loaded ? 1 : 0.01,
+              transform: loaded ? 'none' : 'scale(1.02)',
+              borderRadius: 16,
+            }}
+          >
+            <Image
+              src={mePhoto}
+              alt="Picture with me"
+              width={420}
+              height={580}
+              priority
+              placeholder="blur"
+              sizes="(max-width: 1024px) 100vw, 420px"
+              onLoad={() => setLoaded(true)}
+              style={{
+                width: '100%',
+                height: 'auto',
+                objectFit: 'cover',
+                borderRadius: 16,
+              }}
+            />
+          </div>
         </div>
 
         <div className="w-full lg:w-[55%] leading-8 flex flex-col gap-6">
           <h1
             className={`${metropolis.className} text-xl antialiased tracking-tighter lg:leading-headers md:text-4xl text-primary font-semibold`}
           >
-            Hi, I'm Diana, a multi-disciplinary{' '}
+            Hi, I'm Diana, a{' '}
             <span className={`${metropolis.className} text-tertiary`}>
               product designer
             </span>{' '}
@@ -50,17 +68,15 @@ export default function Page() {
             <span className={`${metropolis.className} text-tertiary`}>
               frontend engineer
             </span>{' '}
-            passionate about solving problems. In my work, I balance{' '}
+            who’s always been drawn to problem-solving (I was the kid who loved
+            math). That mindset drives how I work today: using design and code
+            together to shape clear, practical solutions. I move comfortably
+            across the{' '}
             <span className={`${metropolis.className} text-tertiary`}>
-              user needs
+              product lifecycle
             </span>{' '}
-            with technical feasibility and{' '}
-            <span className={`${metropolis.className} text-tertiary`}>
-              business goals
-            </span>{' '}
-            to fuel growth. Having a deep understanding of the entire product
-            lifecycle, I can communicate clearly with all types of stakeholders,
-            regardless of their background, to ensure great output.
+            and work well with any team to keep things aligned and moving
+            forward.
           </h1>
           {/*<p className="text-gray-400 text-lg">/dee · uh · nah/</p>*/}
           {/*<p className="text-3xl font-semibold">*/}
@@ -117,8 +133,8 @@ export default function Page() {
               End-to-end expertise
             </h2>
             <p className={`${metropolis.className} text-base text-gray-600`}>
-              I bridge design and development to deliver smooth, cohesive
-              products.
+              I move from problem definition to prototypes and delivery without
+              losing context.
             </p>
           </div>
           <div className="flex flex-col items-center text-center">
@@ -165,8 +181,8 @@ export default function Page() {
               Human-centered design
             </h2>
             <p className={`${metropolis.className} text-base text-gray-600`}>
-              I prioritize human needs while balancing technical feasibility and
-              business goals, crafting intuitive and scalable solutions.
+              I design for real people while staying grounded in technical and
+              business constraints.
             </p>
           </div>
           <div className="flex flex-col items-center text-center">
@@ -181,8 +197,8 @@ export default function Page() {
               Technical proficiency
             </h2>
             <p className={`${metropolis.className} text-base text-gray-600`}>
-              I translate designs into interactive prototypes with live data and
-              complex interactions.
+              I build interactive prototypes that reflect real data and
+              real-world behavior.
             </p>
           </div>
           <div className="flex flex-col items-center text-center">
@@ -197,9 +213,8 @@ export default function Page() {
               Data visualization
             </h2>
             <p className={`${metropolis.className} text-base text-gray-600`}>
-              I enjoy transforming complex data into clear, engaging visual
-              representations that drive insight and help inform better
-              decision-making.
+              I turn complex data into clear visuals that inform better
+              decisions.
             </p>
           </div>
         </div>
@@ -224,6 +239,31 @@ export default function Page() {
           <Quote quote="A problem well stated is a problem half solved" />
         </div>
       </section>
+      {/*<section className="animate__animated animate__fadeIn animate__delay-1s container p-4 mb-8 w-screen max-w-screen-xl ">*/}
+      {/*  <h2 className={`${metropolis.className} text-2xl font-semibold mb-8`}>*/}
+      {/*    My life in numbers*/}
+      {/*  </h2>*/}
+      {/*  <div className="flex flex-row flex-wrap gap-8 w-full">*/}
+      {/*    <div className="flex flex-col items-center gap-2">*/}
+      {/*      <CountUp className="text-5xl" from={0} to={31} />*/}
+      {/*      <span>laps around the sun</span>*/}
+      {/*    </div>*/}
+      {/*    <div className="flex flex-col items-center gap-2">*/}
+      {/*      <CountUp className="text-5xl" from={0} to={8} />*/}
+      {/*      <span>Danish winters survived</span>*/}
+      {/*    </div>*/}
+      {/*    <div className="flex flex-col items-center gap-2">*/}
+      {/*      <CountUp className="text-5xl" from={0} to={6} />*/}
+      {/*      <span>years of consistent Strava activity</span>*/}
+      {/*    </div>*/}
+      {/*    <div className="flex flex-col items-center gap-2">*/}
+      {/*      <CountUp className="text-5xl" from={0} to={92} />%*/}
+      {/*      <span>*/}
+      {/*        of my Figma files: “final_v3_FINAL_reallyfinal(FINAL).fig”*/}
+      {/*      </span>*/}
+      {/*    </div>*/}
+      {/*  </div>*/}
+      {/*</section>*/}
       {/*<Carousel />*/}
     </Layout>
   );
