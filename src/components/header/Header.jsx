@@ -1,71 +1,169 @@
-import '@/styles/header.scss';
-import '@/styles/fonts.scss';
-import 'animate.css';
+// javascript
+import React, { useEffect, useRef, useState } from 'react';
 
-import { usePathname, useRouter } from 'next/navigation';
-// import { a } from '@react-spring/web';
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { metropolis } from '@/app/utils/local-font';
+export default function GlassHeader({
+  logo = null,
+  navItems = [
+    { href: '/', label: 'Home' },
+    { href: '/about', label: 'About' },
+    { href: '/projects', label: 'Projects' },
+    { href: '/contact', label: 'Contact' },
+  ],
+  shrinkAt = 40, // start shrinking after this many px scrolled
+  shrinkRange = 400, // amount of scroll over which it shrinks to min
+  minWidth = 600, // minimum pill width
+  maxWidthCap = 1280, // maximum logical pill width
+}) {
+  const [path, setPath] = useState(
+    typeof window !== 'undefined' ? window.location.pathname : '/'
+  );
+  const [scrolled, setScrolled] = useState(false);
+  const [pillWidth, setPillWidth] = useState(null);
+  const ticking = useRef(false);
 
-import Burger from './Hamburger';
-import Menu from './Menu';
+  // compute width based on current scroll
+  const updateWidth = () => {
+    if (typeof window === 'undefined') return;
+    const viewportAvailable = Math.max(window.innerWidth - 48, 0);
+    const containerMax = Math.min(viewportAvailable, maxWidthCap);
+    const y = window.scrollY || 0;
+    const start = shrinkAt;
+    const range = Math.max(1, shrinkRange);
+    const rawProgress = (y - start) / range;
+    const progress = Math.max(0, Math.min(1, rawProgress)); // 0..1
+    // linear interpolation from containerMax -> minWidth
+    const widthPx = Math.max(
+      minWidth,
+      Math.round(containerMax - progress * (containerMax - minWidth))
+    );
+    setPillWidth(widthPx);
+    setScrolled(y > 0);
+  };
 
-export default function Header({ fill, background }) {
-  const [isOpen, setOpen] = useState(false);
-  const activePage = usePathname();
-  const router = useRouter();
+  useEffect(() => {
+    // initial set on mount
+    updateWidth();
+
+    const onScroll = () => {
+      if (!ticking.current) {
+        ticking.current = true;
+        window.requestAnimationFrame(() => {
+          updateWidth();
+          ticking.current = false;
+        });
+      }
+    };
+    const onResize = () => {
+      if (!ticking.current) {
+        ticking.current = true;
+        window.requestAnimationFrame(() => {
+          updateWidth();
+          ticking.current = false;
+        });
+      }
+    };
+    const onPop = () => setPath(window.location.pathname);
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onResize);
+    window.addEventListener('popstate', onPop);
+
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onResize);
+      window.removeEventListener('popstate', onPop);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // fallback width when not measured yet
+  const pillStyle = {
+    width: pillWidth ? `${pillWidth}px` : '100%',
+    transition: 'width 180ms cubic-bezier(.2,.9,.2,1), box-shadow 160ms',
+    // additional inline glass accents (keeps Tailwind + inline for finer control)
+    background:
+      'linear-gradient(180deg, rgba(255,255,255,0.62), rgba(255,255,255,0.28))',
+    boxShadow: scrolled
+      ? '0 6px 18px rgba(12,14,20,0.08), inset 0 1px 0 rgba(255,255,255,0.45)'
+      : '0 8px 30px rgba(12,14,20,0.06), inset 0 1px 0 rgba(255,255,255,0.6), inset 0 -6px 20px rgba(0,0,0,0.06)',
+    backdropFilter: 'blur(12px) saturate(140%)',
+    WebkitBackdropFilter: 'blur(12px) saturate(140%)',
+  };
 
   return (
-    <header className="header animate-fadeIn" id="header">
-      <div>
-        <svg
-          fill={fill}
-          width={30}
-          height={30}
-          viewBox="0 0 251 239"
-          onClick={() => router.push('/')}
-          className="hover:cursor-pointer header-logo"
+    <header
+      role="banner"
+      className={`fixed left-0 right-0 z-50 flex justify-center pointer-events-none ${scrolled ? 'top-2' : 'top-4'} transition-all duration-200`}
+    >
+      <div className="relative w-[calc(100%-48px)] max-w-[1280px] pointer-events-auto box-border">
+        <div
+          className="mx-auto flex items-center justify-between rounded-full px-6 py-4"
+          aria-hidden={false}
+          style={pillStyle}
         >
-          <path d="M81.8812 236.371C70.4592 236.371 59.7762 234.311 49.8387 230.187C39.8897 226.064 31.2221 220.459 23.8188 213.365C16.4152 206.282 10.602 197.988 6.37312 188.469C2.13835 178.951 0.0239258 168.791 0.0239258 158.005C0.0239258 147.215 2.13835 137.07 6.37312 127.552C10.602 118.034 16.4152 109.739 23.8188 102.645C31.2221 95.5623 39.8897 89.9577 49.8387 85.8341C59.7762 81.7104 70.4592 79.6472 81.8812 79.6472H86.9537C83.1464 82.816 79.6051 86.9987 76.3239 92.1717C73.0457 97.3654 70.3025 103.331 68.0767 110.1C65.8567 116.869 64.1097 124.324 62.8446 132.468C61.5764 140.612 60.9409 149.128 60.9409 158.005C60.9409 166.893 61.5764 175.41 62.8446 183.554C64.1097 191.694 65.8567 199.152 68.0767 205.907C70.3025 212.688 73.0457 218.653 76.3239 223.838C79.6051 229.023 83.1464 233.203 86.9537 236.371H81.8812" />
-          <path d="M241.777 67.9032V136.754H240.509C239.022 134.635 236.646 131.094 233.367 126.119C230.089 121.156 225.753 115.495 220.361 109.145C214.966 102.808 208.413 96.1448 200.689 89.1657C192.971 82.1865 183.925 75.6272 173.567 69.4876V67.9032H241.777ZM105.674 56.8034C113.711 52.5733 121.959 47.7166 130.419 42.2037C137.605 37.347 145.539 31.4764 154.212 24.6007C162.884 17.728 171.448 9.85323 179.911 0.964538V106.618V158.643C179.911 166.042 180.913 172.764 182.923 178.789C184.933 184.81 187.629 190.32 191.014 195.283C194.398 200.258 198.203 204.651 202.436 208.449C206.666 212.256 211.005 215.544 215.445 218.293C225.806 225.062 237.654 230.232 250.976 233.832C242.519 235.313 234.053 236.478 225.596 237.329C218.194 237.956 210.207 238.166 201.644 237.956C193.077 237.746 184.987 236.688 177.372 234.787C169.97 232.878 163.044 229.395 156.594 224.314C150.141 219.236 144.537 213.049 139.777 205.756C135.018 198.464 131.261 190.367 128.518 181.49C125.763 172.602 124.389 163.515 124.389 154.207V103.751C124.389 92.976 123.392 84.5159 121.376 78.3763C119.369 72.2396 117.2 67.5898 114.87 64.421C112.127 60.6107 109.059 58.0715 105.674 56.8034" />
-        </svg>
-        <ul className="navigation">
-          <li>
-            <Link href="/">
-              <p
-                style={{
-                  color: fill,
-                  fontWeight: activePage === '/' ? 600 : 400,
-                }}
-                className={metropolis.className}
+          {/* Logo (glass) */}
+          <button
+            onClick={() => (window.location.href = '/')}
+            type="button"
+            aria-label="Home"
+            className="flex items-center gap-3 pointer-events-auto bg-transparent p-0"
+            style={{ marginRight: 6 }}
+          >
+            <img
+              src="/logo.svg"
+              alt="Logo"
+              className="w-6 h-6 object-contain"
+            />
+          </button>
+
+          {/* Nav */}
+          <nav aria-label="Primary" className="flex-1 mx-6">
+            <ul className="flex items-center justify-center gap-8">
+              {navItems.map((it) => {
+                const active = path === it.href;
+                return (
+                  <li key={it.href} className="list-none">
+                    <a
+                      href={it.href}
+                      onClick={() => setPath(it.href)}
+                      className={`text-sm transition-colors duration-150 ${active ? 'font-semibold text-black' : 'font-medium text-gray-700'}`}
+                    >
+                      <span className="inline-flex items-center gap-2">
+                        {it.label}
+                        {active && (
+                          <span className="w-2 h-2 bg-emerald-500 rounded-full block" />
+                        )}
+                      </span>
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
+
+          {/* Actions */}
+          <div className="flex items-center gap-3">
+            <button
+              type="button"
+              aria-label="Toggle theme"
+              className="w-9 h-9 rounded-lg flex items-center justify-center bg-white/6 hover:bg-white/12 transition pointer-events-auto"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-4 h-4 text-gray-700"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
               >
-                Work
-              </p>
-            </Link>
-          </li>
-          <li>
-            <Link href="/about">
-              <p
-                style={{
-                  color: fill,
-                  fontWeight: activePage === '/about' ? 600 : 400,
-                }}
-                className={metropolis.className}
-              >
-                About
-              </p>
-            </Link>
-          </li>
-        </ul>
-        <div className="burgerMenuNavigation">
-          <Burger
-            open={isOpen}
-            setOpen={setOpen}
-            fill={fill}
-            background={background}
-          />
-          <Menu open={isOpen} setOpen={setOpen} />
+                <path
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M12 3v1M12 20v1M4.2 4.2l.7.7M18.1 18.1l.7.7M1 12h1M22 12h1M4.2 19.8l.7-.7M18.1 5.9l.7-.7M12 7a5 5 0 100 10 5 5 0 000-10z"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </header>
