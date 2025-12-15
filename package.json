@@ -11,15 +11,17 @@
   },
   "dependencies": {
     "animate.css": "^4.1.1",
+    "clsx": "^2.1.1",
     "feather-icons": "^4.29.2",
     "hint.css": "^3.0.0",
     "image-compare-viewer": "^1.6.2",
-    "next": "16.0.3",
-    "react": "19.2.0",
-    "react-dom": "19.2.0",
+    "next": "^16.0.10",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
     "react-fast-marquee": "^1.6.5",
     "react-feather": "^2.0.10",
     "sass": "^1.89.2",
+    "tailwind-merge": "^3.4.0",
     "three": "^0.171.0"
   },
   "devDependencies": {
