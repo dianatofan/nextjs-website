@@ -10,6 +10,9 @@
     "export": "next export"
   },
   "dependencies": {
+    "@react-three/drei": "^10.7.4",
+    "@react-three/fiber": "^9.3.0",
+    "@react-three/rapier": "^2.2.0",
     "animate.css": "^4.1.1",
     "clsx": "^2.1.1",
     "feather-icons": "^4.29.2",
@@ -22,7 +25,7 @@
     "react-feather": "^2.0.10",
     "sass": "^1.89.2",
     "tailwind-merge": "^3.4.0",
-    "three": "^0.171.0"
+    "three": "^0.167.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

@@ -4,7 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="721b2078-e459-4257-8e32-71ab93b9970a" name="Changes" comment="Remove image path" />
+    <list default="true" id="721b2078-e459-4257-8e32-71ab93b9970a" name="Changes" comment="Remove image path">
+      <change afterPath="$PROJECT_DIR$/public/bold.blob" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/journey-transformed.glb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logo.glb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logo.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/model_52a_-_kemps_ridley_sea_turtle_no_id-transformed.glb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/react-transformed.glb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/rocket-transformed.glb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/shapes-transformed.glb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/shoe-draco.glb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox.config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/helper/gltf.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sandboxes/Basic.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sandboxes/Logo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sandboxes/PingPong.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sandboxes/Rocket.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sandboxes/Shoe.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sandboxes/Stencil.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sandboxes/Turtle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Canvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Canvas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ColorBends.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ColorBends.jsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,8 +40,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="SCSS File" />
-        <option value="JavaScript File" />
         <option value="JSX File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -58,32 +84,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;migration&quot;,
-    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
-    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/dianatofan/Documents/Projects/next-js-portfolio/public/images/json&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/dianatofan/Documents/nextjs-website/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "migration",
+    "js.debugger.nextJs.config.created.client": "true",
+    "js.debugger.nextJs.config.created.server": "true",
+    "last_opened_file_path": "/Users/dianatofan/Documents/nextjs-website/public",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/Users/dianatofan/Documents/nextjs-website/node_modules/prettier",
+    "settings.editor.selected.configurable": "copyright",
+    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/src/sandboxes" />
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/public/images/json" />
       <recent name="$PROJECT_DIR$/src/app/project/json" />
-      <recent name="$PROJECT_DIR$/src/app/project" />
-      <recent name="$PROJECT_DIR$/public/images" />
-      <recent name="$PROJECT_DIR$/public/fonts/Nauryz" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/images" />
@@ -96,7 +122,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-WS-252.27397.92" />
+        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-WS-252.28539.21" />
       </set>
     </attachedChunks>
   </component>
@@ -136,6 +162,9 @@
       <workItem from="1763629371924" duration="4067000" />
       <workItem from="1763653900929" duration="611000" />
       <workItem from="1765787164574" duration="9523000" />
+      <workItem from="1766048590766" duration="5112000" />
+      <workItem from="1766055208240" duration="4652000" />
+      <workItem from="1766134673405" duration="10109000" />
     </task>
     <task id="LOCAL-00001" summary="Remove image path">
       <option name="closed" value="true" />
