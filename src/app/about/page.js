@@ -10,9 +10,9 @@ import Layout from '@/components/Layout';
 import '@/styles/about.scss';
 import '@/styles/styles.scss';
 import LinkItem from '@/components/about/LinkItem';
-import Quote from '@/components/about/Quote';
 import 'animate.css';
 import { metropolis } from '@/app/utils/local-font';
+import CrosswordFact from '@/components/about/CrosswordFact';
 
 export default function Page() {
   const [{ background, fill }, set] = useSpring(
@@ -22,6 +22,40 @@ export default function Page() {
     },
     []
   );
+
+  const facts = [
+    {
+      imageSrc: '/images/about/minime.png',
+      alt: 'Fact 1',
+      text: 'Curious about computers since day one',
+    },
+    {
+      imageSrc: '/images/about/run.jpg',
+      alt: 'Fact 2',
+      text: 'Running is my therapy',
+    },
+    {
+      alt: 'Fact 3',
+      text: 'I love crosswords (Copenhagen crossword ⬆️, enjoy!)',
+      media: <CrosswordFact />,
+      showBorder: true,
+    },
+    {
+      imageSrc: '/images/about/ride.jpg',
+      alt: 'Fact 4',
+      text: '3 bikes and counting',
+    },
+    {
+      imageSrc: '/images/about/museum.png',
+      alt: 'Fact 5',
+      text: 'Immersive art? Yes please',
+    },
+    {
+      imageSrc: '/images/about/datavis.png',
+      alt: 'Fact 6',
+      text: 'Data visualization nerd',
+    },
+  ];
   const [loaded, setLoaded] = useState(false);
 
   return (
@@ -60,23 +94,26 @@ export default function Page() {
           <h1
             className={`${metropolis.className} text-xl antialiased tracking-tighter lg:leading-headers md:text-4xl text-primary font-semibold`}
           >
-            Hi, I'm Diana, a{' '}
+            Hi, I'm Diana, a multi-disciplinary{' '}
             <span className={`${metropolis.className} text-tertiary`}>
-              product designer
+              UX designer
             </span>{' '}
             and{' '}
             <span className={`${metropolis.className} text-tertiary`}>
               frontend engineer
             </span>{' '}
-            who’s always been drawn to problem-solving (I was the kid who loved
-            math). That mindset drives how I work today: using design and code
-            together to shape clear, practical solutions. I move comfortably
-            across the{' '}
+            passionate about solving problems. In my work, I balance{' '}
             <span className={`${metropolis.className} text-tertiary`}>
-              product lifecycle
+              user needs
             </span>{' '}
-            and work well with any team to keep things aligned and moving
-            forward.
+            with technical feasibility and{' '}
+            <span className={`${metropolis.className} text-tertiary`}>
+              business goals
+            </span>{' '}
+            to fuel growth. Having a deep understanding of both sides of the
+            product lifecycle, I can communicate clearly with all types of
+            stakeholders, regardless of their background, to ensure great
+            output.
           </h1>
           {/*<p className="text-gray-400 text-lg">/dee · uh · nah/</p>*/}
           {/*<p className="text-3xl font-semibold">*/}
@@ -219,24 +256,63 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section className="animate__animated animate__fadeIn animate__delay-1s container p-4 mb-8 w-screen max-w-screen-xl ">
-        <h2 className={`${metropolis.className} text-2xl font-semibold mb-8`}>
-          Words I live by
-        </h2>
-        <svg
-          className="w-8 h-8 mx-auto mb-3 text-gray-400 dark:text-gray-600"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="currentColor"
-          viewBox="0 0 18 14"
-        >
-          <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
-        </svg>
-        <div className="flex flex-col gap-4 w-full">
-          <Quote quote="A prototype is worth 1000 meetings" />
-          <Quote quote="The best UX is the least UX" />
-          <Quote quote="Consistency for the sake of clarity" />
-          <Quote quote="A problem well stated is a problem half solved" />
+      {/*<section className="animate__animated animate__fadeIn animate__delay-1s container p-4 mb-8 w-screen max-w-screen-xl ">*/}
+      {/*  <h2 className={`${metropolis.className} text-2xl font-semibold mb-8`}>*/}
+      {/*    Words I live by*/}
+      {/*  </h2>*/}
+      {/*  <svg*/}
+      {/*    className="w-8 h-8 mx-auto mb-3 text-gray-400 dark:text-gray-600"*/}
+      {/*    aria-hidden="true"*/}
+      {/*    xmlns="http://www.w3.org/2000/svg"*/}
+      {/*    fill="currentColor"*/}
+      {/*    viewBox="0 0 18 14"*/}
+      {/*  >*/}
+      {/*    <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />*/}
+      {/*  </svg>*/}
+      {/*  <div className="flex flex-col gap-4 w-full">*/}
+      {/*    <Quote quote="A prototype is worth 1000 meetings" />*/}
+      {/*    <Quote quote="The best UX is the least UX" />*/}
+      {/*    <Quote quote="Consistency for the sake of clarity" />*/}
+      {/*    <Quote quote="A problem well stated is a problem half solved" />*/}
+      {/*  </div>*/}
+      {/*</section>*/}
+      <section className="w-full flex justify-center px-8 py-16 bg-white">
+        <div className="w-full max-w-screen-xl">
+          <h2 className={`${metropolis.className} text-2xl font-semibold mb-8`}>
+            6 facts about me
+          </h2>
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
+            {facts.map((fact, i) => (
+              <article key={i} className="bg-white">
+                <div
+                  className={`relative w-full aspect-[3/4] overflow-hidden rounded-2xl bg-gray-100 ${
+                    fact?.showBorder ? 'border border-gray-200' : 'border-0'
+                  }`}
+                >
+                  {fact.media ? (
+                    <div className="absolute inset-0">{fact.media}</div>
+                  ) : (
+                    <Image
+                      src={fact.imageSrc}
+                      alt={fact.alt ?? ''}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="object-cover"
+                      priority={i < 2}
+                    />
+                  )}
+                </div>
+
+                <div className="pt-4">
+                  <p
+                    className={`${metropolis.className} text-base text-gray-600`}
+                  >
+                    {fact.text}
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
       {/*<section className="animate__animated animate__fadeIn animate__delay-1s container p-4 mb-8 w-screen max-w-screen-xl ">*/}

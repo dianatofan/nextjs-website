@@ -10,6 +10,7 @@
     "export": "next export"
   },
   "dependencies": {
+    "@jaredreisinger/react-crossword": "^5.2.0",
     "@react-spring/core": "^9.7.5",
     "@react-spring/three": "^9.7.5",
     "@react-spring/web": "^9.7.5",
