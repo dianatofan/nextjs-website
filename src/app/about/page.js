@@ -96,7 +96,7 @@ export default function Page() {
           >
             Hi, I'm Diana, a multi-disciplinary{' '}
             <span className={`${metropolis.className} text-tertiary`}>
-              UX designer
+              product designer
             </span>{' '}
             and{' '}
             <span className={`${metropolis.className} text-tertiary`}>
