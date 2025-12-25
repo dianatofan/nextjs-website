@@ -60,6 +60,18 @@ export default function App() {
             <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-6">
               {/* Always visible */}
               <Card
+                title="LiveOps Dashboard Notifications System"
+                description="Making Google Search the most loved tool for travellers"
+                role="UX/UI DESIGN"
+                image="./images/thumbnail7.png"
+                url="explore"
+                label="Shipped"
+                isPasswordProtected
+                fill={fill}
+                project="notifications-system"
+              />
+
+              <Card
                 title="Google Search for Travellers"
                 description="Making Google Search the most loved tool for travellers"
                 role="UX/UI DESIGN"
