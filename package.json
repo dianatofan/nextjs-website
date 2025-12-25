@@ -30,6 +30,7 @@
     "react-feather": "^2.0.10",
     "react-scroll-progress-bar": "^2.0.3",
     "sass": "^1.89.2",
+    "tailwindcss-animate": "^1.0.7",
     "three": "^0.171.0"
   },
   "devDependencies": {

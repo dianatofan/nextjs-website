@@ -20,7 +20,7 @@ export default function Page() {
       background: '#f0f0f0',
       fill: '#202020',
     },
-    []
+    [],
   );
 
   const facts = [
@@ -60,7 +60,8 @@ export default function Page() {
 
   return (
     <Layout fill={fill} isProjectPage={false}>
-      <div className="container w-screen p-4 my-[14rem] mb-[6rem] max-w-screen-xl flex items-start  flex-col lg:flex-row gap-12 animate__animated animate__fadeIn">
+      <div
+        className="container w-screen p-4 my-[14rem] mb-[6rem] max-w-screen-xl flex items-start  flex-col lg:flex-row gap-12 animate__animated animate__fadeIn">
         <div className="w-full lg:w-[45%]">
           <div
             aria-hidden="true"
@@ -201,7 +202,8 @@ export default function Page() {
               Cross-functional collaboration
             </h2>
             <p className={`${metropolis.className} text-base text-gray-600`}>
-              I align teams through clear, effective communication.
+              I align designers, engineers, and stakeholders through clear
+              communication.
             </p>
           </div>
         </div>
@@ -234,8 +236,7 @@ export default function Page() {
               Technical proficiency
             </h2>
             <p className={`${metropolis.className} text-base text-gray-600`}>
-              I build interactive prototypes that reflect real data and
-              real-world behavior.
+              I build interactive prototypes that behave like real products.
             </p>
           </div>
           <div className="flex flex-col items-center text-center">
@@ -250,8 +251,7 @@ export default function Page() {
               Data visualization
             </h2>
             <p className={`${metropolis.className} text-base text-gray-600`}>
-              I turn complex data into clear visuals that inform better
-              decisions.
+              I turn complex data into visuals that support better decisions.
             </p>
           </div>
         </div>

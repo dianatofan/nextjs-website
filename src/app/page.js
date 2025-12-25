@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
 import { useSpring } from '@react-spring/core';
 import { a } from '@react-spring/web';
@@ -26,6 +26,9 @@ export default function App() {
     },
     []
   );
+
+  // showMore state controls the collapsible area
+  const [showMore, setShowMore] = useState(false);
 
   return (
     <Layout fill={fill} isProjectPage={false}>
@@ -55,6 +58,7 @@ export default function App() {
         <section className="animate__animated animate__fadeIn animate__delay-1s w-full ml-8 mr-8 flex justify-center">
           <div className="max-w-screen-xl w-full py-8 mx-4 lg:mx-0">
             <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-6">
+              {/* Always visible */}
               <Card
                 title="Google Search for Travellers"
                 description="Making Google Search the most loved tool for travellers"
@@ -66,17 +70,7 @@ export default function App() {
                 fill={fill}
                 project="google-travel"
               />
-              <Card
-                title="JSON Editor UI"
-                description="Enabling faster, safer, developer-independent updates to live game content"
-                role="UX/UI DESIGN"
-                image="./images/thumbnail6.png"
-                url="json"
-                label="Shipped"
-                isPasswordProtected
-                fill={fill}
-                project="json"
-              />
+
               <Card
                 title="Famly's Redesign"
                 description="Shaping a design system for a mature product"
@@ -87,37 +81,83 @@ export default function App() {
                 fill={fill}
                 project="famly-redesign"
               />
-              <Card
-                title="Racefinder App"
-                description="Optimizing the racebooking process to help runners find their next race easier"
-                role="UX/UI DESIGN | USER RESEARCH"
-                image="./images/thumbnail1.png"
-                url="racefinder"
-                label="Side project"
-                fill={fill}
-                project="racefinder"
-              />
-              {/*<Card*/}
-              {/*  title="Sustainable E-Commerce"*/}
-              {/*  description="Reimagining the checkout flow to reduce packaging waste in online orders"*/}
-              {/*  role="UX/UI DESIGN | USER RESEARCH"*/}
-              {/*  image="./images/thumbnail3.png"*/}
-              {/*  url="sustainability"*/}
-              {/*  label="Side project"*/}
-              {/*  fill={fill}*/}
-              {/*  project="sustainable-ecommerce"*/}
-              {/*/>*/}
-              <Card
-                title="Visual Exploration of Time Series in Healthcare"
-                description="Generate medical charts given patient data"
-                role="DATA VISUALIZATION | UX/UI DESIGN"
-                image="./images/thumbnail2.png"
-                url="time-series"
-                label="Research"
-                fill={fill}
-                project="time-series"
-              />
+
+              {/* Collapsible area (hidden by default) */}
+              <div
+                className={`overflow-hidden transition-all duration-500 ease-[cubic-bezier(.2,.9,.2,1)] ${
+                  showMore
+                    ? 'max-h-[3000px] opacity-100 mt-6'
+                    : 'max-h-0 opacity-0'
+                }`}
+                aria-hidden={!showMore}
+              >
+                <div className="grid md:grid-cols-1 sm:grid-cols-1 gap-6">
+                  <Card
+                    title="JSON Editor UI"
+                    description="Enabling faster, safer, developer-independent updates to live game content"
+                    role="UX/UI DESIGN"
+                    image="./images/thumbnail6.png"
+                    url="json"
+                    label="Shipped"
+                    isPasswordProtected
+                    fill={fill}
+                    project="json"
+                  />
+                  <Card
+                    title="Racefinder App"
+                    description="Optimizing the racebooking process to help runners find their next race easier"
+                    role="UX/UI DESIGN | USER RESEARCH"
+                    image="./images/thumbnail1.png"
+                    url="racefinder"
+                    label="Side project"
+                    fill={fill}
+                    project="racefinder"
+                  />
+                  <Card
+                    title="Visual Exploration of Time Series in Healthcare"
+                    description="Generate medical charts given patient data"
+                    role="DATA VISUALIZATION | UX/UI DESIGN"
+                    image="./images/thumbnail2.png"
+                    url="time-series"
+                    label="Research"
+                    fill={fill}
+                    project="time-series"
+                  />
+                </div>
+              </div>
             </div>
+
+            {/* SEE MORE button - placed outside the collapsible container so it's always visible */}
+            {/*<div className="mt-8 flex justify-center">*/}
+            {/*  <button*/}
+            {/*    onClick={() => setShowMore((s) => !s)}*/}
+            {/*    aria-expanded={showMore}*/}
+            {/*    className={`*/}
+            {/*      relative z-50 inline-flex items-center gap-3 px-6 py-2 rounded-full*/}
+            {/*      bg-black/85 text-white font-medium*/}
+            {/*      shadow-[0_8px_24px_rgba(2,6,23,0.45)]*/}
+            {/*      border border-white/10*/}
+            {/*      hover:bg-black/95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black/30*/}
+            {/*    `}*/}
+            {/*    // Temporary inline debug style (uncomment to force visibility if still hidden)*/}
+            {/*    // style={{ position: 'fixed', bottom: 32, left: '50%', transform: 'translateX(-50%)', zIndex: 9999 }}*/}
+            {/*  >*/}
+            {/*    <span>{showMore ? 'Show less' : 'See more'}</span>*/}
+            {/*    <svg*/}
+            {/*      xmlns="http://www.w3.org/2000/svg"*/}
+            {/*      className={`h-4 w-4 transition-transform duration-200 ${showMore ? 'rotate-180' : 'rotate-0'}`}*/}
+            {/*      viewBox="0 0 20 20"*/}
+            {/*      fill="currentColor"*/}
+            {/*      aria-hidden="true"*/}
+            {/*    >*/}
+            {/*      <path*/}
+            {/*        fillRule="evenodd"*/}
+            {/*        d="M10 3a1 1 0 01.707.293l5 5a1 1 0 11-1.414 1.414L10 5.414 5.707 9.707A1 1 0 114.293 8.293l5-5A1 1 0 0110 3z"*/}
+            {/*        clipRule="evenodd"*/}
+            {/*      />*/}
+            {/*    </svg>*/}
+            {/*  </button>*/}
+            {/*</div>*/}
           </div>
         </section>
       </a.main>
