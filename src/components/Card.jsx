@@ -13,6 +13,7 @@ export default function Card({
   isPasswordProtected,
   fill,
   project,
+  height,
 }) {
   const [icon, showIcon] = useState(false);
   const [isActive, setIsActive] = useState(false);
@@ -39,7 +40,7 @@ export default function Card({
           style={{
             position: 'relative',
             width: '100%',
-            height: '320px',
+            height: height || '320px',
             overflow: 'hidden',
           }}
           className="rounded-xl group"

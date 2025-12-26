@@ -1,6 +1,4 @@
 'use client';
-
-import React from 'react';
 import Image from 'next/image';
 import ProtectedRoute from '@/components/ProtectedRoute';
 import 'animate.css';
@@ -11,37 +9,56 @@ import '@/styles/about.scss';
 import '@/styles/styles.scss';
 import Layout from '@/components/Layout';
 import Tldr from '@/components/Tldr';
+import ScrollProgressTOC from '@/components/ScrollProgressTOC';
+import ProjectNavigation from '@/components/ProjectNavigation';
 import { metropolis, nauryz } from '@/app/utils/local-font';
 
-const labels = [
-  { text: 'Google' },
-  { text: '3 Months' },
-  { text: 'Mobile' },
-  { text: 'UX Engineer' },
+const tocItems = [
+  { id: 'overview', label: 'Overview' },
+  { id: 'problem', label: 'Problem statement' },
+  { id: 'research', label: 'What we knew' },
+  { id: 'current-ux', label: "Today's experience" },
+  { id: 'goal', label: 'Goal' },
+  { id: 'persona', label: 'Meet Naomi' },
+  { id: 'journey', label: "Naomi's journey" },
+  { id: 'get-inspired', label: 'I. Get Inspired' },
+  { id: 'alternatives', label: 'II. Alternatives' },
+  { id: 'rediscover', label: 'III. Rediscover' },
+  { id: 'conclusion', label: 'Conclusion' },
 ];
 
 export default function Page() {
   const tldrData = {
-    title: "Google Travel Search",
+    title: 'Google Travel Search',
     problem:
-      "Travellers used Google to plan trips, but the experience was text-heavy and overwhelming. Flexible users—often unsure about dates or destinations—struggled to compare options and make confident choices.",
+      'Travellers used Google to plan trips, but the experience was text-heavy and overwhelming. Flexible users—often unsure about dates or destinations—struggled to compare options and make confident choices.',
     research:
-      "We drew on insights from previous UX studies showing that most users are flexible (70% on dates, 50% on destinations) and often change plans mid-search. The main friction points were getting inspired, comparing alternatives, and resuming past searches. Our design sprint focused on solving these challenges while supporting Google’s shift toward more visual, interactive results with images, maps, and multimedia.",
+      "We drew on insights from previous UX studies showing that most users are flexible (70% on dates, 50% on destinations) and often change plans mid-search. The main friction points were getting inspired, comparing alternatives, and resuming past searches. Our design sprint focused on solving these challenges while supporting Google's shift toward more visual, interactive results with images, maps, and multimedia.",
     solution:
-      "I built interactive prototypes in Figma and React to bring our ideas to life. In React, I implemented complex animations that Figma couldn’t support and integrated the Google Maps API to mimic realistic travel scenarios. The final design restructured the journey into three stages: Get Inspired (visual, cross-vertical content), Look into Alternatives (side-by-side suggestions with price/context), and Rediscover the Journey (personalized history with insights).",
+      "I built interactive prototypes in Figma and React to bring our ideas to life. In React, I implemented complex animations that Figma couldn't support and integrated the Google Maps API to mimic realistic travel scenarios. The final design restructured the journey into three stages: Get Inspired (visual, cross-vertical content), Look into Alternatives (side-by-side suggestions with price/context), and Rediscover the Journey (personalized history with insights).",
     metrics: [
-      { value: "3", label: "clear stages defined in the traveller journey framework" },
-      { value: "✔", label: "validated by UX leadership and adopted into 2024 roadmap" },
-      { value: "→", label: "contributed to Google Search\’s broader shift toward visual, multimedia results" },
+      {
+        value: '3',
+        label: 'clear stages defined in the traveller journey framework',
+      },
+      {
+        value: '✔',
+        label: 'validated by UX leadership and adopted into 2024 roadmap',
+      },
+      {
+        value: '→',
+        label:
+          "contributed to Google Search's broader shift toward visual, multimedia results",
+      },
     ],
   };
-  
 
-  
   return (
     <ProtectedRoute>
       <Layout isProjectPage>
-      <div className="relative w-full h-[100vh]">
+        <ScrollProgressTOC items={tocItems} />
+
+        <div className="relative w-full h-[100vh]">
           <Image
             src="/images/explore/cover.png"
             alt="cover"
@@ -51,52 +68,54 @@ export default function Page() {
           />
         </div>
         <div className="w-screen mt-8 items-center align-center animate__animated animate__fadeIn">
-        <section className="flex flex-col align-center justify-between w-screen max-w-screen-xl">
-        <div className="flex flex-col md:align-center lg:items-center gap-2 md:flex-row md:gap-12 px-8 pb-8 lg:p-0 lg:pb-0">
-            <div className="p-8">
-              <h1
-                className={`text-3xl antialiased tracking-tighter lg:leading-headers md:text-4xl text-primary font-semibold ${metropolis.className}`}
-              >
-                An Enhanced Travel Experience
-              </h1>
-              <h3 className={`text-lg text-gray-500 ${metropolis.className}`}>
-                Making Google Search the most loved tool for travellers
-              </h3>
-            </div>
-            <div className="flex flex-col gap-2 md:flex-row md:gap-12 px-8 pb-8 lg:p-0 lg:pb-0">
-              <div>
-                <div
-                  className={`font-semibold uppercase text-gray-400 text-sm ${metropolis.className}`}
+          <section className="flex flex-col align-center justify-between w-screen max-w-screen-xl">
+            <div className="flex flex-col md:align-center lg:items-center gap-2 md:flex-row md:gap-12 px-8 pb-8 lg:p-0 lg:pb-0">
+              <div className="p-8">
+                <h1
+                  className={`text-3xl antialiased tracking-tighter lg:leading-headers md:text-4xl text-primary font-semibold ${metropolis.className}`}
                 >
-                  Duration
-                </div>
-                <div className={metropolis.className}>3 months</div>
+                  An Enhanced Travel Experience
+                </h1>
+                <h3 className={`text-lg text-gray-500 ${metropolis.className}`}>
+                  Making Google Search the most loved tool for travellers
+                </h3>
               </div>
-              <div>
-                <div
-                  className={`font-semibold uppercase text-gray-400 text-sm ${metropolis.className}`}
-                >
-                  Type
+              <div className="flex flex-col gap-2 md:flex-row md:gap-12 px-8 pb-8 lg:p-0 lg:pb-0">
+                <div>
+                  <div
+                    className={`font-semibold uppercase text-gray-400 text-sm ${metropolis.className}`}
+                  >
+                    Duration
+                  </div>
+                  <div className={metropolis.className}>3 months</div>
                 </div>
-                <div className={metropolis.className}>Design sprint</div>
-              </div>
-              <div>
-                <div
-                  className={`font-semibold uppercase text-gray-400 text-sm ${metropolis.className}`}
-                >
-                  Role
+                <div>
+                  <div
+                    className={`font-semibold uppercase text-gray-400 text-sm ${metropolis.className}`}
+                  >
+                    Type
+                  </div>
+                  <div className={metropolis.className}>Design sprint</div>
                 </div>
-                <div className={metropolis.className}>UX/UI designer</div>
+                <div>
+                  <div
+                    className={`font-semibold uppercase text-gray-400 text-sm ${metropolis.className}`}
+                  >
+                    Role
+                  </div>
+                  <div className={metropolis.className}>UX/UI designer</div>
+                </div>
               </div>
-            </div>
             </div>
             <Tldr {...tldrData} />
           </section>
-          <section className="bg-gray-100 py-12 flex items-center w-screen justify-center px-8">
+          <section
+            id="overview"
+            className="bg-gray-100 py-12 flex items-center w-screen justify-center px-8"
+          >
             <div className="xl:flex items-center justify-between w-screen max-w-screen-xl gap-6">
               <h1
                 className={`max-w-screen-xl text-lg antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-2xl text-gray-400 font-semibold ${metropolis.className}`}
-                id="overview"
               >
                 Overview
               </h1>
@@ -126,6 +145,7 @@ export default function Page() {
 
                 <h3
                   className={`font-semibold uppercase text-gray-400 text-sm mb-4 ${metropolis.className}`}
+                  id="problem"
                 >
                   Problem
                 </h3>
@@ -138,58 +158,6 @@ export default function Page() {
               </div>
             </div>
           </section>
-          {/*Quote Section*/}
-          {/*/!* Why Section *!/*/}
-          {/*<section className="relative z-10 px-6 md:px-8 py-16 md:py-24 max-w-7xl mx-auto">*/}
-          {/*  <div className="mb-8">*/}
-          {/*    <h2*/}
-          {/*      className={`text-md text-gray-400 mb-6 font-medium ${metropolis.className}`}*/}
-          {/*    >*/}
-          {/*      Why it mattered?*/}
-          {/*    </h2>*/}
-          {/*    <h3*/}
-          {/*      className={`text-4xl md:text-5xl lg:text-6xl font-semibold leading-tighter tracking-tighter mb-8 ${metropolis.className}`}*/}
-          {/*    >*/}
-          {/*      Trip planning on Google felt fragmented and overwhelming.*/}
-          {/*    </h3>*/}
-          {/*    <p*/}
-          {/*      className={`text-lg md:text-xl text-primary leading-relaxed font-normal ${metropolis.className}`}*/}
-          {/*    >*/}
-          {/*      Search is the #1 starting point for travel planning — but for*/}
-          {/*      many users, it quickly becomes a source of stress. Research*/}
-          {/*      showed that travelers were constantly switching between tabs,*/}
-          {/*      drowning in choices, and struggling to compare destinations.*/}
-          {/*      Planning felt like work, not inspiration.*/}
-          {/*    </p>*/}
-          {/*  </div>*/}
-
-          {/*  /!* Data Visualization *!/*/}
-          {/*  <div className="relative flex justify-center items-center h-[28rem]">*/}
-          {/*    /!* 91% Bubble *!/*/}
-          {/*    <div className="absolute text-center left-0 top-1/2 -translate-y-1/2 w-96 h-96 bg-gray-800 rounded-full flex flex-col justify-center items-start z-10 shadow-lg">*/}
-          {/*      <span className="text-white text-5xl text-center w-full font-semibold mb-2">*/}
-          {/*        91%*/}
-          {/*      </span>*/}
-          {/*      <span*/}
-          {/*        className={`text-white text-lg text-center w-full ${metropolis.className}`}*/}
-          {/*      >*/}
-          {/*        Rely on search engines*/}
-          {/*        <br /> for trip inspiration*/}
-          {/*      </span>*/}
-          {/*    </div>*/}
-          {/*    /!* 81% Bubble (overlapping) *!/*/}
-          {/*    <div className="absolute left-80 top-1/2 -translate-y-1/2 w-80 h-80 bg-gray-600 rounded-full flex flex-col justify-center items-center z-20 shadow-lg border-4 border-white">*/}
-          {/*      <span className="text-white text-4xl font-semibold mb-2">*/}
-          {/*        81%*/}
-          {/*      </span>*/}
-          {/*      <span*/}
-          {/*        className={`text-white text-base text-center max-w-xs ${metropolis.className}`}*/}
-          {/*      >*/}
-          {/*        Prefer Google*/}
-          {/*      </span>*/}
-          {/*    </div>*/}
-          {/*  </div>*/}
-          {/*</section>*/}
           <section className="bg-black text-white py-40 md:py-56 text-center  w-lg xl:flex flex-col items-center justify-center w-screen px-8 gap-3">
             <p
               className={`text-7xl antialiased tracking-tighter lg:leading-tight md:text-8xl text-white font-medium max-w-6xl mx-auto ${nauryz.className}`}
@@ -204,11 +172,13 @@ export default function Page() {
             </p>
           </section>
           {/* What we know Section */}
-          <section className="bg-white py-12 flex flex-col items-center w-screen justify-center px-8">
+          <section
+            id="research"
+            className="bg-white py-12 flex flex-col items-center w-screen justify-center px-8"
+          >
             <div className="w-screen p-8 lg:px-32 lg:py-16">
               <h1
                 className={`max-w-screen-xl text-lg antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-2xl text-gray-400 font-semibold ${metropolis.className}`}
-                id="overview"
               >
                 What we knew
               </h1>
@@ -216,22 +186,14 @@ export default function Page() {
             </div>
           </section>
 
-          {/*<section className="relative z-10 px-6 md:px-8 py-16 md:py-24 max-w-7xl mx-auto">*/}
-          {/*  <div className="mb-8">*/}
-          {/*    <h2*/}
-          {/*      className={`text-md text-gray-400 mb-6 font-medium ${metropolis.className}`}*/}
-          {/*    >*/}
-          {/*      What we knew*/}
-          {/*    </h2>*/}
-          {/*    <TravelStatistics />*/}
-          {/*  </div>*/}
-          {/*</section>*/}
           {/* State-of-art Section */}
-          <section className="bg-white py-12 flex flex-col items-center w-screen justify-center px-8">
+          <section
+            id="current-ux"
+            className="bg-white py-12 flex flex-col items-center w-screen justify-center px-8"
+          >
             <div className="w-screen p-8 lg:px-32 lg:py-16">
               <h1
                 className={`max-w-screen-xl text-lg antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-2xl text-gray-400 font-semibold ${metropolis.className}`}
-                id="overview"
               >
                 Today's search experience
               </h1>
@@ -249,7 +211,6 @@ export default function Page() {
             <div className="w-screen p-8 lg:px-32 lg:py-8">
               <h1
                 className={`max-w-screen-xl text-xl antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-3xl text-primary font-semibold ${metropolis.className}`}
-                id="overview"
               >
                 A typical user journey is... frustrating
               </h1>
@@ -269,7 +230,6 @@ export default function Page() {
             <div className="w-screen p-8 lg:px-32 lg:py-8">
               <h1
                 className={`max-w-screen-xl text-xl antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-3xl text-primary font-semibold ${metropolis.className}`}
-                id="overview"
               >
                 An ideal user journey is... awesome
               </h1>
@@ -286,7 +246,10 @@ export default function Page() {
             </div>
           </section>
           {/* Quote Section */}
-          <section className="bg-black text-white w-lg xl:flex items-center justify-center w-screen px-8 al">
+          <section
+            id="goal"
+            className="bg-black text-white w-lg xl:flex items-center justify-center w-screen px-8"
+          >
             <div
               className={`text-5xl antialiased tracking-tighter lg:leading-tight md:text-6xl text-white text-center font-semibold max-w-screen-md mx-auto py-32 ${metropolis.className}`}
             >
@@ -305,11 +268,13 @@ export default function Page() {
               </p>
             </div>
           </section>
-          <section className="bg-white py-12 flex items-center w-screen justify-center px-8">
+          <section
+            id="persona"
+            className="bg-white py-12 flex items-center w-screen justify-center px-8"
+          >
             <div className="xl:flex items-center justify-between w-screen max-w-screen-xl gap-6">
               <h1
                 className={`max-w-screen-xl text-lg antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-2xl text-gray-400 font-semibold ${metropolis.className}`}
-                id="overview"
               >
                 Meet Naomi
               </h1>
@@ -332,11 +297,13 @@ export default function Page() {
               </div>
             </div>
           </section>
-          <section className="bg-white py-12 flex flex-col items-center w-screen justify-center px-8">
+          <section
+            id="journey"
+            className="bg-white py-12 flex flex-col items-center w-screen justify-center px-8"
+          >
             <div className="w-screen p-8 lg:px-32 lg:py-8">
               <h1
                 className={`max-w-screen-xl text-lg antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-2xl text-primary font-semibold ${metropolis.className}`}
-                id="overview"
               >
                 Naomi's exploration journey
               </h1>
@@ -352,11 +319,13 @@ export default function Page() {
               />
             </div>
           </section>
-          <section className="bg-lightTeal py-12 flex flex-col items-center w-screen justify-center px-8">
+          <section
+            id="get-inspired"
+            className="bg-lightTeal py-12 flex flex-col items-center w-screen justify-center px-8"
+          >
             <div className="w-screen p-8 lg:px-32 lg:py-8">
               <h1
                 className={`max-w-screen-xl text-xl antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-3xl text-teal font-semibold ${metropolis.className}`}
-                id="overview"
               >
                 I. Get Inspired
               </h1>
@@ -376,7 +345,6 @@ export default function Page() {
             <div className="xl:flex items-center justify-between w-screen max-w-screen-xl gap-6">
               <h1
                 className={`max-w-screen-xl text-lg antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-2xl text-gray-400 font-semibold ${metropolis.className}`}
-                id="overview"
               >
                 Context
               </h1>
@@ -387,7 +355,7 @@ export default function Page() {
                   Why?
                 </h3>
                 <p className={`text-lg mb-12 ${metropolis.className}`}>
-                  According to a recent survey of US travelers, “exploring” is
+                  According to a recent survey of US travelers, "exploring" is
                   the most enjoyable part of the journey.
                 </p>
                 <h3
@@ -407,7 +375,7 @@ export default function Page() {
                 </h3>
                 <p className={`text-lg mb-4 ${metropolis.className}`}>
                   Naomi doesn't have a solid idea for trip destinations, so she
-                  starts her search by typing a broad query: “weekend getaway”
+                  starts her search by typing a broad query: "weekend getaway"
                   to get started in her journey.
                 </p>
                 <p className={`text-lg mb-8 ${metropolis.className}`}>
@@ -450,11 +418,13 @@ export default function Page() {
               </div>
             </div>
           </section>
-          <section className="bg-lightPurple py-12 flex flex-col items-center w-screen justify-center px-8">
+          <section
+            id="alternatives"
+            className="bg-lightPurple py-12 flex flex-col items-center w-screen justify-center px-8"
+          >
             <div className="w-screen p-8 lg:px-32 lg:py-8">
               <h1
                 className={`max-w-screen-xl text-xl antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-3xl text-purple font-semibold ${metropolis.className}`}
-                id="overview"
               >
                 II. Look into alternatives
               </h1>
@@ -474,7 +444,6 @@ export default function Page() {
             <div className="xl:flex items-center justify-between w-screen max-w-screen-xl gap-6">
               <h1
                 className={`max-w-screen-xl text-lg antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-2xl text-gray-400 font-semibold ${metropolis.className}`}
-                id="overview"
               >
                 Context
               </h1>
@@ -503,9 +472,9 @@ export default function Page() {
                 </h3>
                 <p className={`text-lg mb-4 ${metropolis.className}`}>
                   "London seems to be a nice choice!" Naomi starts to check the
-                  flight details by searching “flights to London”. However,
-                  she's also wondering: “are there other cheaper destinations?”,
-                  “am I missing out anything?”
+                  flight details by searching "flights to London". However,
+                  she's also wondering: "are there other cheaper destinations?",
+                  "am I missing out anything?"
                 </p>
                 <div className="flex justify-center">
                   <Image
@@ -518,19 +487,19 @@ export default function Page() {
                   />
                 </div>
                 <p className={`text-lg mb-8 ${metropolis.className}`}>
-                  “Alternative destinations” gives Naomi suggestions based on
+                  "Alternative destinations" gives Naomi suggestions based on
                   price and her search history, as well as sustainable
                   suggestions to travel nearby.
                 </p>
               </div>
             </div>
           </section>
-          <section className="bg-lightGreen py-12 flex flex-col items-center w-screen justify-center px-8">
+          <section
+            id="rediscover"
+            className="bg-lightGreen py-12 flex flex-col items-center w-screen justify-center px-8"
+          >
             <div className="w-screen p-8 lg:px-32 lg:py-8">
-              <h1
-                className="max-w-screen-xl text-xl antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-3xl text-green font-semibold"
-                id="overview"
-              >
+              <h1 className="max-w-screen-xl text-xl antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-3xl text-green font-semibold">
                 III. Rediscover the journey
               </h1>
             </div>
@@ -547,10 +516,7 @@ export default function Page() {
           </section>
           <section className="bg-gray-100 py-12 flex items-center w-screen justify-center px-8">
             <div className="xl:flex items-center justify-between w-screen max-w-screen-xl gap-6">
-              <h1
-                className="max-w-screen-xl text-lg antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-2xl text-gray-400 font-semibold"
-                id="overview"
-              >
+              <h1 className="max-w-screen-xl text-lg antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-2xl text-gray-400 font-semibold">
                 Context
               </h1>
               <div className="max-w-screen-lg">
@@ -573,9 +539,9 @@ export default function Page() {
                   Back to Naomi's story
                 </h3>
                 <p className={`text-lg mb-4 ${metropolis.className}`}>
-                  Naomi considers a few potential destinations, but hasn’t made
+                  Naomi considers a few potential destinations, but hasn't made
                   up her mind yet. She comes back to Search and types one of
-                  places in her mind, “London”; the search history page shows
+                  places in her mind, "London"; the search history page shows
                   information about London, which she has searched for before
                 </p>
                 <div className="flex justify-center">
@@ -598,10 +564,7 @@ export default function Page() {
           </section>
           <section className="bg-white py-12 flex items-center w-screen justify-center px-8">
             <div className="xl:flex items-center justify-between w-screen max-w-screen-xl gap-6">
-              <h1
-                className="max-w-screen-xl text-lg antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-2xl text-gray-400 font-semibold"
-                id="overview"
-              >
+              <h1 className="max-w-screen-xl text-lg antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-2xl text-gray-400 font-semibold">
                 Summing up
               </h1>
               <div className="max-w-screen-lg">
@@ -640,12 +603,12 @@ export default function Page() {
               </div>
             </div>
           </section>
-          <section className="bg-gray-100 pt-12 flex items-center w-screen justify-center px-8">
+          <section
+            id="conclusion"
+            className="bg-gray-100 pt-12 pb-0 flex items-center w-screen justify-center px-8"
+          >
             <div className="xl:flex items-center justify-between w-screen max-w-screen-xl gap-6">
-              <h1
-                className="max-w-screen-xl text-lg antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-2xl text-gray-400 font-semibold"
-                id="overview"
-              >
+              <h1 className="max-w-screen-xl text-lg antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-2xl text-gray-400 font-semibold">
                 Conclusion
               </h1>
               <div className="max-w-screen-lg">
@@ -673,6 +636,17 @@ export default function Page() {
               </div>
             </div>
           </section>
+
+          <ProjectNavigation
+            previousProject={{
+              title: 'Supplier Management Dashboard',
+              href: '/project/previous-project',
+            }}
+            nextProject={{
+              title: 'E-commerce Redesign',
+              href: '/project/next-project',
+            }}
+          />
         </div>
       </Layout>
     </ProtectedRoute>

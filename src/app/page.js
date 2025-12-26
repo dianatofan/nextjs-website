@@ -57,42 +57,68 @@ export default function App() {
 
         <section className="animate__animated animate__fadeIn animate__delay-1s w-full ml-8 mr-8 flex justify-center">
           <div className="max-w-screen-xl w-full py-8 mx-4 lg:mx-0">
-            <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-6">
-              {/* Always visible */}
-              <Card
-                title="LiveOps Dashboard Notifications System"
-                description="Making Google Search the most loved tool for travellers"
-                role="UX/UI DESIGN"
-                image="./images/thumbnail7.png"
-                url="explore"
-                label="Shipped"
-                isPasswordProtected
-                fill={fill}
-                project="notifications-system"
-              />
+            {/* Layout:
+                - One full-width card on top using thumbnail8
+                - A mid single card (kept here for continuity)
+                - Two bottom cards (Famly and Google) displayed 50/50 on md+ and full width on small screens
+                - Collapsible area below
+            */}
+            <div className="grid gap-6">
+              {/* Top full-width card (thumbnail8) */}
+              <div className="w-full">
+                <Card
+                  title="LiveOps Dashboard Notifications System"
+                  description="A highlight of my recent work"
+                  role="UX/UI DESIGN"
+                  image="./images/thumbnail8.png"
+                  url="featured"
+                  label="Tactile Games"
+                  isPasswordProtected
+                  fill={fill}
+                  project="notifications-system"
+                  height={400}
+                />
+              </div>
 
-              <Card
-                title="Google Search for Travellers"
-                description="Making Google Search the most loved tool for travellers"
-                role="UX/UI DESIGN"
-                image="./images/thumbnail5.png"
-                url="explore"
-                label="Shipped"
-                isPasswordProtected
-                fill={fill}
-                project="google-travel"
-              />
+              {/* Mid card (kept visible above the bottom two) */}
+              {/*<div>*/}
+              {/*  <Card*/}
+              {/*    title="LiveOps Dashboard Notifications System"*/}
+              {/*    description="Making Google Search the most loved tool for travellers"*/}
+              {/*    role="UX/UI DESIGN"*/}
+              {/*    image="./images/thumbnail7.png"*/}
+              {/*    url="explore"*/}
+              {/*    label="Shipped"*/}
+              {/*    isPasswordProtected*/}
+              {/*    fill={fill}*/}
+              {/*    project="notifications-system"*/}
+              {/*  />*/}
+              {/*</div>*/}
 
-              <Card
-                title="Famly's Redesign"
-                description="Shaping a design system for a mature product"
-                role="UX/UI DESIGN | USER RESEARCH"
-                image="./images/famlyThumbnail.png"
-                url="famly"
-                label="Shipped"
-                fill={fill}
-                project="famly-redesign"
-              />
+              {/* Bottom two: Famly and Google - 50% / 50% on md+, full width on small */}
+              <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-6">
+                <Card
+                  title="Google Search for Travellers"
+                  description="Making Google Search the most loved tool for travellers"
+                  role="UX/UI DESIGN"
+                  image="./images/thumbnail5.png"
+                  url="explore"
+                  label="Shipped"
+                  isPasswordProtected
+                  fill={fill}
+                  project="google-travel"
+                />
+                <Card
+                  title="Famly's Redesign"
+                  description="Shaping a design system for a mature product"
+                  role="UX/UI DESIGN | USER RESEARCH"
+                  image="./images/famlyThumbnail.png"
+                  url="famly"
+                  label="Shipped"
+                  fill={fill}
+                  project="famly-redesign"
+                />
+              </div>
 
               {/* Collapsible area (hidden by default) */}
               <div

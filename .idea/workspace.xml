@@ -5,12 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="721b2078-e459-4257-8e32-71ab93b9970a" name="Changes" comment="Remove image path">
-      <change afterPath="$PROJECT_DIR$/public/images/thumbnail7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/project/notifications-system/page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/project/notifications-system/travel-statistics.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ProjectNavigation.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ScrollProgressTOC.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/thumbnail8.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/thumbnail8.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProtectedRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProtectedRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/project/notifications-system/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/project/notifications-system/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +25,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="SCSS File" />
-        <option value="JSX File" />
         <option value="JavaScript File" />
+        <option value="JSX File" />
       </list>
     </option>
   </component>
@@ -97,7 +101,7 @@
     "git-widget-placeholder": "main",
     "js.debugger.nextJs.config.created.client": "true",
     "js.debugger.nextJs.config.created.server": "true",
-    "last_opened_file_path": "/Users/dianatofan/Documents/Projects/next-js-portfolio/src/app/project",
+    "last_opened_file_path": "/Users/dianatofan/Documents/Projects/next-js-portfolio/public/images",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -111,8 +115,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/app/project" />
       <recent name="$PROJECT_DIR$/public/images" />
+      <recent name="$PROJECT_DIR$/src/app/project" />
       <recent name="$PROJECT_DIR$/src/images/about" />
       <recent name="$PROJECT_DIR$/public/images/json" />
       <recent name="$PROJECT_DIR$/src/app/project/json" />
@@ -165,7 +169,7 @@
       <workItem from="1758613557463" duration="8960000" />
       <workItem from="1758788145255" duration="8522000" />
       <workItem from="1759130886195" duration="10896000" />
-      <workItem from="1766665073055" duration="9441000" />
+      <workItem from="1766665073055" duration="14538000" />
     </task>
     <task id="LOCAL-00001" summary="Remove image path">
       <option name="closed" value="true" />
