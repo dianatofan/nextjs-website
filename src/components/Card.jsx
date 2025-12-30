@@ -14,6 +14,7 @@ export default function Card({
   fill,
   project,
   height,
+  company,
 }) {
   const [icon, showIcon] = useState(false);
   const [isActive, setIsActive] = useState(false);
@@ -72,6 +73,7 @@ export default function Card({
             <span className="w-full px-6 py-4 text-lg font-medium text-white flex justify-between items-center rounded-b-xl relative bg-gradient-to-t from-black/80 to-transparent">
               <span>{title}</span>
               <span className="inline-flex gap-2 items-center">
+                {company && <Chip label={company} />}
                 <Chip label={label} />
                 {isPasswordProtected && <Chip isPasswordProtected />}
               </span>

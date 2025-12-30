@@ -3,15 +3,16 @@ import Image from 'next/image';
 import ProtectedRoute from '@/components/ProtectedRoute';
 import 'animate.css';
 
-import TravelStatistics from '@/app/project/google-travel/travel-statistics';
-
 import '@/styles/about.scss';
 import '@/styles/styles.scss';
 import Layout from '@/components/Layout';
-import Tldr from '@/components/Tldr';
-import ScrollProgressTOC from '@/components/ScrollProgressTOC';
-import ProjectNavigation from '@/components/ProjectNavigation';
 import { metropolis, nauryz } from '@/app/utils/local-font';
+import { BackgroundBlock } from '@/app/project/notifications-system/background-block';
+import React from 'react';
+import ObservabilityGapBlock from '@/app/project/notifications-system/observability-gap-block';
+import AlternatingVideos from '@/app/project/notifications-system/alternating-videos';
+import { TradeoffsBlock } from '@/app/project/notifications-system/tradeoffs-block';
+import { ImpactBlock } from '@/app/project/notifications-system/impact-cards';
 
 const tocItems = [
   { id: 'overview', label: 'Overview' },
@@ -29,7 +30,7 @@ const tocItems = [
 
 export default function Page() {
   const tldrData = {
-    title: 'Google Travel Search',
+    title: 'Notifications Alerting System for LiveOps Creators',
     problem:
       'Travellers used Google to plan trips, but the experience was text-heavy and overwhelming. Flexible users—often unsure about dates or destinations—struggled to compare options and make confident choices.',
     research:
@@ -56,11 +57,11 @@ export default function Page() {
   return (
     <ProtectedRoute>
       <Layout isProjectPage>
-        <ScrollProgressTOC items={tocItems} />
+        {/*<ScrollProgressTOC items={tocItems} />*/}
 
         <div className="relative w-full h-[100vh]">
           <Image
-            src="/images/explore/cover.png"
+            src="/images/notifications/cover.png"
             alt="cover"
             priority
             fill
@@ -68,585 +69,501 @@ export default function Page() {
           />
         </div>
         <div className="w-screen mt-8 items-center align-center animate__animated animate__fadeIn">
-          <section className="flex flex-col align-center justify-between w-screen max-w-screen-xl">
-            <div className="flex flex-col md:align-center lg:items-center gap-2 md:flex-row md:gap-12 px-8 pb-8 lg:p-0 lg:pb-0">
-              <div className="p-8">
+          <section className="w-screen max-w-screen-xl px-8 lg:px-0">
+            <div className="flex flex-col w-full py-8 lg:py-12">
+              {/* Title + subtitle */}
+              <div className="max-w-3xl">
                 <h1
-                  className={`text-3xl antialiased tracking-tighter lg:leading-headers md:text-4xl text-primary font-semibold ${metropolis.className}`}
+                  className={`text-4xl md:text-5xl font-semibold tracking-tight text-primary ${metropolis.className}`}
                 >
-                  An Enhanced Travel Experience
+                  LiveOps Alerting System
                 </h1>
-                <h3 className={`text-lg text-gray-500 ${metropolis.className}`}>
-                  Making Google Search the most loved tool for travellers
-                </h3>
+
+                <p
+                  className={`mt-3 text-base md:text-lg leading-relaxed text-gray-500 ${metropolis.className}`}
+                >
+                  Surfacing critical production failures in real time to reduce
+                  incidents and player impact
+                </p>
               </div>
-              <div className="flex flex-col gap-2 md:flex-row md:gap-12 px-8 pb-8 lg:p-0 lg:pb-0">
-                <div>
+
+              {/* Divider */}
+              <div className="mt-8 h-px w-full bg-gray-200" />
+
+              {/* Meta info */}
+              <div className="mt-8 flex flex-col gap-6 md:flex-row md:gap-14">
+                <div className="flex-1">
                   <div
-                    className={`font-semibold uppercase text-gray-400 text-sm ${metropolis.className}`}
-                  >
-                    Duration
-                  </div>
-                  <div className={metropolis.className}>3 months</div>
-                </div>
-                <div>
-                  <div
-                    className={`font-semibold uppercase text-gray-400 text-sm ${metropolis.className}`}
-                  >
-                    Type
-                  </div>
-                  <div className={metropolis.className}>Design sprint</div>
-                </div>
-                <div>
-                  <div
-                    className={`font-semibold uppercase text-gray-400 text-sm ${metropolis.className}`}
+                    className={`text-xs font-semibold uppercase tracking-[0.2em] text-gray-400 ${metropolis.className}`}
                   >
                     Role
                   </div>
-                  <div className={metropolis.className}>UX/UI designer</div>
+                  <div
+                    className={`mt-2 text-sm md:text-base text-gray-500 ${metropolis.className}`}
+                  >
+                    Lead Product Designer
+                  </div>
+                </div>
+
+                <div className="flex-1">
+                  <div
+                    className={`text-xs font-semibold uppercase  tracking-[0.2em] text-gray-400 ${metropolis.className}`}
+                  >
+                    Team
+                  </div>
+                  <div
+                    className={`mt-2 text-sm md:text-base  text-gray-500 ${metropolis.className}`}
+                  >
+                    Product Manager, CTO, 2 BE Engineers, 1 FE Engineer
+                  </div>
+                </div>
+
+                <div className="flex-1">
+                  <div
+                    className={`text-xs font-semibold uppercase  tracking-[0.2em] text-gray-400 ${metropolis.className}`}
+                  >
+                    Company
+                  </div>
+                  <div
+                    className={`mt-2 text-sm md:text-base text-gray-500 ${metropolis.className}`}
+                  >
+                    Tactile Games
+                  </div>
+                </div>
+
+                <div className="flex-1">
+                  <div
+                    className={`text-xs font-semibold uppercase  tracking-[0.2em] text-gray-400 ${metropolis.className}`}
+                  >
+                    Duration
+                  </div>
+                  <div
+                    className={`mt-2 text-sm md:text-base text-gray-500 ${metropolis.className}`}
+                  >
+                    3 months
+                  </div>
                 </div>
               </div>
             </div>
-            <Tldr {...tldrData} />
           </section>
           <section
-            id="overview"
-            className="bg-gray-100 py-12 flex items-center w-screen justify-center px-8"
+            id="context"
+            className="w-screen bg-gray-50 py-20 flex justify-center px-8"
           >
-            <div className="xl:flex items-center justify-between w-screen max-w-screen-xl gap-6">
-              <h1
-                className={`max-w-screen-xl text-lg antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-2xl text-gray-400 font-semibold ${metropolis.className}`}
-              >
-                Overview
-              </h1>
-              <div className="max-w-screen-lg">
-                <h3
-                  className={`font-semibold uppercase text-gray-400 text-sm mb-4 ${metropolis.className}`}
-                >
-                  Background
-                </h3>
-                <p className={`text-lg mb-4 ${metropolis.className}`}>
-                  91% of travellers are turning to search engines when looking
-                  for places to visit, with the vast majority (81%) preferring
-                  to use Google as their most common source of travel
-                  inspiration.
-                </p>
-                <p className={`text-lg mb-4 ${metropolis.className}`}>
-                  However, many users expressed frustration with constantly
-                  switching between pages during their trip planning, drowning
-                  in a sea of possibilities.
-                </p>
-                <p className={`text-lg mb-8 ${metropolis.className}`}>
-                  Together with 3 UXDs and a UXR, we embarked on a design sprint
-                  journey to improve the search experience for travellers,
-                  making it easier to narrow down choices when planning a
-                  vacation.
-                </p>
-
-                <h3
-                  className={`font-semibold uppercase text-gray-400 text-sm mb-4 ${metropolis.className}`}
-                  id="problem"
-                >
-                  Problem
-                </h3>
-                <h1
-                  className={`text-4xl antialiased tracking-tighter lg:leading-tight md:text-5xl text-primary font-semibold ${metropolis.className}`}
-                >
-                  Current search experience for travellers is not tailored
-                  around their interests.
-                </h1>
+            <div className="w-full max-w-screen-xl">
+              <div className="grid grid-cols-1 xl:grid-cols-12 gap-14 items-start">
+                {/* Left rail label */}
+                <div className="xl:col-span-3">
+                  <h1
+                    className={`max-w-screen-xl text-lg antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-2xl text-gray-400 font-semibold ${metropolis.className}`}
+                  >
+                    Overview
+                  </h1>
+                </div>
+                {/* Main content */}
+                <BackgroundBlock metropolis={metropolis} />
               </div>
             </div>
           </section>
-          <section className="bg-black text-white py-40 md:py-56 text-center  w-lg xl:flex flex-col items-center justify-center w-screen px-8 gap-3">
+          <section className="bg-black text-white py-44 md:py-60 text-center  w-lg xl:flex flex-col items-center justify-center w-screen px-8 gap-3">
             <p
-              className={`text-7xl antialiased tracking-tighter lg:leading-tight md:text-8xl text-white font-medium max-w-6xl mx-auto ${nauryz.className}`}
+              className={`text-6xl antialiased tracking-tighter lg:leading-tight md:text-7xl text-white font-medium max-w-6xl mx-auto ${nauryz.className}`}
             >
-              How might we
+              Goal
             </p>
             <p
-              className={`text-6xl antialiased tracking-tighter lg:leading-tighter md:text-7xl text-white font-semibold max-w-5xl mx-auto ${metropolis.className}`}
+              className={`text-5xl antialiased tracking-tighter lg:leading-tighter md:text-6xl text-white font-semibold max-w-5xl mx-auto ${metropolis.className}`}
             >
-              help travellers narrow down their choices when planning a
-              vacation?
+              <span className="text-tertiary">Surface backend failures</span> to
+              LiveOps creators
+              <span className="text-tertiary"> early</span> so they can act
+              before players are affected
             </p>
           </section>
           {/* What we know Section */}
           <section
             id="research"
-            className="bg-white py-12 flex flex-col items-center w-screen justify-center px-8"
+            className="bg-white py-12 mt-4 flex flex-col items-center w-screen justify-center px-8"
           >
-            <div className="w-screen p-8 lg:px-32 lg:py-16">
-              <h1
-                className={`max-w-screen-xl text-lg antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-2xl text-gray-400 font-semibold ${metropolis.className}`}
-              >
-                What we knew
-              </h1>
-              <TravelStatistics />
+            <div className="w-full max-w-screen-xl">
+              <div className="grid grid-cols-1 xl:grid-cols-12 gap-14 items-start">
+                {/* Left rail label */}
+                <div className="xl:col-span-3">
+                  <h1
+                    className={`max-w-screen-xl text-lg antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-2xl text-gray-400 font-semibold ${metropolis.className}`}
+                  >
+                    Discovery
+                  </h1>
+                </div>
+                {/* Main content */}
+                <ObservabilityGapBlock metropolis={metropolis} />
+              </div>
             </div>
           </section>
+          <section
+            id="research"
+            className="bg-gray-50 py-12 flex flex-col items-center w-screen justify-center px-8"
+          >
+            <div className="w-full max-w-screen-xl">
+              <div className="grid grid-cols-1 xl:grid-cols-12 gap-14 items-start">
+                {/* Left rail label */}
+                <div className="xl:col-span-3">
+                  <h1
+                    className={`max-w-screen-xl text-lg antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-2xl text-gray-400 font-semibold ${metropolis.className}`}
+                  >
+                    Solution
+                  </h1>
+                </div>
+                {/* Main content */}
+                <div className="xl:col-span-9">
+                  <p
+                    className={`max-w-3xl text-base md:text-lg leading-relaxed text-gray-900 ${metropolis.className}`}
+                  >
+                    To close the observability gap, I redesigned the LiveOps
+                    Dashboard to surface the right signals, to the right people,
+                    at the right time. The solution combines UI surfacing with
+                    ownership and subscription logic, so failures are visible,
+                    actionable, and clearly owned.
+                  </p>
 
-          {/* State-of-art Section */}
+                  {/*/!* Bullet points *!/*/}
+                  {/*<ul className="mt-6 max-w-3xl space-y-3">*/}
+                  {/*  {[*/}
+                  {/*    {*/}
+                  {/*      title: 'Homepage',*/}
+                  {/*      description:*/}
+                  {/*        'High-level system health and critical issues visible immediately on entry.',*/}
+                  {/*    },*/}
+                  {/*    {*/}
+                  {/*      title: 'Sidebar',*/}
+                  {/*      description:*/}
+                  {/*        'Persistent indicators that signal ongoing problems while creators work.',*/}
+                  {/*    },*/}
+                  {/*    {*/}
+                  {/*      title: 'Dedicated issue views',*/}
+                  {/*      description:*/}
+                  {/*        'Detailed, actionable breakdowns of failures with ownership and context.',*/}
+                  {/*    },*/}
+                  {/*  ].map((item) => (*/}
+                  {/*    <li key={item.title} className="flex gap-4">*/}
+                  {/*      /!* Bullet marker *!/*/}
+                  {/*      <span className="mt-2 h-2 w-2 rounded-full bg-gray-900 shrink-0" />*/}
+
+                  {/*      /!* Text *!/*/}
+                  {/*      <div>*/}
+                  {/*        <p*/}
+                  {/*          className={`font-medium text-gray-900 ${metropolis.className}`}*/}
+                  {/*        >*/}
+                  {/*          {item.title}*/}
+                  {/*        </p>*/}
+                  {/*        <p*/}
+                  {/*          className={`text-sm md:text-base text-gray-600 ${metropolis.className}`}*/}
+                  {/*        >*/}
+                  {/*          {item.description}*/}
+                  {/*        </p>*/}
+                  {/*      </div>*/}
+                  {/*    </li>*/}
+                  {/*  ))}*/}
+                  {/*</ul>*/}
+                </div>
+              </div>
+            </div>
+          </section>
           <section
-            id="current-ux"
-            className="bg-white py-12 flex flex-col items-center w-screen justify-center px-8"
+            id="homepage-early-visibility"
+            className="bg-black py-20 flex justify-center w-screen px-6 md:px-8"
           >
-            <div className="w-screen p-8 lg:px-32 lg:py-16">
-              <h1
-                className={`max-w-screen-xl text-lg antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-2xl text-gray-400 font-semibold ${metropolis.className}`}
+            <div className="w-full max-w-screen-xl">
+              <h2
+                className={`text-xl md:text-3xl font-semibold tracking-tight text-white ${metropolis.className}`}
               >
-                Today's search experience
-              </h1>
-              <Image
-                src="/images/explore/currentUx.png"
-                alt="cover"
-                width={1920}
-                height={1080}
-                layout="responsive"
-                className="w-full mt-12 animate__animated animate__fadeIn"
-              />
-            </div>
-          </section>
-          <section className="bg-white py-12 flex flex-col items-center w-screen justify-center px-8">
-            <div className="w-screen p-8 lg:px-32 lg:py-8">
-              <h1
-                className={`max-w-screen-xl text-xl antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-3xl text-primary font-semibold ${metropolis.className}`}
-              >
-                A typical user journey is... frustrating
-              </h1>
-            </div>
-            <div className="max-w-screen-lg">
-              <Image
-                src="/images/explore/uxnow.png"
-                alt="cover"
-                width={1920}
-                height={1080}
-                layout="responsive"
-                className="w-full mt-12 animate__animated animate__fadeIn"
-              />
-            </div>
-          </section>
-          <section className="bg-white py-12 flex flex-col items-center w-screen justify-center px-8">
-            <div className="w-screen p-8 lg:px-32 lg:py-8">
-              <h1
-                className={`max-w-screen-xl text-xl antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-3xl text-primary font-semibold ${metropolis.className}`}
-              >
-                An ideal user journey is... awesome
-              </h1>
-            </div>
-            <div className="max-w-screen-lg">
-              <Image
-                src="/images/explore/uxideal.png"
-                alt="cover"
-                width={1920}
-                height={1080}
-                layout="responsive"
-                className="w-full mt-12 animate__animated animate__fadeIn"
-              />
-            </div>
-          </section>
-          {/* Quote Section */}
-          <section
-            id="goal"
-            className="bg-black text-white w-lg xl:flex items-center justify-center w-screen px-8"
-          >
-            <div
-              className={`text-5xl antialiased tracking-tighter lg:leading-tight md:text-6xl text-white text-center font-semibold max-w-screen-md mx-auto py-32 ${metropolis.className}`}
-            >
+                Homepage: Early Visibility
+              </h2>
+
               <p
-                className={`text-7xl antialiased tracking-tighter lg:leading-tight md:text-8xl text-white font-medium max-w-6xl mx-auto ${nauryz.className}`}
+                className={`mt-6 max-w-2xl text-base md:text-lg leading-relaxed text-gray-300 ${metropolis.className}`}
               >
-                Goal
+                The homepage previously showed only creator-configured
+                shortcuts, with no indication when systems were failing.
+              </p>
+
+              <p
+                className={`mt-6 max-w-2xl text-base md:text-lg leading-relaxed text-gray-300 ${metropolis.className}`}
+              >
+                I added 2 new sections at the top of the homepage:
               </p>
               <p
-                className={`text-6xl antialiased tracking-tighter lg:leading-tighter md:text-10xl text-white font-semibold max-w-8xl mx-auto ${metropolis.className}`}
+                className={`mt-6 max-w-2xl text-base md:text-lg leading-relaxed  border-l-2 px-4 border-gray-500 text-gray-400  ${metropolis.className}`}
               >
-                help flexible travellers make confident decisions about
-                <span className="text-tertiary"> where</span> to go and{' '}
-                <span className="text-tertiary"> when</span> to go by offering
-                rich and inspiring experiences on Search
+                A critical issues banner that appears only when blocking issues
+                exist and links directly to the Issues view
+              </p>
+              <p
+                className={`mt-6 max-w-2xl text-base md:text-lg leading-relaxed  border-l-2 px-4 border-gray-500 text-gray-400 ${metropolis.className}`}
+              >
+                A latest updates feed showing non-critical changes relevant to
+                the logged-in user, scoped to resources they own or watch
+              </p>
+
+              <p
+                className={`mt-8 max-w-2xl text-base md:text-lg leading-relaxed text-gray-300 ${metropolis.className}`}
+              >
+                These sections act as previews, helping creators understand the
+                current state before they start configuring features.
               </p>
             </div>
           </section>
+          <div className="w-full">
+            <video
+              src="/images/notifications/homepage-video.mp4"
+              className="w-full h-auto rounded-lg"
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+          </div>
           <section
-            id="persona"
-            className="bg-white py-12 flex items-center w-screen justify-center px-8"
+            id="sidebar-persistent-signals"
+            className="bg-white py-20 flex justify-center w-screen px-6 md:px-8"
           >
-            <div className="xl:flex items-center justify-between w-screen max-w-screen-xl gap-6">
-              <h1
-                className={`max-w-screen-xl text-lg antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-2xl text-gray-400 font-semibold ${metropolis.className}`}
-              >
-                Meet Naomi
-              </h1>
-              <div className="max-w-screen-lg">
-                <p className={`text-lg mb-4 ${metropolis.className}`}>
-                  Naomi is a mother and a travel enthusiast, who lives in Zürich
-                  and is interested in booking a weekend getaway somewhere in
-                  Europe with her family.
-                </p>
-                <div className="flex justify-center items-center">
-                  <Image
-                    src="/images/explore/naomi.jpeg"
-                    alt="cover"
-                    width={1920}
-                    height={1080}
-                    layout="responsive"
-                    className="max-w-screen-sm animate__animated animate__fadeIn"
-                  />
-                </div>
-              </div>
-            </div>
-          </section>
-          <section
-            id="journey"
-            className="bg-white py-12 flex flex-col items-center w-screen justify-center px-8"
-          >
-            <div className="w-screen p-8 lg:px-32 lg:py-8">
-              <h1
-                className={`max-w-screen-xl text-lg antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-2xl text-primary font-semibold ${metropolis.className}`}
-              >
-                Naomi's exploration journey
-              </h1>
-            </div>
-            <div className="max-w-screen-xl">
-              <Image
-                src="/images/explore/tripExploration.png"
-                alt="cover"
-                width={1920}
-                height={1080}
-                layout="responsive"
-                className="w-full mt-6 animate__animated animate__fadeIn"
-              />
-            </div>
-          </section>
-          <section
-            id="get-inspired"
-            className="bg-lightTeal py-12 flex flex-col items-center w-screen justify-center px-8"
-          >
-            <div className="w-screen p-8 lg:px-32 lg:py-8">
-              <h1
-                className={`max-w-screen-xl text-xl antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-3xl text-teal font-semibold ${metropolis.className}`}
-              >
-                I. Get Inspired
-              </h1>
-            </div>
-            <div className="max-w-screen-lg">
-              <Image
-                src="/images/explore/getInspired.png"
-                alt="cover"
-                width={1920}
-                height={1080}
-                layout="responsive"
-                className="w-full mt-6 animate__animated animate__fadeIn"
-              />
-            </div>
-          </section>
-          <section className="bg-gray-100 py-12 flex items-center w-screen justify-center px-8">
-            <div className="xl:flex items-center justify-between w-screen max-w-screen-xl gap-6">
-              <h1
-                className={`max-w-screen-xl text-lg antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-2xl text-gray-400 font-semibold ${metropolis.className}`}
-              >
-                Context
-              </h1>
-              <div className="max-w-screen-lg">
-                <h3
-                  className={`font-semibold uppercase text-gray-400 text-sm mb-4 ${metropolis.className}`}
-                >
-                  Why?
-                </h3>
-                <p className={`text-lg mb-12 ${metropolis.className}`}>
-                  According to a recent survey of US travelers, "exploring" is
-                  the most enjoyable part of the journey.
-                </p>
-                <h3
-                  className={`font-semibold uppercase text-gray-400 text-sm mb-4 ${metropolis.className}`}
-                >
-                  How?
-                </h3>
-                <p className={`text-lg mb-12 ${metropolis.className}`}>
-                  By creating a one stop shop that is lightweight, fun and
-                  informative, we can make more delightful experiences and
-                  increase the overall funnel.
-                </p>
-                <h3
-                  className={`font-semibold uppercase text-gray-400 text-sm mb-4 ${metropolis.className}`}
-                >
-                  Back to Naomi's story
-                </h3>
-                <p className={`text-lg mb-4 ${metropolis.className}`}>
-                  Naomi doesn't have a solid idea for trip destinations, so she
-                  starts her search by typing a broad query: "weekend getaway"
-                  to get started in her journey.
-                </p>
-                <p className={`text-lg mb-8 ${metropolis.className}`}>
-                  First she is drawn to Grindelwald as it seems relaxing. After
-                  a quick peek, she thinks that it may not be kid-friendly and
-                  remembers seeing some family friendly places before.
-                </p>
-                <div className="flex justify-center">
-                  <Image
-                    src="/images/explore/firstscreen-grindelwald.gif"
-                    alt="cover"
-                    width={320}
-                    height={560}
-                    layout="responsive"
-                    className="max-w-xs border-4 mb-12 border-black rounded-32px animate__animated animate__fadeIn"
-                  />
-                </div>
-                <p className={`text-lg mb-8 ${metropolis.className}`}>
-                  She wants to check the map as she needs to make sure the
-                  travel time is manageable for the kids. She then discovers
-                  that London would be an affordable option. She wants to learn
-                  more.
-                </p>
-                <div className="flex justify-center">
-                  <Image
-                    src="/images/explore/firstscreen-selected.gif"
-                    alt="cover"
-                    width={320}
-                    height={560}
-                    layout="responsive"
-                    className="max-w-xs border-4 mb-12 border-black rounded-32px animate__animated animate__fadeIn"
-                  />
-                </div>
-                <p className={`text-lg mb-8 ${metropolis.className}`}>
-                  She wants to check the map as she needs to make sure the
-                  travel time is manageable for the kids. She then discovers
-                  that London would be an affordable option. She wants to learn
-                  more.
-                </p>
-              </div>
-            </div>
-          </section>
-          <section
-            id="alternatives"
-            className="bg-lightPurple py-12 flex flex-col items-center w-screen justify-center px-8"
-          >
-            <div className="w-screen p-8 lg:px-32 lg:py-8">
-              <h1
-                className={`max-w-screen-xl text-xl antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-3xl text-purple font-semibold ${metropolis.className}`}
-              >
-                II. Look into alternatives
-              </h1>
-            </div>
-            <div className="max-w-screen-lg">
-              <Image
-                src="/images/explore/flights.png"
-                alt="cover"
-                width={1920}
-                height={1080}
-                layout="responsive"
-                className="w-full mt-6 animate__animated animate__fadeIn"
-              />
-            </div>
-          </section>
-          <section className="bg-gray-100 py-12 flex items-center w-screen justify-center px-8">
-            <div className="xl:flex items-center justify-between w-screen max-w-screen-xl gap-6">
-              <h1
-                className={`max-w-screen-xl text-lg antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-2xl text-gray-400 font-semibold ${metropolis.className}`}
-              >
-                Context
-              </h1>
-              <div className="max-w-screen-lg">
-                <h3
-                  className={`font-semibold uppercase text-gray-400 text-sm mb-4 ${metropolis.className}`}
-                >
-                  Why?
-                </h3>
-                <p className={`text-lg mb-12 ${metropolis.className}`}>
-                  1/3 of users who have a destination in mind are still
-                  exploring travel ideas.
-                </p>
-                <h3
-                  className={`font-semibold uppercase text-gray-400 text-sm mb-4 ${metropolis.className}`}
-                >
-                  How?
-                </h3>
-                <p className={`text-lg mb-12 ${metropolis.className}`}>
-                  Offer alternative suggestions based on user's intent.
-                </p>
-                <h3
-                  className={`font-semibold uppercase text-gray-400 text-sm mb-4 ${metropolis.className}`}
-                >
-                  Back to Naomi's story
-                </h3>
-                <p className={`text-lg mb-4 ${metropolis.className}`}>
-                  "London seems to be a nice choice!" Naomi starts to check the
-                  flight details by searching "flights to London". However,
-                  she's also wondering: "are there other cheaper destinations?",
-                  "am I missing out anything?"
-                </p>
-                <div className="flex justify-center">
-                  <Image
-                    src="/images/explore/secondscreen-flights.gif"
-                    alt="cover"
-                    width={320}
-                    height={560}
-                    layout="responsive"
-                    className="max-w-xs border-4 mb-12 border-black rounded-32px animate__animated animate__fadeIn"
-                  />
-                </div>
-                <p className={`text-lg mb-8 ${metropolis.className}`}>
-                  "Alternative destinations" gives Naomi suggestions based on
-                  price and her search history, as well as sustainable
-                  suggestions to travel nearby.
-                </p>
-              </div>
-            </div>
-          </section>
-          <section
-            id="rediscover"
-            className="bg-lightGreen py-12 flex flex-col items-center w-screen justify-center px-8"
-          >
-            <div className="w-screen p-8 lg:px-32 lg:py-8">
-              <h1 className="max-w-screen-xl text-xl antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-3xl text-green font-semibold">
-                III. Rediscover the journey
-              </h1>
-            </div>
-            <div className="max-w-screen-lg">
-              <Image
-                src="/images/explore/rediscover.png"
-                alt="cover"
-                width={1920}
-                height={1080}
-                layout="responsive"
-                className="w-full mt-6 animate__animated animate__fadeIn"
-              />
-            </div>
-          </section>
-          <section className="bg-gray-100 py-12 flex items-center w-screen justify-center px-8">
-            <div className="xl:flex items-center justify-between w-screen max-w-screen-xl gap-6">
-              <h1 className="max-w-screen-xl text-lg antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-2xl text-gray-400 font-semibold">
-                Context
-              </h1>
-              <div className="max-w-screen-lg">
-                <h3 className="font-semibold uppercase text-gray-400 text-sm mb-4">
-                  Why?
-                </h3>
-                <p className={`text-lg mb-12 ${metropolis.className}`}>
-                  The average length of a successful travel journey in Search is
-                  34 days.
-                </p>
-                <h3 className="font-semibold uppercase text-gray-400 text-sm mb-4">
-                  How?
-                </h3>
-                <p className={`text-lg mb-12 ${metropolis.className}`}>
-                  Intelligently curate Search history to provide users with a
-                  personalized and up-to-date Search experience, making it easy
-                  to resume their search and find the information they need.
-                </p>
-                <h3 className="font-semibold uppercase text-gray-400 text-sm mb-4">
-                  Back to Naomi's story
-                </h3>
-                <p className={`text-lg mb-4 ${metropolis.className}`}>
-                  Naomi considers a few potential destinations, but hasn't made
-                  up her mind yet. She comes back to Search and types one of
-                  places in her mind, "London"; the search history page shows
-                  information about London, which she has searched for before
-                </p>
-                <div className="flex justify-center">
-                  <Image
-                    src="/images/explore/lastscreen.gif"
-                    alt="cover"
-                    width={320}
-                    height={560}
-                    layout="responsive"
-                    className="max-w-xs border-4 mb-12 border-black rounded-32px animate__animated animate__fadeIn"
-                  />
-                </div>
-                <p className={`text-lg mb-8 ${metropolis.className}`}>
-                  She discovers that there is a Disney festival in London that
-                  her son would like. The flight is even cheaper than last time.
-                  London is calling.
-                </p>
-              </div>
-            </div>
-          </section>
-          <section className="bg-white py-12 flex items-center w-screen justify-center px-8">
-            <div className="xl:flex items-center justify-between w-screen max-w-screen-xl gap-6">
-              <h1 className="max-w-screen-xl text-lg antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-2xl text-gray-400 font-semibold">
-                Summing up
-              </h1>
-              <div className="max-w-screen-lg">
-                <p className={`text-lg mb-16 ${metropolis.className}`}>
-                  We divided the customer journey in three main stages and
-                  proposed solutions for each aspect of the trip planning.
-                </p>
-                <div className="mb-8">
-                  <p className="text-xl lg:text-2xl mb-4 font-semibold">
-                    I. Get inspired (cross-vertical journey)
-                  </p>
-                  <p className={`text-lg mb-4 ${metropolis.className}`}>
-                    Offer snackable content across diverse verticals (hotels,
-                    food, things to do etc.) to inspire users where to go.
-                  </p>
-                </div>
-                <div className="mb-8">
-                  <p className="text-xl lg:text-2xl mb-4 font-semibold">
-                    II. Look into alternatives (sideway navigation)
-                  </p>
-                  <p className={`text-lg mb-4 ${metropolis.className}`}>
-                    Provide compelling multi-format content streams for
-                    suggestions and facilitate user comparisons.
-                  </p>
-                </div>
-                <div className="mb-8">
-                  <p className="text-xl lg:text-2xl mb-4 font-semibold">
-                    III. Rediscover the journey (multi-session)
-                  </p>
-                  <p className={`text-lg mb-4 ${metropolis.className}`}>
-                    Users can revisit their search history to resume
-                    explorations, accompanied by insights to support their
-                    decision-making.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section
-            id="conclusion"
-            className="bg-gray-100 pt-12 pb-0 flex items-center w-screen justify-center px-8"
-          >
-            <div className="xl:flex items-center justify-between w-screen max-w-screen-xl gap-6">
-              <h1 className="max-w-screen-xl text-lg antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-2xl text-gray-400 font-semibold">
-                Conclusion
-              </h1>
-              <div className="max-w-screen-lg">
-                <p className={`text-lg mb-16 ${metropolis.className}`}>
-                  We successfully proposed a new framework oriented towards
-                  travelers, to inspire them to travel to places that suit their
-                  needs and interests. This framework can be extended to
-                  multiple scenarios, from weekend trips to ski tours or long
-                  summer vacations.
-                </p>
-                <div className="mb-8">
-                  <p className="text-lg lg:text-xl mb-4 font-semibold">
-                    Next steps
-                  </p>
-                  <p className={`text-lg mb-4 ${metropolis.className}`}>
-                    We presented our ideas to the steering committee of UX leads
-                    and after weekly feedback rounds, these concepts set the
-                    roadmap for 2024 planning, however there is stil a lot of
-                    work left to do. Even if the concepts were validated by
-                    internal stakeholders, we still need to conduct more user
-                    studies with external participants to identify areas which
-                    might not seem so counterintuitive to the average traveller.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
+            <div className="w-full max-w-screen-xl">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+                {/* Left column: Title + text */}
+                <div className="max-w-xl">
+                  <h2
+                    className={`text-xl md:text-3xl font-semibold tracking-tight text-primary ${metropolis.className}`}
+                  >
+                    Sidebar: Persistent Attention Signals
+                  </h2>
 
-          <ProjectNavigation
-            previousProject={{
-              title: 'Supplier Management Dashboard',
-              href: '/project/previous-project',
-            }}
-            nextProject={{
-              title: 'E-commerce Redesign',
-              href: '/project/next-project',
-            }}
+                  <p
+                    className={`mt-6 text-base md:text-lg leading-relaxed text-gray-900 ${metropolis.className}`}
+                  >
+                    In practice, many users do not always land on the homepage.
+                    Some navigate directly to a specific game or resource.
+                  </p>
+
+                  <p
+                    className={`mt-4 text-base md:text-lg leading-relaxed text-gray-900 ${metropolis.className}`}
+                  >
+                    To account for this, I made critical states visible directly
+                    in the left-hand sidebar, where they could not be missed.
+                  </p>
+
+                  <p
+                    className={`mt-4 text-base md:text-lg leading-relaxed text-gray-900 ${metropolis.className}`}
+                  >
+                    This ensures issues draw attention regardless of entry
+                    point, without interrupting workflows.
+                  </p>
+                </div>
+
+                {/* Right column: Image */}
+                <div className="flex justify-start md:justify-end">
+                  <Image
+                    src="/images/notifications/sidebar-badges.png"
+                    alt="Sidebar showing persistent issue indicators"
+                    width={320}
+                    height={560}
+                    className="w-full max-w-xs h-auto animate__animated animate__fadeIn"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+          <AlternatingVideos
+            video1="/images/notifications/avatar-sidebar.mp4"
+            video2="/images/notifications/game-sidebar.mp4"
+            caption1="Avatar-level signal"
+            caption2="Game-level signals"
           />
+          <section
+            id="homepage-early-visibility"
+            className="bg-black py-20 flex justify-center w-screen px-6 md:px-8"
+          >
+            <div className="w-full max-w-screen-xl">
+              <h2
+                className={`text-xl md:text-3xl font-semibold tracking-tight text-white ${metropolis.className}`}
+              >
+                List Views: From Awareness to Action
+              </h2>
+
+              <p
+                className={`mt-6 max-w-2xl text-base md:text-lg leading-relaxed text-gray-300 ${metropolis.className}`}
+              >
+                Clicking into the Critical Issues or Latest Updates views
+                reveals structured lists with clear context.
+              </p>
+
+              <p
+                className={`mt-6 max-w-2xl text-base md:text-lg leading-relaxed  border-l-2 px-4 border-gray-500 text-gray-400 ${metropolis.className}`}
+              >
+                For critical issues, users can see what is broken, where it
+                occurs, which resources are affected, and how the issue was
+                detected. Issues can be resolved or reopened, and deeper links
+                provide access to backend or monitoring sources when needed.
+              </p>
+
+              <p
+                className={`mt-6 max-w-2xl text-base md:text-lg leading-relaxed  border-l-2 px-4 border-gray-500  text-gray-400 ${metropolis.className}`}
+              >
+                Updates provide visibility into relevant changes without
+                requiring action, supporting awareness without noise.
+              </p>
+            </div>
+          </section>
+          <div className="w-full">
+            <video
+              src="/images/notifications/list-views1.mp4"
+              className="w-full h-auto rounded-lg"
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+          </div>{' '}
+          <section
+            id="sidebar-persistent-signals"
+            className="bg-white py-20 flex justify-center w-screen px-6 md:px-8"
+          >
+            <div className="w-full max-w-screen-xl">
+              {/* Left column: Title + text */}
+              <div className="max-w-2xl">
+                <h2
+                  className={`text-xl md:text-3xl font-semibold tracking-tight text-primary ${metropolis.className}`}
+                >
+                  Ownership and Watchers
+                </h2>
+
+                <p
+                  className={`mt-6 text-base md:text-lg leading-relaxed text-gray-900 ${metropolis.className}`}
+                >
+                  Alerting only works if responsibility is clear.
+                </p>
+
+                <p
+                  className={`mt-4 text-base md:text-lg leading-relaxed text-gray-900 ${metropolis.className}`}
+                >
+                  I introduced ownership as a first-class concept across LiveOps
+                  resources. The creator becomes the default owner, ownership
+                  can be transferred, and owners are automatically subscribed to
+                  critical issues affecting their resources. Owners cannot
+                  unsubscribe from these issues.
+                </p>
+
+                <p
+                  className={`mt-4 text-base md:text-lg leading-relaxed text-gray-900 ${metropolis.className}`}
+                >
+                  In addition, users can act as watchers of specific resources,
+                  resource types, or entire games, allowing teams to stay
+                  informed without centralising responsibility on a single role.
+                </p>
+              </div>
+            </div>
+          </section>
+          <AlternatingVideos
+            video1="/images/notifications/transfer-ownership.mp4"
+            video2="/images/notifications/adding-watcher.mp4"
+            caption1="Transfering ownership of a resource"
+            caption2="Adding watcher to a resource"
+          />
+          <section
+            id="homepage-early-visibility"
+            className="bg-black py-20 flex justify-center w-screen px-6 md:px-8"
+          >
+            <div className="w-full max-w-screen-xl">
+              <div className="max-w-2xl">
+                <h2
+                  className={`text-xl md:text-3xl font-semibold tracking-tight text-white ${metropolis.className}`}
+                >
+                  Notification Settings
+                </h2>
+
+                <p
+                  className={`mt-6 max-w-2xl text-base md:text-lg leading-relaxed text-gray-300 ${metropolis.className}`}
+                >
+                  To balance signal and noise, I designed a subscription-based
+                  notification model.
+                </p>
+
+                <p
+                  className={`mt-6 max-w-2xl text-base md:text-lg leading-relaxed  text-gray-300 ${metropolis.className}`}
+                >
+                  Users can manage which games and resource types they follow,
+                  and whether they receive critical issues, updates, or both.
+                  Defaults are intentionally opinionated: owners and producers
+                  always receive critical issues, while view-only roles can
+                  subscribe without taking action.
+                </p>
+
+                <p
+                  className={`mt-6 max-w-2xl text-base md:text-lg leading-relaxed  text-gray-300 ${metropolis.className}`}
+                >
+                  Notification preferences live in the user profile, making them
+                  explicit and adjustable over time.
+                </p>
+              </div>
+            </div>
+          </section>
+          <div className="w-full">
+            <video
+              src="/images/notifications/notifications-settings.mp4"
+              className="w-full h-auto rounded-lg"
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+          </div>
+          <section
+            id="context"
+            className="w-screen bg-gray-50 py-20 flex justify-center px-8"
+          >
+            <div className="w-full max-w-screen-xl">
+              <div className="grid grid-cols-1 xl:grid-cols-12 gap-14 items-start">
+                {/* Left rail label */}
+                <div className="xl:col-span-3">
+                  <h1
+                    className={`max-w-screen-xl text-lg antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-2xl text-gray-400 font-semibold ${metropolis.className}`}
+                  >
+                    Key tradeoffs
+                  </h1>
+                </div>
+                {/* Main content */}
+                <TradeoffsBlock metropolis={metropolis} />
+              </div>
+            </div>
+          </section>
+          <section
+            id="context"
+            className="w-screen bg-white py-20 flex justify-center px-8"
+          >
+            <div className="w-full max-w-screen-xl">
+              <div className="grid grid-cols-1 xl:grid-cols-12 gap-14 items-start">
+                {/* Left rail label */}
+                <div className="xl:col-span-3">
+                  <h1
+                    className={`max-w-screen-xl text-lg antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-2xl text-gray-400 font-semibold ${metropolis.className}`}
+                  >
+                    Impact
+                  </h1>
+                </div>
+                {/* Main content */}
+                <ImpactBlock metropolis={metropolis} />
+              </div>
+            </div>
+          </section>{' '}
+          {/*<ProjectNavigation*/}
+          {/*  previousProject={{*/}
+          {/*    title: 'Supplier Management Dashboard',*/}
+          {/*    href: '/project/previous-project',*/}
+          {/*  }}*/}
+          {/*  nextProject={{*/}
+          {/*    title: 'E-commerce Redesign',*/}
+          {/*    href: '/project/next-project',*/}
+          {/*  }}*/}
+          {/*/>*/}
         </div>
       </Layout>
     </ProtectedRoute>

@@ -67,12 +67,13 @@ export default function App() {
               {/* Top full-width card (thumbnail8) */}
               <div className="w-full">
                 <Card
-                  title="LiveOps Dashboard Notifications System"
+                  title="LiveOps Alerting System"
                   description="A highlight of my recent work"
                   role="UX/UI DESIGN"
                   image="./images/thumbnail8.png"
                   url="featured"
-                  label="Tactile Games"
+                  label="2025"
+                  company="Tactile Games"
                   isPasswordProtected
                   fill={fill}
                   project="notifications-system"
