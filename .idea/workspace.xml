@@ -5,26 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="721b2078-e459-4257-8e32-71ab93b9970a" name="Changes" comment="Remove image path">
-      <change afterPath="$PROJECT_DIR$/public/images/canvas/game-canvas-cover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/thumbnail9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/project/game-setup/alternating-videos.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/project/game-setup/background-block.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/project/game-setup/before-after-video-card.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/project/game-setup/impact-cards.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/project/game-setup/list-view-section.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/project/game-setup/liveops-diagram-card.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/project/game-setup/observability-gap-block.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/project/game-setup/page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/project/game-setup/tradeoffs-block.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/project/game-setup/travel-statistics.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/project/game-setup/force-graph.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/notifications/email-notifications-removed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/project/notifications-system/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/project/notifications-system/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Chip.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chip.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProtectedRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProtectedRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ScrollProgressBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ScrollProgressBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/project/game-setup/background-block.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/project/game-setup/background-block.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/project/game-setup/liveops-diagram-card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/project/game-setup/liveops-diagram-card.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/project/game-setup/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/project/game-setup/page.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +169,7 @@
       <workItem from="1758788145255" duration="8522000" />
       <workItem from="1759130886195" duration="10896000" />
       <workItem from="1766665073055" duration="65807000" />
-      <workItem from="1767098064556" duration="17323000" />
+      <workItem from="1767098064556" duration="21598000" />
     </task>
     <task id="LOCAL-00001" summary="Remove image path">
       <option name="closed" value="true" />

@@ -7,12 +7,12 @@ import '@/styles/about.scss';
 import '@/styles/styles.scss';
 import Layout from '@/components/Layout';
 import { metropolis, nauryz } from '@/app/utils/local-font';
-import { BackgroundBlock } from '@/app/project/notifications-system/background-block';
+import { BackgroundBlock } from '@/app/project/game-setup/background-block';
 import React from 'react';
-import ObservabilityGapBlock from '@/app/project/notifications-system/observability-gap-block';
-import AlternatingVideos from '@/app/project/notifications-system/alternating-videos';
-import { TradeoffsBlock } from '@/app/project/notifications-system/tradeoffs-block';
-import { ImpactBlock } from '@/app/project/notifications-system/impact-cards';
+import ObservabilityGapBlock from '@/app/project/game-setup/observability-gap-block';
+import AlternatingVideos from '@/app/project/game-setup/alternating-videos';
+import { TradeoffsBlock } from '@/app/project/game-setup/tradeoffs-block';
+import { ImpactBlock } from '@/app/project/game-setup/impact-cards';
 
 const tocItems = [
   { id: 'overview', label: 'Overview' },
@@ -133,7 +133,7 @@ export default function Page() {
                   <h1
                     className={`max-w-screen-xl text-lg antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-2xl text-gray-400 font-semibold ${metropolis.className}`}
                   >
-                    Overview
+                    Context
                   </h1>
                 </div>
                 {/* Main content */}
@@ -150,10 +150,11 @@ export default function Page() {
             <p
               className={`text-5xl antialiased tracking-tighter lg:leading-tighter md:text-6xl text-white font-semibold max-w-5xl mx-auto ${metropolis.className}`}
             >
-              <span className="text-tertiary">Surface backend failures</span> to
-              LiveOps creators
-              <span className="text-tertiary"> early</span> so they can act
-              before players are affected
+              Enable teams to{' '}
+              <span className="text-tertiary">
+                launch more games per quarter
+              </span>{' '}
+              through fast, safe, self-serve game setup.
             </p>
           </section>
           {/* What we know Section */}

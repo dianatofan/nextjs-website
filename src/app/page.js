@@ -98,18 +98,18 @@ export default function App() {
 
               {/* Bottom two: Famly and Google - 50% / 50% on md+, full width on small */}
               <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-6">
-                {/*<Card*/}
-                {/*  title="Game Setup Canvas Tool"*/}
-                {/*  description="Making Google Search the most loved tool for travellers"*/}
-                {/*  role="UX/UI DESIGN"*/}
-                {/*  image="./images/thumbnail9.png"*/}
-                {/*  url="explore"*/}
-                {/*  label="2025"*/}
-                {/*  company="Tactile Games"*/}
-                {/*  isPasswordProtected*/}
-                {/*  fill={fill}*/}
-                {/*  project="game-setup"*/}
-                {/*/>*/}
+                <Card
+                  title="Game Setup Canvas Tool"
+                  description="Making Google Search the most loved tool for travellers"
+                  role="UX/UI DESIGN"
+                  image="./images/thumbnail9.png"
+                  url="explore"
+                  label="2025"
+                  company="Tactile Games"
+                  isPasswordProtected
+                  fill={fill}
+                  project="game-setup"
+                />
                 <Card
                   title="Google Search for Travellers"
                   description="Making Google Search the most loved tool for travellers"

@@ -1,200 +1,190 @@
-import { useMemo, useState } from 'react';
-import Image from 'next/image';
+'use client';
 
-function SegmentedToggle({ value, onChange, fontClass = '' }) {
-  return (
-    <div
-      className={[
-        'inline-flex rounded-full bg-gray-100 p-1 ring-1 ring-gray-200',
-        fontClass,
-      ].join(' ')}
-    >
-      {[
-        { key: 'ideal', label: 'Ideal' },
-        { key: 'error', label: 'Error' },
-      ].map((opt) => {
-        const active = value === opt.key;
-        return (
-          <button
-            key={opt.key}
-            type="button"
-            onClick={() => onChange(opt.key)}
-            className={[
-              'rounded-full px-3 py-1.5 text-xs md:text-sm font-medium transition',
-              active
-                ? 'bg-white text-gray-900 shadow-sm'
-                : 'text-gray-600 hover:text-gray-900',
-            ].join(' ')}
-            aria-pressed={active}
-          >
-            {opt.label}
-          </button>
-        );
-      })}
-    </div>
-  );
-}
+import ForceGraph from './force-graph';
 
 export function LiveOpsDiagramCard({ metropolis }) {
-  const [mode, setMode] = useState('ideal');
+  const nodes = [
+    { id: 'Game Setup' },
 
-  // Update these paths to your actual files
-  const diagrams = useMemo(
-    () => ({
-      ideal: {
-        src: '/images/notifications/LiveOps-ideal.png',
-        alt: 'Ideal LiveOps flow: Dashboard configuration processed by backend systems and delivered to players.',
-        caption:
-          'Ideal: Dashboard configuration is processed by backend systems and reaches players as expected.',
-        badge: 'Expected behavior',
-      },
-      error: {
-        src: '/images/notifications/LiveOps-error.png', // <-- create/export this
-        alt: 'Error LiveOps flow: backend failure impacts players while the dashboard shows no issue.',
-        caption:
-          'Error: A backend dependency fails — players may see errors while creators see no signal in the Dashboard.',
-        badge: 'Failure can be invisible',
-      },
-    }),
-    []
-  );
+    { id: 'Dashboard' },
+    { id: 'Game Canvas' },
+    { id: 'Blueprint (legacy)' },
 
-  const active = diagrams[mode];
+    { id: 'LiveOps Admin' },
+    { id: 'Feature Flags' },
+    { id: 'Remote Config' },
+    { id: 'Rules Engine' },
+    { id: 'Segmentation' },
+    { id: 'Experimentation (A/B)' },
+    { id: 'Offers & Store' },
+    { id: 'Events Scheduler' },
+
+    { id: 'Backend Runtime' },
+    { id: 'Config Service' },
+    { id: 'Gateway / API' },
+    { id: 'Matchmaking' },
+    { id: 'Economy Service' },
+    { id: 'Inventory Service' },
+    { id: 'Player Profile' },
+    { id: 'Entitlements' },
+
+    { id: 'Redis Cache' },
+    { id: 'SQL DB' },
+    { id: 'Blob Storage' },
+
+    { id: 'Game Client' },
+    { id: 'Client Events SDK' },
+    { id: 'Event Ingestion' },
+    { id: 'Stream Processing' },
+    { id: 'Data Warehouse' },
+    { id: 'Dashboards / BI' },
+    { id: 'Attribution' },
+
+    { id: 'Build Pipeline' },
+    { id: 'CI' },
+    { id: 'CD' },
+    { id: 'App Store' },
+    { id: 'Feature Rollout' },
+
+    { id: 'IAM / Permissions' },
+    { id: 'Audit Log' },
+    { id: 'Approvals' },
+    { id: 'Policy Checks' },
+
+    { id: 'Infrastructure' },
+    { id: 'Kubernetes / Compute' },
+    { id: 'Secrets Manager' },
+
+    { id: 'Monitoring' },
+    { id: 'Logs' },
+    { id: 'Alerts / On-call' },
+    { id: 'SLO / Reliability' },
+
+    { id: 'Players' },
+  ];
+
+  const links = [
+    // Backbone
+    { source: 'Game Setup', target: 'Dashboard', strength: 1.0 },
+    { source: 'Game Setup', target: 'Game Canvas', strength: 1.0 },
+    { source: 'Game Setup', target: 'Build Pipeline', strength: 1.0 },
+    { source: 'Game Setup', target: 'Infrastructure', strength: 1.0 },
+    { source: 'Game Setup', target: 'IAM / Permissions', strength: 1.0 },
+    { source: 'Game Setup', target: 'Monitoring', strength: 1.0 },
+    { source: 'Game Setup', target: 'Event Ingestion', strength: 1.0 },
+    { source: 'Game Setup', target: 'Backend Runtime', strength: 1.0 },
+
+    // Ownership
+    { source: 'Blueprint (legacy)', target: 'Game Setup' },
+    { source: 'Dashboard', target: 'Game Canvas' },
+    { source: 'Game Canvas', target: 'LiveOps Admin' },
+    { source: 'Game Canvas', target: 'Infrastructure' },
+    { source: 'Game Canvas', target: 'IAM / Permissions' },
+    { source: 'Game Canvas', target: 'Build Pipeline' },
+
+    // LiveOps config
+    { source: 'Dashboard', target: 'LiveOps Admin' },
+    { source: 'LiveOps Admin', target: 'Feature Flags' },
+    { source: 'LiveOps Admin', target: 'Remote Config' },
+    { source: 'LiveOps Admin', target: 'Offers & Store' },
+    { source: 'LiveOps Admin', target: 'Events Scheduler' },
+    { source: 'LiveOps Admin', target: 'Experimentation (A/B)' },
+    { source: 'Experimentation (A/B)', target: 'Segmentation' },
+    { source: 'Segmentation', target: 'Rules Engine' },
+    { source: 'Feature Flags', target: 'Rules Engine' },
+    { source: 'Remote Config', target: 'Config Service' },
+    { source: 'Rules Engine', target: 'Config Service' },
+
+    // Runtime path
+    { source: 'Config Service', target: 'Backend Runtime' },
+    { source: 'Backend Runtime', target: 'Gateway / API' },
+    { source: 'Gateway / API', target: 'Game Client' },
+    { source: 'Game Client', target: 'Players' },
+
+    // Runtime services
+    { source: 'Backend Runtime', target: 'Player Profile' },
+    { source: 'Backend Runtime', target: 'Inventory Service' },
+    { source: 'Backend Runtime', target: 'Economy Service' },
+    { source: 'Backend Runtime', target: 'Entitlements' },
+    { source: 'Backend Runtime', target: 'Matchmaking' },
+
+    // Storage
+    { source: 'Player Profile', target: 'SQL DB' },
+    { source: 'Inventory Service', target: 'SQL DB' },
+    { source: 'Economy Service', target: 'SQL DB' },
+    { source: 'Entitlements', target: 'SQL DB' },
+    { source: 'Gateway / API', target: 'Redis Cache' },
+    { source: 'Backend Runtime', target: 'Blob Storage' },
+
+    // Analytics
+    { source: 'Game Client', target: 'Client Events SDK' },
+    { source: 'Client Events SDK', target: 'Event Ingestion' },
+    { source: 'Event Ingestion', target: 'Stream Processing' },
+    { source: 'Stream Processing', target: 'Data Warehouse' },
+    { source: 'Data Warehouse', target: 'Dashboards / BI' },
+    { source: 'Attribution', target: 'Data Warehouse' },
+    { source: 'Dashboards / BI', target: 'Dashboard' },
+
+    // Release
+    { source: 'Build Pipeline', target: 'CI' },
+    { source: 'CI', target: 'CD' },
+    { source: 'CD', target: 'App Store' },
+    { source: 'App Store', target: 'Game Client' },
+    { source: 'Build Pipeline', target: 'Feature Rollout' },
+    { source: 'Feature Rollout', target: 'Feature Flags' },
+    { source: 'CD', target: 'Backend Runtime' },
+
+    // Permissions
+    { source: 'IAM / Permissions', target: 'Approvals' },
+    { source: 'Approvals', target: 'Policy Checks' },
+    { source: 'Policy Checks', target: 'LiveOps Admin' },
+    { source: 'IAM / Permissions', target: 'Audit Log' },
+    { source: 'LiveOps Admin', target: 'Audit Log' },
+    { source: 'IAM / Permissions', target: 'Backend Runtime' },
+
+    // Infra
+    { source: 'Infrastructure', target: 'Kubernetes / Compute' },
+    { source: 'Kubernetes / Compute', target: 'Backend Runtime' },
+    { source: 'Infrastructure', target: 'Secrets Manager' },
+    { source: 'Secrets Manager', target: 'Backend Runtime' },
+
+    // Observability
+    { source: 'Backend Runtime', target: 'Logs' },
+    { source: 'Gateway / API', target: 'Logs' },
+    { source: 'Logs', target: 'Monitoring' },
+    { source: 'Monitoring', target: 'Alerts / On-call' },
+    { source: 'Monitoring', target: 'SLO / Reliability' },
+    { source: 'Alerts / On-call', target: 'Dashboard' },
+
+    // Cross-links
+    { source: 'Monitoring', target: 'Backend Runtime' },
+    { source: 'Event Ingestion', target: 'Monitoring' },
+    { source: 'Infrastructure', target: 'Monitoring' },
+  ];
 
   return (
     <div className="mt-12 w-full">
       <div className="rounded-2xl border border-gray-200 bg-white overflow-hidden">
-        {/* Header (inside card) */}
-        <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between px-5 py-4 md:px-6 border-b border-gray-100">
-          <div>
-            <div
-              className={`text-xs font-semibold uppercase tracking-[0.22em] text-gray-400 ${metropolis.className}`}
-            >
-              LiveOps flow (simplified)
-            </div>
-            <div
-              className={`mt-1 text-sm text-gray-600 ${metropolis.className}`}
-            >
-              Toggle to compare the ideal path vs. what happens when a backend
-              system fails.
-            </div>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <span
-              className={`hidden md:inline-flex text-xs font-medium px-3 py-1 rounded-full border border-gray-200 bg-gray-50 text-gray-600 ${metropolis.className}`}
-            >
-              {active.badge}
-            </span>
-
-            <SegmentedToggle
-              value={mode}
-              onChange={setMode}
-              fontClass={metropolis.className}
-            />
-          </div>
+        {/* Graph */}
+        <div className="bg-white">
+          <ForceGraph
+            nodes={nodes}
+            links={links}
+            height={420}
+            nodeRadius={6}
+            linkDistance={95}
+            chargeStrength={-320}
+          />
         </div>
 
-        {/* Image area */}
-        <div className="bg-gray-50 p-8">
-          {/* Padding wrapper */}
-          <div className="relative">
-            {/* Ideal */}
-            <Image
-              src={diagrams.ideal.src}
-              alt={diagrams.ideal.alt}
-              width={1920}
-              height={1080}
-              className={[
-                'absolute inset-0 w-full h-auto transition-opacity duration-500 ease-in-out',
-                mode === 'ideal' ? 'opacity-100' : 'opacity-0',
-              ].join(' ')}
-            />
-
-            {/* Error */}
-            <Image
-              src={diagrams.error.src}
-              alt={diagrams.error.alt}
-              width={1920}
-              height={1080}
-              className={[
-                'absolute inset-0 w-full h-auto transition-opacity duration-500 ease-in-out',
-                mode === 'error' ? 'opacity-100' : 'opacity-0',
-              ].join(' ')}
-            />
-
-            {/* Layout spacer */}
-            <div className="invisible">
-              <Image
-                src={diagrams.ideal.src}
-                alt=""
-                width={1920}
-                height={1080}
-                className="w-full h-auto"
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* Caption (inside card footer, not below) */}
-        <div
-          className={[
-            'relative overflow-hidden',
-            'px-5 py-4 md:px-6 border-t border-gray-100',
-            mode === 'ideal' ? 'bg-emerald-50' : 'bg-red-50',
-          ].join(' ')}
-        >
-          {/*/!* Left accent that follows border radius *!/*/}
-          {/*<span*/}
-          {/*  className={[*/}
-          {/*    'pointer-events-none absolute inset-y-0  left-0 w-1',*/}
-          {/*    '',*/}
-          {/*    mode === 'ideal' ? 'bg-emerald-400' : 'bg-red-400',*/}
-          {/*  ].join(' ')}*/}
-          {/*/>*/}
-
-          <div className="flex items-center gap-3">
-            {/* Status icon */}
-            {mode === 'ideal' ? (
-              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-emerald-500">
-                <svg
-                  className="h-3 w-3 text-white"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M16.704 5.29a1 1 0 010 1.42l-7.5 7.5a1 1 0 01-1.42 0l-3.5-3.5a1 1 0 011.42-1.42l2.79 2.79 6.79-6.79a1 1 0 011.42 0z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </span>
-            ) : (
-              <svg
-                className="h-5 w-5 text-red-500"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                aria-hidden="true"
-              >
-                <path d="M12 3a1 1 0 01.87.5l9 16a1 1 0 01-.87 1.5H3a1 1 0 01-.87-1.5l9-16A1 1 0 0112 3z" />
-                <path
-                  d="M12 9v4"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <circle cx="12" cy="16" r="1.25" fill="white" />
-              </svg>
-            )}
-
-            {/* Caption */}
-            <p
-              className={`text-xs md:text-sm leading-relaxed text-gray-800 ${metropolis.className}`}
-            >
-              {active.caption}
-            </p>
-          </div>
+        {/* Caption footer */}
+        <div className="px-5 py-4 md:px-6 border-t border-gray-100 bg-gray-50">
+          <p
+            className={`text-xs md:text-sm leading-relaxed text-gray-800 ${metropolis?.className || ''}`}
+          >
+            Game setup depended on many tightly coupled systems and manual
+            coordination.
+          </p>
         </div>
       </div>
     </div>
