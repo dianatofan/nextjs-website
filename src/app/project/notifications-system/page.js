@@ -69,7 +69,10 @@ export default function Page() {
           />
         </div>
         <div className="w-screen mt-8 items-center align-center animate__animated animate__fadeIn">
-          <section className="w-screen max-w-screen-xl px-8 lg:px-0">
+          <section
+            className="w-screen max-w-screen-xl px-8 lg:px-0"
+            data-bg="light"
+          >
             <div className="flex flex-col w-full py-8 lg:py-12">
               {/* Title + subtitle */}
               <div className="max-w-3xl">
@@ -149,6 +152,7 @@ export default function Page() {
           <section
             id="context"
             className="w-screen bg-gray-50 py-20 flex justify-center px-8"
+            data-bg="light"
           >
             <div className="w-full max-w-screen-xl">
               <div className="grid grid-cols-1 xl:grid-cols-12 gap-14 items-start">
@@ -165,7 +169,10 @@ export default function Page() {
               </div>
             </div>
           </section>
-          <section className="bg-black text-white py-44 md:py-60 text-center  w-lg xl:flex flex-col items-center justify-center w-screen px-8 gap-3">
+          <section
+            data-bg="dark"
+            className="bg-black text-white py-44 md:py-60 text-center  w-lg xl:flex flex-col items-center justify-center w-screen px-8 gap-3"
+          >
             <p
               className={`text-6xl antialiased tracking-tighter lg:leading-tight md:text-7xl text-white font-medium max-w-6xl mx-auto ${nauryz.className}`}
             >
@@ -184,6 +191,7 @@ export default function Page() {
           <section
             id="research"
             className="bg-white py-12 mt-4 flex flex-col items-center w-screen justify-center px-8"
+            data-bg="light"
           >
             <div className="w-full max-w-screen-xl">
               <div className="grid grid-cols-1 xl:grid-cols-12 gap-14 items-start">

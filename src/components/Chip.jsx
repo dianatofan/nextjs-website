@@ -13,12 +13,12 @@ export default function Chip({ label, isPasswordProtected, icon }) {
         </span>
       )}
 
-      <span className="truncate">{label}</span>
+      {label && <span className="truncate">{label}</span>}
 
       {isPasswordProtected && (
         <Lock
           size={16}
-          className={`${metropolis.className} text-sm font-normal text-gray-600 ml-2`}
+          className={`${metropolis.className} text-sm font-normal text-gray-600`}
         />
       )}
     </span>

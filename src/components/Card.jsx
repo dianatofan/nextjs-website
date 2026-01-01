@@ -58,7 +58,10 @@ export default function Card({
             src={image}
             alt={title}
             fill
-            style={{ objectFit: 'cover', objectPosition: 'top' }}
+            style={{
+              objectFit: 'cover',
+              objectPosition: 'top',
+            }}
             className="rounded-xl object-fill transform transition-transform duration-500 group-hover:scale-110"
             unoptimized
             priority
@@ -73,8 +76,8 @@ export default function Card({
             <span className="w-full px-6 py-4 text-lg font-medium text-white flex justify-between items-center rounded-b-xl relative bg-gradient-to-t from-black/80 to-transparent">
               <span>{title}</span>
               <span className="inline-flex gap-2 items-center">
-                {company && <Chip label={company} />}
                 <Chip label={label} />
+                {company && <Chip label={company} />}
                 {isPasswordProtected && <Chip isPasswordProtected />}
               </span>
             </span>

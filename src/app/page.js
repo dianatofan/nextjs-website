@@ -98,13 +98,26 @@ export default function App() {
 
               {/* Bottom two: Famly and Google - 50% / 50% on md+, full width on small */}
               <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-6">
+                {/*<Card*/}
+                {/*  title="Game Setup Canvas Tool"*/}
+                {/*  description="Making Google Search the most loved tool for travellers"*/}
+                {/*  role="UX/UI DESIGN"*/}
+                {/*  image="./images/thumbnail9.png"*/}
+                {/*  url="explore"*/}
+                {/*  label="2025"*/}
+                {/*  company="Tactile Games"*/}
+                {/*  isPasswordProtected*/}
+                {/*  fill={fill}*/}
+                {/*  project="game-setup"*/}
+                {/*/>*/}
                 <Card
                   title="Google Search for Travellers"
                   description="Making Google Search the most loved tool for travellers"
                   role="UX/UI DESIGN"
                   image="./images/thumbnail5.png"
                   url="explore"
-                  label="Shipped"
+                  label="2024"
+                  company="Google"
                   isPasswordProtected
                   fill={fill}
                   project="google-travel"
@@ -115,7 +128,8 @@ export default function App() {
                   role="UX/UI DESIGN | USER RESEARCH"
                   image="./images/famlyThumbnail.png"
                   url="famly"
-                  label="Shipped"
+                  label="2023"
+                  company="Famly"
                   fill={fill}
                   project="famly-redesign"
                 />
