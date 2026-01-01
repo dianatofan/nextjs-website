@@ -76,26 +76,19 @@ export default function ObservabilityGapBlock({ metropolis }) {
     <div className="xl:col-span-9 ">
       {/* Header */}
       <div className="max-w-3xl">
-        <h3
-          className={[
-            'text-2xl md:text-3xl font-semibold leading-snug text-primary',
-            metropolis.className,
-          ].join(' ')}
-        >
-          Critical signals lived outside the LiveOps Dashboard
-        </h3>
-
         {/* Scannable narrative (not a wall of text) */}
-        <div className="mt-6 space-y-4">
+        <div className="space-y-4">
           <p
             className={[
               'text-base md:text-lg leading-relaxed text-gray-900',
               metropolis.className,
             ].join(' ')}
           >
-            I worked closely with LiveOps creators, backend engineers, and
-            support teams to understand how production issues were detected and
-            handled in practice.
+            We ran a{' '}
+            <span className="font-semibold">cross-functional workshop</span>{' '}
+            with Product, Core Team, and platform engineers to map the current
+            setup process, surface hidden dependencies, and align on
+            constraints.
           </p>
 
           <p
@@ -104,36 +97,35 @@ export default function ObservabilityGapBlock({ metropolis }) {
               metropolis.className,
             ].join(' ')}
           >
-            While backend systems reliably flagged failures at runtime through
-            monitoring and logs, creators had{' '}
-            <span className="font-medium">no direct visibility</span> in the
-            LiveOps Dashboard. Instead, they relied on indirect signals: Slack
-            messages from engineers, support tickets, or noticing anomalies in
-            player metrics.
+            The goal was to establish a shared mental model of what must happen
+            at Production Start and define a single safe golden path for
+            automation.
           </p>
         </div>
       </div>
 
-      {/* Optional visual placeholder */}
       {/* Optional visual */}
-      <div className="mt-10 max-w-5xl ">
+
+      <div className="mt-10 max-w-5xl rounded-2xl border border-gray-200 bg-white overflow-hidden">
         <Image
-          src="/images/notifications/observability-gap.png"
+          src="/images/canvas/workshop.png"
           alt="Observability gap: alerts appear in engineering tools while the LiveOps Dashboard shows no alerts."
           width={1920}
           height={1080}
           className="h-auto w-full"
           priority={false}
+          placeholder="blur"
+          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQEBUQEBIVFhUVFRUVFRUVFRUVFRUVFRUYFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGxAQGy0lICUtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAJ8BPgMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAABQYBAwQCB//EAD4QAAEDAgQDBQYEBgIDAAAAAAEAAgMEEQUSITEGEyJBUWFxgZGhFDKhscHR8BQjUmJy4RUzQ1OCkqL/xAAZAQEAAwEBAAAAAAAAAAAAAAAAAgMEAQX/xAAjEQEBAAICAgICAgMAAAAAAAAAAQIREiExBBMiUWEUMkJx/9oADAMBAAIRAxEAPwD9qQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaaaaaaaa"
         />
 
-        <div
-          className={[
-            'mt-3 text-xs md:text-sm text-gray-400',
-            metropolis.className,
-          ].join(' ')}
-        >
-          Failures were detectable in engineering tools, but creators worked in
-          the Dashboard — creating an observability gap
+        {/* Caption footer */}
+        <div className="px-5 py-4 md:px-6 border-t border-gray-100 bg-gray-50">
+          <p
+            className={`text-xs md:text-sm leading-relaxed text-gray-800 ${metropolis?.className || ''}`}
+          >
+            Workshop outputs mapping setup steps, constraints, and system
+            dependencies.
+          </p>
         </div>
       </div>
     </div>

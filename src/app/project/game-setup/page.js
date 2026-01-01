@@ -13,6 +13,7 @@ import ObservabilityGapBlock from '@/app/project/game-setup/observability-gap-bl
 import AlternatingVideos from '@/app/project/game-setup/alternating-videos';
 import { TradeoffsBlock } from '@/app/project/game-setup/tradeoffs-block';
 import { ImpactBlock } from '@/app/project/game-setup/impact-cards';
+import { PrinciplesGrid } from '@/app/project/game-setup/principles-grid';
 
 const tocItems = [
   { id: 'overview', label: 'Overview' },
@@ -188,6 +189,33 @@ export default function Page() {
                   <h1
                     className={`max-w-screen-xl text-lg antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-2xl text-gray-400 font-semibold ${metropolis.className}`}
                   >
+                    Constraints
+                  </h1>
+                </div>
+                {/* Main content */}
+                <div className="xl:col-span-9">
+                  <p
+                    className={`max-w-3xl text-base md:text-lg leading-relaxed text-gray-900 ${metropolis.className}`}
+                  >
+                    These constraints were defined and agreed on during the
+                    workshop:
+                  </p>
+                  <PrinciplesGrid metropolis={metropolis} />
+                </div>
+              </div>
+            </div>
+          </section>
+          <section
+            id="research"
+            className="bg-white py-12 flex flex-col items-center w-screen justify-center px-8"
+          >
+            <div className="w-full max-w-screen-xl">
+              <div className="grid grid-cols-1 xl:grid-cols-12 gap-14 items-start">
+                {/* Left rail label */}
+                <div className="xl:col-span-3">
+                  <h1
+                    className={`max-w-screen-xl text-lg antialiased tracking-tighter lg:leading-headers mb-8 xl:mb-0 md:text-2xl text-gray-400 font-semibold ${metropolis.className}`}
+                  >
                     Solution
                   </h1>
                 </div>
@@ -196,52 +224,20 @@ export default function Page() {
                   <p
                     className={`max-w-3xl text-base md:text-lg leading-relaxed text-gray-900 ${metropolis.className}`}
                   >
-                    To close the observability gap, I redesigned the LiveOps
-                    Dashboard to surface the right signals, to the right people,
-                    at the right time. The solution combines UI surfacing with
-                    ownership and subscription logic, so failures are visible,
-                    actionable, and clearly owned.
+                    We created a{' '}
+                    <span className="font-semibold">
+                      wizard-like game setup tool
+                    </span>
+                    , inspired by platforms like Firebase, using{' '}
+                    <span className="font-semibold">
+                      progressive disclosure
+                    </span>{' '}
+                    to keep setup fast and safe. In the first step, teams define
+                    only the essentials — such as game name, icon, and core
+                    identifiers — while more advanced configuration is
+                    intentionally deferred to later stages, reducing cognitive
+                    load and preventing early misconfiguration.
                   </p>
-
-                  {/*/!* Bullet points *!/*/}
-                  {/*<ul className="mt-6 max-w-3xl space-y-3">*/}
-                  {/*  {[*/}
-                  {/*    {*/}
-                  {/*      title: 'Homepage',*/}
-                  {/*      description:*/}
-                  {/*        'High-level system health and critical issues visible immediately on entry.',*/}
-                  {/*    },*/}
-                  {/*    {*/}
-                  {/*      title: 'Sidebar',*/}
-                  {/*      description:*/}
-                  {/*        'Persistent indicators that signal ongoing problems while creators work.',*/}
-                  {/*    },*/}
-                  {/*    {*/}
-                  {/*      title: 'Dedicated issue views',*/}
-                  {/*      description:*/}
-                  {/*        'Detailed, actionable breakdowns of failures with ownership and context.',*/}
-                  {/*    },*/}
-                  {/*  ].map((item) => (*/}
-                  {/*    <li key={item.title} className="flex gap-4">*/}
-                  {/*      /!* Bullet marker *!/*/}
-                  {/*      <span className="mt-2 h-2 w-2 rounded-full bg-gray-900 shrink-0" />*/}
-
-                  {/*      /!* Text *!/*/}
-                  {/*      <div>*/}
-                  {/*        <p*/}
-                  {/*          className={`font-medium text-gray-900 ${metropolis.className}`}*/}
-                  {/*        >*/}
-                  {/*          {item.title}*/}
-                  {/*        </p>*/}
-                  {/*        <p*/}
-                  {/*          className={`text-sm md:text-base text-gray-600 ${metropolis.className}`}*/}
-                  {/*        >*/}
-                  {/*          {item.description}*/}
-                  {/*        </p>*/}
-                  {/*      </div>*/}
-                  {/*    </li>*/}
-                  {/*  ))}*/}
-                  {/*</ul>*/}
                 </div>
               </div>
             </div>
@@ -254,39 +250,32 @@ export default function Page() {
               <h2
                 className={`text-xl md:text-3xl font-semibold tracking-tight text-white ${metropolis.className}`}
               >
-                Homepage: Early Visibility
+                Step 1: Define the essentials
               </h2>
 
               <p
                 className={`mt-6 max-w-2xl text-base md:text-lg leading-relaxed text-gray-300 ${metropolis.className}`}
               >
-                The homepage previously showed only creator-configured
-                shortcuts, with no indication when systems were failing.
+                We start the setup flow by establishing the game’s identity and
+                ownership — the minimum information required to safely create a
+                new game.
               </p>
 
               <p
                 className={`mt-6 max-w-2xl text-base md:text-lg leading-relaxed text-gray-300 ${metropolis.className}`}
               >
-                I added 2 new sections at the top of the homepage:
+                Teams define essential metadata such as the game’s name,
+                codename, and visual identity, along with initial user access.
+                These values form the foundation for all downstream
+                configuration and provisioning.{' '}
               </p>
               <p
                 className={`mt-6 max-w-2xl text-base md:text-lg leading-relaxed  border-l-2 px-4 border-gray-500 text-gray-400  ${metropolis.className}`}
               >
-                A critical issues banner that appears only when blocking issues
-                exist and links directly to the Issues view
-              </p>
-              <p
-                className={`mt-6 max-w-2xl text-base md:text-lg leading-relaxed  border-l-2 px-4 border-gray-500 text-gray-400 ${metropolis.className}`}
-              >
-                A latest updates feed showing non-critical changes relevant to
-                the logged-in user, scoped to resources they own or watch
-              </p>
-
-              <p
-                className={`mt-8 max-w-2xl text-base md:text-lg leading-relaxed text-gray-300 ${metropolis.className}`}
-              >
-                These sections act as previews, helping creators understand the
-                current state before they start configuring features.
+                Some fields are intentionally immutable because they map
+                directly to infrastructure namespaces and CI pipelines. This is
+                made explicit in the UI to set expectations early and prevent
+                unsafe changes later in the setup process.
               </p>
             </div>
           </section>
