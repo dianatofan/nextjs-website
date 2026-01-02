@@ -257,31 +257,32 @@ export default function Page() {
                 className={`mt-6 max-w-2xl text-base md:text-lg leading-relaxed text-gray-300 ${metropolis.className}`}
               >
                 We start the setup flow by establishing the game’s identity and
-                ownership — the minimum information required to safely create a
-                new game.
+                ownership — the minimum information required to create a new
+                game.
               </p>
 
               <p
                 className={`mt-6 max-w-2xl text-base md:text-lg leading-relaxed text-gray-300 ${metropolis.className}`}
               >
-                Teams define essential metadata such as the game’s name,
-                codename, and visual identity, along with initial user access.
-                These values form the foundation for all downstream
-                configuration and provisioning.{' '}
+                Input fields are shown on the left, while a contextual helper
+                panel on the right explains what each field is used for and
+                which formats are valid as teams move through the form.
+                Together, this creates a clear foundation for all downstream
+                configuration and provisioning.
               </p>
-              <p
-                className={`mt-6 max-w-2xl text-base md:text-lg leading-relaxed  border-l-2 px-4 border-gray-500 text-gray-400  ${metropolis.className}`}
-              >
-                Some fields are intentionally immutable because they map
-                directly to infrastructure namespaces and CI pipelines. This is
-                made explicit in the UI to set expectations early and prevent
-                unsafe changes later in the setup process.
-              </p>
+              {/*<p*/}
+              {/*  className={`mt-6 max-w-2xl text-base md:text-lg leading-relaxed  border-l-2 px-4 border-gray-500 text-gray-400  ${metropolis.className}`}*/}
+              {/*>*/}
+              {/*  Some fields are intentionally immutable because they map*/}
+              {/*  directly to infrastructure namespaces and CI pipelines. This is*/}
+              {/*  made explicit in the UI to set expectations early and prevent*/}
+              {/*  unsafe changes later in the setup process.*/}
+              {/*</p>*/}
             </div>
           </section>
           <div className="w-full">
             <video
-              src="/images/notifications/homepage-video.mp4"
+              src="/images/canvas/step1-demo.mp4"
               className="w-full h-auto rounded-lg"
               autoPlay
               loop
@@ -289,6 +290,42 @@ export default function Page() {
               playsInline
             />
           </div>
+          <section
+            id="homepage-early-visibility"
+            className="bg-black py-20 flex justify-center w-screen px-6 md:px-8"
+          >
+            <div className="w-full max-w-screen-xl">
+              <h2
+                className={`text-xl md:text-3xl font-semibold tracking-tight text-white ${metropolis.className}`}
+              >
+                Step 2: Configure services
+              </h2>
+
+              <p
+                className={`mt-6 max-w-2xl text-base md:text-lg leading-relaxed text-gray-300 ${metropolis.className}`}
+              >
+                Once the game’s identity is established, teams configure the
+                services the game depends on.
+              </p>
+
+              <p
+                className={`mt-6 max-w-2xl text-base md:text-lg leading-relaxed text-gray-300 ${metropolis.className}`}
+              >
+                The setup shifts from data entry to a service overview, grouping
+                internal and external systems into a single, scannable view.
+                Each service clearly communicates its current state — available,
+                scheduled, or not yet configured — so teams understand what’s
+                ready and what still requires action.
+              </p>
+              <p
+                className={`mt-6 max-w-2xl text-base md:text-lg leading-relaxed text-gray-300 ${metropolis.className}`}
+              >
+                Configuration is intentionally modular. Teams can enable and
+                configure services independently, allowing setup to progress
+                incrementally without blocking on every dependency upfront.
+              </p>
+            </div>
+          </section>
           <section
             id="sidebar-persistent-signals"
             className="bg-white py-20 flex justify-center w-screen px-6 md:px-8"
@@ -300,28 +337,24 @@ export default function Page() {
                   <h2
                     className={`text-xl md:text-3xl font-semibold tracking-tight text-primary ${metropolis.className}`}
                   >
-                    Sidebar: Persistent Attention Signals
+                    Automation model
                   </h2>
 
                   <p
                     className={`mt-6 text-base md:text-lg leading-relaxed text-gray-900 ${metropolis.className}`}
                   >
-                    In practice, many users do not always land on the homepage.
-                    Some navigate directly to a specific game or resource.
+                    Services follow one of two paths: some are provisioned
+                    automatically by the backend, while others require manual
+                    configuration due to external dependencies or
+                    platform-specific credentials.
                   </p>
 
                   <p
                     className={`mt-4 text-base md:text-lg leading-relaxed text-gray-900 ${metropolis.className}`}
                   >
-                    To account for this, I made critical states visible directly
-                    in the left-hand sidebar, where they could not be missed.
-                  </p>
-
-                  <p
-                    className={`mt-4 text-base md:text-lg leading-relaxed text-gray-900 ${metropolis.className}`}
-                  >
-                    This ensures issues draw attention regardless of entry
-                    point, without interrupting workflows.
+                    The overview makes this distinction explicit, so teams know
+                    what will happen without intervention and where action is
+                    required.
                   </p>
                 </div>
 
