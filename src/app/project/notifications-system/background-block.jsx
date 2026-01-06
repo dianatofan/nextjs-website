@@ -58,7 +58,7 @@ export function BackgroundBlock({ metropolis }) {
         <p
           className={`text-base md:text-lg leading-relaxed text-gray-900 ${metropolis.className}`}
         >
-          The flow looks simple — but it depends on multiple backend systems
+          The flow looks simple, but it depends on multiple backend systems
           staying in sync. When something breaks, the impact often appears first
           in the live game.
         </p>

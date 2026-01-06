@@ -42,14 +42,14 @@ export function ListViewsSection({ metropolis }) {
     issues: {
       title: 'Critical issues',
       description:
-        'A structured list that makes failures actionable: what’s broken, where it occurs, who it affects, and how it was detected — with quick actions to resolve or reopen.',
+        'A structured list that makes failures actionable: what’s broken, where it occurs, who it affects, and how it was detected, with quick actions to resolve or reopen.',
       image: '/images/notifications/list-critical-issues.png', // placeholder
       alt: 'Critical Issues list view showing issue context and actions.',
     },
     updates: {
       title: 'Latest updates',
       description:
-        'A lightweight feed for awareness — relevant changes scoped to the creator — without requiring action or adding noise.',
+        'A lightweight feed for awareness, relevant changes scoped to the creator, without requiring action or adding noise.',
       image: '/images/notifications/list-latest-updates.png', // placeholder
       alt: 'Latest Updates list view showing non-critical changes.',
     },
@@ -77,7 +77,7 @@ export function ListViewsSection({ metropolis }) {
             >
               Clicking into <span className="font-medium">Critical issues</span>{' '}
               or <span className="font-medium">Latest updates</span> opens a
-              structured view with the right level of context — depending on
+              structured view with the right level of context, depending on
               whether action is required.
             </p>
           </div>

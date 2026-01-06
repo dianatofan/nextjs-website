@@ -55,7 +55,7 @@ export function ImpactBlock({ metropolis }) {
         className={`mt-8 text-md md:text-lg leading-relaxed text-gray-800 max-w-3xl ${metropolis.className}`}
       >
         By embedding backend observability into the LiveOps Dashboard, teams
-        shifted from reactive firefighting to proactive production awareness —
+        shifted from reactive firefighting to proactive production awareness,
         reducing player impact while scaling safely across games and teams.
       </p>
     </div>
