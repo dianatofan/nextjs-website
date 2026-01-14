@@ -5,7 +5,7 @@
 // Assumes Tailwind is available. Uses Next <Image />.
 
 import React, { useMemo, useState } from 'react';
-import { BeforeAfterVideoCard } from '@/app/project/notifications-system/before-after-video-card';
+import { BeforeAfterVideoCard } from '@/app/project/game-setup/before-after-video-card';
 import Image from 'next/image';
 
 export function TradeoffsBlock({ metropolis }) {

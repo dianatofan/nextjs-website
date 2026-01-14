@@ -70,7 +70,7 @@ export function BeforeAfterVideoCard({ metropolis }) {
           {/* Base video defines layout size */}
           <video
             ref={beforeRef}
-            src="/images/canvas/everything-expanded.mp4"
+            src="/images/notifications/only-unread.mp4"
             muted
             loop
             playsInline
@@ -84,7 +84,7 @@ export function BeforeAfterVideoCard({ metropolis }) {
           {/* Overlay video fills the base video's box */}
           <video
             ref={afterRef}
-            src="/images/canvas/mostly-collapsed.mp4"
+            src="/images/notifications/read-and-unread.mp4"
             muted
             loop
             playsInline

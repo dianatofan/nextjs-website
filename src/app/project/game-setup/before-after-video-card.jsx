@@ -42,15 +42,16 @@ export function BeforeAfterVideoCard({ metropolis }) {
     const after = afterRef.current;
     if (!before || !after) return;
 
-    if (mode === 'before') {
-      after.pause();
-      before.currentTime = 0;
-      before.play().catch(() => {});
-    } else {
-      before.pause();
-      after.currentTime = 0;
-      after.play().catch(() => {});
-    }
+    const active = mode === 'before' ? before : after;
+    const inactive = mode === 'before' ? after : before;
+
+    // stop the hidden one
+    inactive.pause();
+    inactive.currentTime = 0;
+
+    // restart the visible one
+    active.currentTime = 0;
+    active.play().catch(() => {});
   }, [mode]);
 
   return (
@@ -63,35 +64,37 @@ export function BeforeAfterVideoCard({ metropolis }) {
         />
       </div>
 
-      {/* Shrink-wrap container */}
-      <div className="inline-block relative overflow-hidden rounded-xl  max-w-3xl">
-        {/* Base video defines layout size (NOT absolute) */}
-        <video
-          ref={beforeRef}
-          src="/images/notifications/only-unread.mp4"
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          className={[
-            'block h-auto max-w-full object-contain transition-opacity duration-500',
-            mode === 'before' ? 'opacity-100' : 'opacity-0',
-          ].join(' ')}
-        />
+      <div className="mt-8 w-full bg-[#E3E8F1] p-8 rounded-2xl">
+        {/* Wrapper defines layout + positioning context */}
+        <div className="relative inline-block overflow-hidden rounded-xl max-w-full">
+          {/* Base video defines layout size */}
+          <video
+            ref={beforeRef}
+            src="/images/canvas/everything-expanded.mp4"
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            className={[
+              'block h-auto max-w-full object-contain transition-opacity duration-500',
+              mode === 'before' ? 'opacity-100' : 'opacity-0',
+            ].join(' ')}
+          />
 
-        {/* Overlay video fills the base video's box */}
-        <video
-          ref={afterRef}
-          src="/images/notifications/read-and-unread.mp4"
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          className={[
-            'absolute inset-0 h-full w-full object-contain transition-opacity duration-500',
-            mode === 'after' ? 'opacity-100' : 'opacity-0',
-          ].join(' ')}
-        />
+          {/* Overlay video fills the base video's box */}
+          <video
+            ref={afterRef}
+            src="/images/canvas/mostly-collapsed.mp4"
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            className={[
+              'absolute inset-0 h-full w-full object-contain transition-opacity duration-500',
+              mode === 'after' ? 'opacity-100' : 'opacity-0',
+            ].join(' ')}
+          />
+        </div>
       </div>
     </div>
   );
