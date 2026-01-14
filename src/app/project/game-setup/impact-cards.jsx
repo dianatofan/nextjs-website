@@ -5,20 +5,20 @@
 export function ImpactBlock({ metropolis }) {
   const impacts = [
     {
-      metric: 'Hours → Minutes',
-      body: 'Reduced time to detect critical LiveOps failures from hours to minutes, limiting impact during live events and feature rollouts.',
+      metric: '~2x faster game setup',
+      body: 'Standard game setup dropped from hours or days of Core Team coordination to a single self-serve session.',
     },
     {
-      metric: 'Lower operational cost',
-      body: 'By consolidating alerts into the LiveOps Dashboard, teams reduced reliance on external monitoring and Slack-based escalation, lowering ongoing operational overhead.',
+      metric: '+3 games / quarter',
+      body: 'Removing setup as a bottleneck allowed teams to run more launches in parallel within the same release cycle.',
     },
     {
-      metric: '22% fewer incidents',
-      body: 'One in five production issues were caught before full rollout, reducing player-facing incidents during live events.',
+      metric: 'Fewer issues',
+      body: 'Early validation and visible provisioning reduced last-minute fixes around credentials, permissions, and infrastructure.',
     },
     {
-      metric: 'High adoption',
-      body: 'A single, trusted alerting system replaced fragmented workflows and became the default source of truth.',
+      metric: 'Reduced involvement',
+      body: 'Core Team support requests for game setup dropped significantly, freeing time for platform work instead of manual provisioning.',
     },
   ];
 
@@ -54,9 +54,9 @@ export function ImpactBlock({ metropolis }) {
       <p
         className={`mt-8 text-md md:text-lg leading-relaxed text-gray-800 max-w-3xl ${metropolis.className}`}
       >
-        By embedding backend observability into the LiveOps Dashboard, teams
-        shifted from reactive firefighting to proactive production awareness —
-        reducing player impact while scaling safely across games and teams.
+        By designing the Game Canvas as a self-serve system, I supported the
+        company’s goal of shipping more games by making setup faster and safer
+        at scale.
       </p>
     </div>
   );

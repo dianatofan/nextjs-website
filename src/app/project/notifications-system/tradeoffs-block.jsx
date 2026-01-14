@@ -49,9 +49,9 @@ export function TradeoffsBlock({ metropolis }) {
           className={`text-base md:text-lg leading-relaxed text-gray-900 ${metropolis.className}`}
         >
           Early versions showed only unread updates, causing items to disappear
-          once marked as read. I shifted to showing the latest 10 updates
-          regardless of read state, treating the homepage as a preview while the
-          full Updates view remains the source of truth.
+          once marked as read. I changed this to show all updates from the last
+          10 days, treating the homepage as a preview while the full Updates
+          view remains the source of truth.
         </p>
       </div>
       <BeforeAfterVideoCard metropolis={metropolis} />

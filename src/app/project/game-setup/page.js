@@ -10,7 +10,6 @@ import { metropolis, nauryz } from '@/app/utils/local-font';
 import { BackgroundBlock } from '@/app/project/game-setup/background-block';
 import React from 'react';
 import ObservabilityGapBlock from '@/app/project/game-setup/observability-gap-block';
-import AlternatingVideos from '@/app/project/game-setup/alternating-videos';
 import { TradeoffsBlock } from '@/app/project/game-setup/tradeoffs-block';
 import { ImpactBlock } from '@/app/project/game-setup/impact-cards';
 import { PrinciplesGrid } from '@/app/project/game-setup/principles-grid';
@@ -233,8 +232,8 @@ export default function Page() {
                       progressive disclosure
                     </span>{' '}
                     to keep setup fast and safe. In the first step, teams define
-                    only the essentials — such as game name, icon, and core
-                    identifiers — while more advanced configuration is
+                    only the essentials, such as game name, icon, and core
+                    identifiers, while more advanced configuration is
                     intentionally deferred to later stages, reducing cognitive
                     load and preventing early misconfiguration.
                   </p>
@@ -257,7 +256,7 @@ export default function Page() {
                 className={`mt-6 max-w-2xl text-base md:text-lg leading-relaxed text-gray-300 ${metropolis.className}`}
               >
                 We start the setup flow by establishing the game’s identity and
-                ownership — the minimum information required to create a new
+                ownership - the minimum information required to create a new
                 game.
               </p>
 
@@ -311,72 +310,38 @@ export default function Page() {
               <p
                 className={`mt-6 max-w-2xl text-base md:text-lg leading-relaxed text-gray-300 ${metropolis.className}`}
               >
-                The setup shifts from data entry to a service overview, grouping
-                internal and external systems into a single, scannable view.
-                Each service clearly communicates its current state — available,
-                scheduled, or not yet configured — so teams understand what’s
-                ready and what still requires action.
+                Services are shown as toggleable cards in a single overview and
+                behave like a dependency graph rather than a checklist. Each
+                service communicates its state, such as scheduled, available,
+                requiring configuration, partially configured, or failed.
               </p>
               <p
                 className={`mt-6 max-w-2xl text-base md:text-lg leading-relaxed text-gray-300 ${metropolis.className}`}
               >
                 Configuration is intentionally modular. Teams can enable and
                 configure services independently, allowing setup to progress
-                incrementally without blocking on every dependency upfront.
+                incrementally.
+              </p>
+              <p
+                className={`mt-6 max-w-2xl md:text-lg leading-relaxed  border-l-2 px-4 border-gray-500 text-gray-400  ${metropolis.className}`}
+              >
+                Some services, including the LiveOps Dashboard API and Game
+                Server, are provisioned automatically and remain expanded so
+                teams can copy credentials. Other services are configured
+                manually.
               </p>
             </div>
           </section>
-          <section
-            id="sidebar-persistent-signals"
-            className="bg-white py-20 flex justify-center w-screen px-6 md:px-8"
-          >
-            <div className="w-full max-w-screen-xl">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-                {/* Left column: Title + text */}
-                <div className="max-w-xl">
-                  <h2
-                    className={`text-xl md:text-3xl font-semibold tracking-tight text-primary ${metropolis.className}`}
-                  >
-                    Automation model
-                  </h2>
-
-                  <p
-                    className={`mt-6 text-base md:text-lg leading-relaxed text-gray-900 ${metropolis.className}`}
-                  >
-                    Services follow one of two paths: some are provisioned
-                    automatically by the backend, while others require manual
-                    configuration due to external dependencies or
-                    platform-specific credentials.
-                  </p>
-
-                  <p
-                    className={`mt-4 text-base md:text-lg leading-relaxed text-gray-900 ${metropolis.className}`}
-                  >
-                    The overview makes this distinction explicit, so teams know
-                    what will happen without intervention and where action is
-                    required.
-                  </p>
-                </div>
-
-                {/* Right column: Image */}
-                <div className="flex justify-start md:justify-end">
-                  <Image
-                    src="/images/notifications/sidebar-badges.png"
-                    alt="Sidebar showing persistent issue indicators"
-                    width={320}
-                    height={560}
-                    className="w-full max-w-xs h-auto animate__animated animate__fadeIn"
-                  />
-                </div>
-              </div>
-            </div>
-          </section>
-          <AlternatingVideos
-            video1="/images/notifications/avatar-sidebar.mp4"
-            video2="/images/notifications/game-sidebar.mp4"
-            caption1="Avatar-level signal"
-            caption2="Game-level signals"
-          />
+          <div className="w-full">
+            <video
+              src="/images/canvas/step2-services.mp4"
+              className="w-full h-auto rounded-lg"
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+          </div>
           <section
             id="homepage-early-visibility"
             className="bg-black py-20 flex justify-center w-screen px-6 md:px-8"
@@ -385,43 +350,88 @@ export default function Page() {
               <h2
                 className={`text-xl md:text-3xl font-semibold tracking-tight text-white ${metropolis.className}`}
               >
-                List Views: From Awareness to Action
+                Step 3: Configuration & permissions
               </h2>
 
               <p
                 className={`mt-6 max-w-2xl text-base md:text-lg leading-relaxed text-gray-300 ${metropolis.className}`}
               >
-                Clicking into the Critical Issues or Latest Updates views
-                reveals structured lists with clear context.
+                Access is managed through clear, game-level roles such as{' '}
+                <span className="font-medium">Viewer</span>,{' '}
+                <span className="font-medium">Editor</span>, and{' '}
+                <span className="font-medium">Publisher</span>, shown in a list
+                of users assigned to the game. Teams can add users directly from
+                this view, assign roles, and immediately see who has access and
+                at what level.
               </p>
 
               <p
-                className={`mt-6 max-w-2xl text-base md:text-lg leading-relaxed  border-l-2 px-4 border-gray-500 text-gray-400 ${metropolis.className}`}
+                className={`mt-6 max-w-2xl text-base md:text-lg leading-relaxed text-gray-300 ${metropolis.className}`}
               >
-                For critical issues, users can see what is broken, where it
-                occurs, which resources are affected, and how the issue was
-                detected. Issues can be resolved or reopened, and deeper links
-                provide access to backend or monitoring sources when needed.
-              </p>
-
-              <p
-                className={`mt-6 max-w-2xl text-base md:text-lg leading-relaxed  border-l-2 px-4 border-gray-500  text-gray-400 ${metropolis.className}`}
-              >
-                Updates provide visibility into relevant changes without
-                requiring action, supporting awareness without noise.
+                Platform-level roles are inherited automatically, while
+                guardrails prevent unsafe actions such as removing yourself from
+                a game. Missing permissions disable related features early
+                instead of failing later during provisioning.
               </p>
             </div>
           </section>
           <div className="w-full">
             <video
-              src="/images/notifications/list-views1.mp4"
+              src="/images/canvas/step3-permissions.mp4"
               className="w-full h-auto rounded-lg"
               autoPlay
               loop
               muted
               playsInline
             />
-          </div>{' '}
+          </div>
+          <section
+            id="homepage-early-visibility"
+            className="bg-black py-20 flex justify-center w-screen px-6 md:px-8"
+          >
+            <div className="w-full max-w-screen-xl">
+              <h2
+                className={`text-xl md:text-3xl font-semibold tracking-tight text-white ${metropolis.className}`}
+              >
+                Step 4: Integration credentials
+              </h2>
+
+              <p
+                className={`mt-6 max-w-2xl text-base md:text-lg leading-relaxed text-gray-300 ${metropolis.className}`}
+              >
+                Some configuration depends on external services and cannot be
+                fully automated.{' '}
+              </p>
+              <p
+                className={`mt-6 max-w-2xl text-base md:text-lg leading-relaxed text-gray-300 ${metropolis.className}`}
+              >
+                In this step, teams provide identifiers such as{' '}
+                <span className="font-medium">package names</span> and{' '}
+                <span className="font-medium">certificate fingerprints</span>{' '}
+                required by SDKs and authentication providers. These values are
+                strictly validated and protected by guardrails, since incorrect
+                changes can break live integrations.
+              </p>
+
+              <p
+                className={`mt-6 max-w-2xl text-base md:text-lg leading-relaxed text-gray-300 ${metropolis.className}`}
+              >
+                By separating this step from earlier setup, the flow keeps
+                initial game creation fast while ensuring external integrations
+                are configured deliberately and safely.
+              </p>
+            </div>
+          </section>
+          <div className="w-full">
+            <video
+              src="/images/canvas/step4-credentials.mp4"
+              className="w-full h-auto rounded-lg"
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+          </div>
           <section
             id="sidebar-persistent-signals"
             className="bg-white py-20 flex justify-center w-screen px-6 md:px-8"
@@ -432,89 +442,101 @@ export default function Page() {
                 <h2
                   className={`text-xl md:text-3xl font-semibold tracking-tight text-primary ${metropolis.className}`}
                 >
-                  Ownership and Watchers
+                  Provisioning and system behavior
                 </h2>
 
                 <p
                   className={`mt-6 text-base md:text-lg leading-relaxed text-gray-900 ${metropolis.className}`}
                 >
-                  Alerting only works if responsibility is clear.
+                  Creating a game triggers asynchronous setup across multiple
+                  modules. Core modules like the Game Server and LiveOps
+                  Dashboard API are provisioned automatically by the backend,
+                  while the remaining modules require manual configuration.
                 </p>
 
                 <p
                   className={`mt-4 text-base md:text-lg leading-relaxed text-gray-900 ${metropolis.className}`}
                 >
-                  I introduced ownership as a first-class concept across LiveOps
-                  resources. The creator becomes the default owner, ownership
-                  can be transferred, and owners are automatically subscribed to
-                  critical issues affecting their resources. Owners cannot
-                  unsubscribe from these issues.
+                  Each module exposes its current state, such as scheduled, in
+                  progress, not configured, available, or failed.
                 </p>
-
                 <p
                   className={`mt-4 text-base md:text-lg leading-relaxed text-gray-900 ${metropolis.className}`}
                 >
-                  In addition, users can act as watchers of specific resources,
-                  resource types, or entire games, allowing teams to stay
-                  informed without centralising responsibility on a single role.
+                  Modules that are not configured surface a{' '}
+                  <span className="font-medium uppercase">Configure</span>{' '}
+                  action, while failed modules expose a{' '}
+                  <span className="font-medium uppercase">Retry</span> action,
+                  allowing teams to move forward with partial setup while the
+                  system continues provisioning in the background.
                 </p>
               </div>
             </div>
           </section>
-          <AlternatingVideos
-            video1="/images/notifications/transfer-ownership.mp4"
-            video2="/images/notifications/adding-watcher.mp4"
-            caption1="Transfering ownership of a resource"
-            caption2="Adding watcher to a resource"
-          />
+          {/* Full-width image */}
+          <div className="w-screen bg-gray-50 py-20 flex justify-center">
+            <div className="relative w-full max-w-8xl h-[40vh]">
+              <Image
+                src="/images/canvas/provisioning.png"
+                alt="How provisioning works"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+          </div>
           <section
-            id="homepage-early-visibility"
-            className="bg-black py-20 flex justify-center w-screen px-6 md:px-8"
+            id="sidebar-persistent-signals"
+            className="bg-white py-20 flex justify-center w-screen px-6 md:px-8"
           >
             <div className="w-full max-w-screen-xl">
-              <div className="max-w-2xl">
-                <h2
-                  className={`text-xl md:text-3xl font-semibold tracking-tight text-white ${metropolis.className}`}
-                >
-                  Notification Settings
-                </h2>
+              <div className="grid grid-cols-1 md:grid-cols-[1.6fr_1.9fr] gap-12 items-start">
+                {/* Left column: Title + text */}
+                <div className="max-w-xl">
+                  <h2
+                    className={`text-xl md:text-3xl font-semibold tracking-tight text-primary ${metropolis.className}`}
+                  >
+                    Post-setup ownership
+                  </h2>
 
-                <p
-                  className={`mt-6 max-w-2xl text-base md:text-lg leading-relaxed text-gray-300 ${metropolis.className}`}
-                >
-                  To balance signal and noise, I designed a subscription-based
-                  notification model.
-                </p>
+                  <p
+                    className={`mt-6 text-base md:text-lg leading-relaxed text-gray-900 ${metropolis.className}`}
+                  >
+                    After setup, games transition into a persistent overview
+                    that teams return to for day-to-day management. The
+                    dashboard surfaces configuration health, ownership, and
+                    system status in one place, making it easy to see what is
+                    ready and what still needs attention.
+                  </p>
 
-                <p
-                  className={`mt-6 max-w-2xl text-base md:text-lg leading-relaxed  text-gray-300 ${metropolis.className}`}
-                >
-                  Users can manage which games and resource types they follow,
-                  and whether they receive critical issues, updates, or both.
-                  Defaults are intentionally opinionated: owners and producers
-                  always receive critical issues, while view-only roles can
-                  subscribe without taking action.
-                </p>
+                  <p
+                    className={`mt-4 text-base md:text-lg leading-relaxed text-gray-900 ${metropolis.className}`}
+                  >
+                    Teams can revisit configuration, resolve incomplete modules,
+                    and manage access without restarting the setup flow.
+                    Ownership remains explicit and roles stay editable as teams
+                    and responsibilities evolve.
+                  </p>
+                </div>
 
-                <p
-                  className={`mt-6 max-w-2xl text-base md:text-lg leading-relaxed  text-gray-300 ${metropolis.className}`}
-                >
-                  Notification preferences live in the user profile, making them
-                  explicit and adjustable over time.
-                </p>
+                {/* Right column: Video */}
+                <div className="relative overflow-hidden rounded-xl">
+                  <video
+                    src="/images/canvas/post-setup.mp4"
+                    className="w-full"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                  />
+                  <figcaption className="mt-3 text-xs md:text-sm text-gray-500">
+                    Switching between overview, permissions, and integration
+                    settings for a partially configured game.
+                  </figcaption>
+                </div>
               </div>
             </div>
           </section>
-          <div className="w-full">
-            <video
-              src="/images/notifications/notifications-settings.mp4"
-              className="w-full h-auto rounded-lg"
-              autoPlay
-              loop
-              muted
-              playsInline
-            />
-          </div>
           <section
             id="context"
             className="w-screen bg-gray-50 py-20 flex justify-center px-8"

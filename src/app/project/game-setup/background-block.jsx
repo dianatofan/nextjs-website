@@ -56,10 +56,9 @@ export function BackgroundBlock({ metropolis }) {
         <p
           className={`text-base md:text-lg leading-relaxed text-gray-900 ${metropolis.className}`}
         >
-          Before launch, each game had to be manually registered across LiveOps,
-          analytics, build pipelines, permissions, and infrastructure — work
-          tightly coupled to the Core Team. As a result, game setup became a
-          scaling bottleneck, slowing releases and increasing risk.
+          Before launch, each game had to be registered across LiveOps,
+          analytics, build pipelines, permissions, and infrastructure, creating
+          a Core Team–dependent bottleneck.
         </p>
 
         <p

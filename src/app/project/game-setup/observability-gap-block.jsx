@@ -97,9 +97,8 @@ export default function ObservabilityGapBlock({ metropolis }) {
               metropolis.className,
             ].join(' ')}
           >
-            The goal was to establish a shared mental model of what must happen
-            at Production Start and define a single safe golden path for
-            automation.
+            The goal was to clarify when a game is first provisioned across core
+            systems and define a single, safe automation path.
           </p>
         </div>
       </div>

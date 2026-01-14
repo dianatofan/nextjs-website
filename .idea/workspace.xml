@@ -5,9 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="721b2078-e459-4257-8e32-71ab93b9970a" name="Changes" comment="Remove image path">
-      <change afterPath="$PROJECT_DIR$/public/images/canvas/step1-demo.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/canvas/everything-expanded.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/canvas/inherited-access.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/canvas/module-statuses.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/canvas/mostly-collapsed.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/canvas/mostly-collapsed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/canvas/post-setup.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/canvas/provisioning.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/canvas/step2-services.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/canvas/step3-permissions.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/canvas/step4-credentials.mp4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/canvas/game-canvas-cover.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/canvas/game-canvas-cover.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/project/game-setup/background-block.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/project/game-setup/background-block.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/project/game-setup/impact-cards.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/project/game-setup/impact-cards.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/project/game-setup/liveops-diagram-card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/project/game-setup/liveops-diagram-card.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/project/game-setup/observability-gap-block.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/project/game-setup/observability-gap-block.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/project/game-setup/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/project/game-setup/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/project/game-setup/principles-grid.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/project/game-setup/principles-grid.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/project/game-setup/tradeoffs-block.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/project/game-setup/tradeoffs-block.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/project/notifications-system/before-after-video-card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/project/notifications-system/before-after-video-card.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/project/notifications-system/tradeoffs-block.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/project/notifications-system/tradeoffs-block.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +183,8 @@
       <workItem from="1759130886195" duration="10896000" />
       <workItem from="1766665073055" duration="65807000" />
       <workItem from="1767098064556" duration="27165000" />
-      <workItem from="1767350933436" duration="1752000" />
+      <workItem from="1767350933436" duration="2973000" />
+      <workItem from="1767527932220" duration="15021000" />
     </task>
     <task id="LOCAL-00001" summary="Remove image path">
       <option name="closed" value="true" />

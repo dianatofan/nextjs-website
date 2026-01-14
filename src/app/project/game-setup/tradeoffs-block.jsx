@@ -41,17 +41,18 @@ export function TradeoffsBlock({ metropolis }) {
       <h2
         className={`text-2xl md:text-3xl leading-snug font-semibold text-primary max-w-3xl ${metropolis.className}`}
       >
-        Homepage as preview
+        Progressive expansion
       </h2>
       {/* Intro copy (short + scannable) */}
       <div className="mt-6 max-w-3xl space-y-4">
         <p
           className={`text-base md:text-lg leading-relaxed text-gray-900 ${metropolis.className}`}
         >
-          Early versions showed only unread updates, causing items to disappear
-          once marked as read. I shifted to showing the latest 10 updates
-          regardless of read state, treating the homepage as a preview while the
-          full Updates view remains the source of truth.
+          Showing all service cards expanded by default made the setup long and
+          overwhelming as more services were added. We moved to a progressive
+          expansion model where only the core services stay open by default,
+          while the rest can be expanded as needed, with each user’s preference
+          saved locally.
         </p>
       </div>
       <BeforeAfterVideoCard metropolis={metropolis} />
@@ -59,46 +60,46 @@ export function TradeoffsBlock({ metropolis }) {
       <h2
         className={`mt-16 text-2xl md:text-3xl leading-snug font-semibold text-primary max-w-3xl ${metropolis.className}`}
       >
-        One badge per game
+        Fewer, clearer module states
       </h2>
       {/* Intro copy (short + scannable) */}
       <div className="mt-6 max-w-3xl space-y-4">
         <p
           className={`text-base md:text-lg leading-relaxed text-gray-900 ${metropolis.className}`}
         >
-          Separate badges for issues and updates created visual noise and were
-          hard to scan at scale. I consolidated to a single, severity-based
-          badge per game: red for critical issues, blue for updates only.
+          Early designs exposed many granular states, which were accurate but
+          hard to scan. We reduced these to a small, consistent set that clearly
+          communicates readiness and required action at a glance.
         </p>
       </div>
-      <div className="width-full mt-8 bg-[#E3E8F1] p-8 rounded-2xl max-w-3xl justify-center flex">
+      <div className="width-full mt-8 bg-[#E3E8F1] p-8 rounded-2xl max-w-6xl justify-center flex">
         <Image
-          src="/images/notifications/one-badge.png"
-          alt="Sidebar showing persistent issue indicators"
-          width={160}
+          src="/images/canvas/module-statuses.png"
+          alt="Module statuses"
+          width={520}
           height={320}
         />
       </div>{' '}
       <h2
         className={`mt-16 text-2xl md:text-3xl leading-snug font-semibold text-primary max-w-3xl ${metropolis.className}`}
       >
-        No email notifications
+        Inherited access
       </h2>
       {/* Intro copy (short + scannable) */}
       <div className="mt-6 max-w-3xl space-y-4">
         <p
           className={`text-base md:text-lg leading-relaxed text-gray-900 ${metropolis.className}`}
         >
-          Although email was initially considered, we removed it to avoid
-          delayed responses and alert fatigue. The system focuses on
-          in-dashboard alerts as the source of truth, with Slack used only for
-          time-sensitive awareness.
+          Restricting access to the game creator quickly became a bottleneck. We
+          introduced inherited access so users with global LiveOps permissions
+          are automatically added to new games, reducing manual permission
+          management while keeping ownership explicit.
         </p>
       </div>
       <div className="mt-8 w-full bg-[#E3E8F1] p-8 rounded-2xl">
         <Image
-          src="/images/notifications/email-notifications-removed.png"
-          alt="Email notifications removed from settings"
+          src="/images/canvas/inherited-access.png"
+          alt="Inherited access"
           width={1600}
           height={900}
           className="w-full h-auto rounded-xl"

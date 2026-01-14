@@ -6,32 +6,32 @@ export function PrinciplesGrid({ metropolis }) {
   const items = [
     {
       title: 'Safe by default',
-      body: 'Invalid configurations must never reach production.',
+      body: 'The system should prevent incorrect or incomplete setups from going live.',
       Icon: Lock,
     },
     {
       title: 'Immutable where required',
-      body: 'Infrastructure-bound identifiers cannot change after provisioning.',
+      body: 'The system should prevent changes to identifiers that are used by infrastructure after a game is created.',
       Icon: Shield,
     },
     {
-      title: 'Automated / Manual',
-      body: 'Some steps are automated, while others require explicit user input.',
+      title: 'Automated & manual steps',
+      body: 'The system should automate setup where possible and clearly indicate when user input is required.',
       Icon: Settings,
     },
     {
-      title: 'Async by design',
-      body: 'Provisioning is asynchronous and may complete partially or fail.',
+      title: 'Asynchronous setup',
+      body: 'The system should support setup steps that run over time and may not complete all at once.',
       Icon: Clock,
     },
     {
-      title: 'Partial states visible',
-      body: 'Loading, partial, and error states are explicit and recoverable.',
+      title: 'Visible setup states',
+      body: 'The system should clearly show loading, partial completion, and error states.',
       Icon: Eye,
     },
     {
       title: 'Respect existing infra',
-      body: 'Build on Terraform, GCP, and existing services — no rewrites.',
+      body: 'The system should build on existing tools and services rather than replacing them.',
       Icon: Layers,
     },
   ];

@@ -182,8 +182,8 @@ export function LiveOpsDiagramCard({ metropolis }) {
           <p
             className={`text-xs md:text-sm leading-relaxed text-gray-800 ${metropolis?.className || ''}`}
           >
-            Game setup depended on many tightly coupled systems and manual
-            coordination.
+            Conceptual illustration of the many interconnected systems involved
+            in game setup.
           </p>
         </div>
       </div>
