@@ -49,7 +49,7 @@ export function TradeoffsBlock({ metropolis }) {
           className={`text-base md:text-lg leading-relaxed text-gray-900 ${metropolis.className}`}
         >
           Showing all service cards expanded by default made the setup long and
-          overwhelming as more services were added. We moved to a progressive
+          overwhelming as more services were added. I moved to a progressive
           expansion model where only the core services stay open by default,
           while the rest can be expanded as needed, with each user’s preference
           saved locally.
@@ -68,7 +68,7 @@ export function TradeoffsBlock({ metropolis }) {
           className={`text-base md:text-lg leading-relaxed text-gray-900 ${metropolis.className}`}
         >
           Early designs exposed many granular states, which were accurate but
-          hard to scan. We reduced these to a small, consistent set that clearly
+          hard to scan. I reduced these to a small, consistent set that clearly
           communicates readiness and required action at a glance.
         </p>
       </div>
@@ -90,7 +90,7 @@ export function TradeoffsBlock({ metropolis }) {
         <p
           className={`text-base md:text-lg leading-relaxed text-gray-900 ${metropolis.className}`}
         >
-          Restricting access to the game creator quickly became a bottleneck. We
+          Restricting access to the game creator quickly became a bottleneck. I
           introduced inherited access so users with global LiveOps permissions
           are automatically added to new games, reducing manual permission
           management while keeping ownership explicit.

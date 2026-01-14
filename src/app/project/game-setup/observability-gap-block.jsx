@@ -86,7 +86,7 @@ export default function ObservabilityGapBlock({ metropolis }) {
               metropolis.className,
             ].join(' ')}
           >
-            We ran a{' '}
+            I ran a{' '}
             <span className="font-semibold">cross-functional workshop</span>{' '}
             with Product, Core Team, and platform engineers to map the current
             setup process, surface hidden dependencies, and align on

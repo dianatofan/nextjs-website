@@ -224,7 +224,7 @@ export default function Page() {
                   <p
                     className={`max-w-3xl text-base md:text-lg leading-relaxed text-gray-900 ${metropolis.className}`}
                   >
-                    We created a{' '}
+                    I created a{' '}
                     <span className="font-semibold">
                       wizard-like game setup tool
                     </span>
