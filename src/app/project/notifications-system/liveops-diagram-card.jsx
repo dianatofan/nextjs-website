@@ -52,7 +52,7 @@ export function LiveOpsDiagramCard({ metropolis }) {
         src: '/images/notifications/LiveOps-error.png', // <-- create/export this
         alt: 'Error LiveOps flow: backend failure impacts players while the dashboard shows no issue.',
         caption:
-          'Error: A backend dependency fails — players may see errors while creators see no signal in the Dashboard.',
+          'Error: A backend dependency fails, players may see errors while creators see no signal in the Dashboard.',
         badge: 'Failure can be invisible',
       },
     }),

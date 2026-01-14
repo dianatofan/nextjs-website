@@ -133,7 +133,7 @@ export default function ObservabilityGapBlock({ metropolis }) {
           ].join(' ')}
         >
           Failures were detectable in engineering tools, but creators worked in
-          the Dashboard — creating an observability gap
+          the Dashboard, creating an observability gap
         </div>
       </div>
     </div>
