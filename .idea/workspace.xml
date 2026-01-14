@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="721b2078-e459-4257-8e32-71ab93b9970a" name="Changes" comment="Remove image path">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/project/game-setup/before-after-video-card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/project/game-setup/before-after-video-card.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/project/game-setup/tradeoffs-block.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/project/game-setup/tradeoffs-block.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/project/notifications-system/before-after-video-card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/project/notifications-system/before-after-video-card.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/project/notifications-system/impact-cards.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/project/notifications-system/impact-cards.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +165,7 @@
       <workItem from="1766665073055" duration="65807000" />
       <workItem from="1767098064556" duration="27165000" />
       <workItem from="1767350933436" duration="2973000" />
-      <workItem from="1767527932220" duration="17687000" />
+      <workItem from="1767527932220" duration="18780000" />
     </task>
     <task id="LOCAL-00001" summary="Remove image path">
       <option name="closed" value="true" />

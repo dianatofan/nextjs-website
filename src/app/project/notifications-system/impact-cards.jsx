@@ -5,20 +5,21 @@
 export function ImpactBlock({ metropolis }) {
   const impacts = [
     {
-      metric: 'Hours → Minutes',
-      body: 'Reduced time to detect critical LiveOps failures from hours to minutes, limiting impact during live events and feature rollouts.',
+      metric: 'Faster detection',
+      body: 'Critical failures were detected in minutes instead of hours, allowing teams to intervene before issues reached players during live events.',
     },
     {
-      metric: 'Lower operational cost',
-      body: 'By consolidating alerts into the LiveOps Dashboard, teams reduced reliance on external monitoring and Slack-based escalation, lowering ongoing operational overhead.',
+      metric: 'Less escalation',
+      body: 'Teams relied less on Slack and external monitoring, using the LiveOps Dashboard as the primary place to spot and resolve issues.',
     },
     {
       metric: '22% fewer incidents',
       body: 'One in five production issues were caught before full rollout, reducing player-facing incidents during live events.',
     },
+
     {
-      metric: 'High adoption',
-      body: 'A single, trusted alerting system replaced fragmented workflows and became the default source of truth.',
+      metric: 'Trusted workflow',
+      body: 'The alerting system replaced fragmented workflows and became part of daily LiveOps work.',
     },
   ];
 
