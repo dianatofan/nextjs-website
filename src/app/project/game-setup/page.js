@@ -2,13 +2,12 @@
 import Image from 'next/image';
 import ProtectedRoute from '@/components/ProtectedRoute';
 import 'animate.css';
-
+import React, { useState } from 'react';
 import '@/styles/about.scss';
 import '@/styles/styles.scss';
 import Layout from '@/components/Layout';
 import { metropolis, nauryz } from '@/app/utils/local-font';
 import { BackgroundBlock } from '@/app/project/game-setup/background-block';
-import React from 'react';
 import ObservabilityGapBlock from '@/app/project/game-setup/observability-gap-block';
 import { TradeoffsBlock } from '@/app/project/game-setup/tradeoffs-block';
 import { ImpactBlock } from '@/app/project/game-setup/impact-cards';
@@ -29,6 +28,8 @@ const tocItems = [
 ];
 
 export default function Page() {
+  const [loaded, setLoaded] = useState(false);
+
   return (
     <ProtectedRoute>
       <Layout isProjectPage>
