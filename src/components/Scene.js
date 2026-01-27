@@ -12,6 +12,7 @@ import {
 } from '@react-three/drei';
 import { useSpring } from '@react-spring/core';
 import { a } from '@react-spring/three';
+import { useUIStore } from '@/stores/uiStore';
 
 // React-spring animates native elements, in this case <mesh/> etc,
 // but it can also handle 3rd–party objs, just wrap them in "a".
@@ -20,7 +21,8 @@ const AnimatedMaterial = a(MeshDistortMaterial);
 export default function Scene({ setBg }) {
   const sphere = useRef();
   const light = useRef();
-  const [mode, setMode] = useState(false);
+  const mode = useUIStore((s) => s.mode);
+  const setMode = useUIStore((s) => s.setMode);
   const [down, setDown] = useState(false);
   const [hovered, setHovered] = useState(false);
   const { scene } = useThree();
@@ -36,7 +38,8 @@ export default function Scene({ setBg }) {
 
   useEffect(() => {
     if (directionalLight.current) {
-      const helper = new DirectionalLightHelper(directionalLight.current, 1); // Size of 1
+      const helper = new DirectionalLightHe();
+      lper(directionalLight.current, 1); // Size of 1
       scene.add(helper);
 
       // Clean up the helper on unmount
@@ -110,11 +113,11 @@ export default function Scene({ setBg }) {
           onPointerDown={() => setDown(true)}
           onPointerUp={() => {
             setDown(false);
-            // Toggle mode between dark and bright
-            setMode(!mode);
+            const nextMode = !mode;
+            setMode(nextMode);
             setBg({
-              background: !mode ? '#202020' : '#fff',
-              fill: !mode ? '#fff' : '#202020',
+              background: nextMode ? '#202020' : '#fff',
+              fill: nextMode ? '#fff' : '#202020',
             });
           }}
         >

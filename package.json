@@ -37,7 +37,8 @@
     "sass": "^1.89.2",
     "tailwind-merge": "^3.4.0",
     "tailwindcss-animate": "^1.0.7",
-    "three": "^0.171.0"
+    "three": "^0.171.0",
+    "zustand": "^5.0.10"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

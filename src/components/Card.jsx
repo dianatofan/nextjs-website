@@ -12,6 +12,7 @@ export default function Card({
   label,
   isPasswordProtected,
   fill,
+  background,
   project,
   height,
   company,
