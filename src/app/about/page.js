@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import mePhoto from '@/images/about/me.jpg'; // move `public/images/about/me.jpg` -> `src/images/about/me.jpg` for blur support
 import { useSpring } from '@react-spring/core';
 
 import Layout from '@/components/Layout';
@@ -72,12 +71,11 @@ export default function Page() {
             }}
           >
             <Image
-              src={mePhoto}
+              src="/images/about/img.webp"
               alt="Picture with me"
               width={420}
               height={580}
               priority
-              placeholder="blur"
               sizes="(max-width: 1024px) 100vw, 420px"
               onLoad={() => setLoaded(true)}
               style={{
