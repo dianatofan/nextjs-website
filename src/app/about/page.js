@@ -20,7 +20,7 @@ export default function Page() {
       background: '#f0f0f0',
       fill: '#202020',
     },
-    [],
+    []
   );
 
   const facts = [
@@ -60,14 +60,13 @@ export default function Page() {
 
   return (
     <Layout fill={fill} isProjectPage={false}>
-      <div
-        className="container w-screen p-4 my-[14rem] mb-[6rem] max-w-screen-xl flex items-start  flex-col lg:flex-row gap-12 animate__animated animate__fadeIn">
+      <div className="container w-screen p-4 my-[14rem] mb-[6rem] max-w-screen-xl flex items-start  flex-col lg:flex-row gap-12 animate__animated animate__fadeIn">
         <div className="w-full lg:w-[45%]">
           <div
             aria-hidden="true"
             style={{
-              transition: 'opacity .36s ease, transform .36s ease',
-              opacity: loaded ? 1 : 0.01,
+              transition: 'filter .36s ease, transform .36s ease',
+              filter: loaded ? 'blur(0px)' : 'blur(12px)',
               transform: loaded ? 'none' : 'scale(1.02)',
               borderRadius: 16,
             }}
