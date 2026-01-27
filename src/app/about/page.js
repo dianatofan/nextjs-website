@@ -64,9 +64,8 @@ export default function Page() {
           <div
             aria-hidden="true"
             style={{
-              transition: 'filter .36s ease, transform .36s ease',
-              filter: loaded ? 'blur(0px)' : 'blur(12px)',
-              transform: loaded ? 'none' : 'scale(1.02)',
+              opacity: loaded ? 1 : 0,
+              transition: 'opacity .4s ease',
               borderRadius: 16,
             }}
           >
