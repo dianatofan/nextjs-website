@@ -1,4 +1,5 @@
 'use client';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import ProtectedRoute from '@/components/ProtectedRoute';
 import 'animate.css';
@@ -8,7 +9,6 @@ import '@/styles/styles.scss';
 import Layout from '@/components/Layout';
 import { metropolis, nauryz } from '@/app/utils/local-font';
 import { BackgroundBlock } from '@/app/project/notifications-system/background-block';
-import React from 'react';
 import ObservabilityGapBlock from '@/app/project/notifications-system/observability-gap-block';
 import AlternatingVideos from '@/app/project/notifications-system/alternating-videos';
 import { TradeoffsBlock } from '@/app/project/notifications-system/tradeoffs-block';
@@ -29,6 +29,8 @@ const tocItems = [
 ];
 
 export default function Page() {
+  const [loaded, setLoaded] = useState(false);
+
   const tldrData = {
     title: 'Notifications Alerting System for LiveOps Creators',
     problem:
@@ -59,14 +61,24 @@ export default function Page() {
       <Layout isProjectPage>
         {/*<ScrollProgressTOC items={tocItems} />*/}
 
-        <div className="relative w-full h-[100vh]">
-          <Image
-            src="/images/notifications/cover.png"
-            alt="cover"
-            priority
-            fill
-            className="object-cover w-full h-full animate__animated animate__fadeIn"
-          />
+        <div className="relative w-full h-[100vh] overflow-hidden">
+          <div
+            style={{
+              opacity: loaded ? 1 : 0,
+              transition: 'opacity .4s ease',
+            }}
+            className="w-full h-full"
+          >
+            <Image
+              src="/images/notifications/cover.webp"
+              alt="cover"
+              fill
+              priority
+              sizes="100vw"
+              onLoadingComplete={() => setLoaded(true)}
+              className="object-cover"
+            />
+          </div>
         </div>
         <div className="w-screen mt-8 items-center align-center animate__animated animate__fadeIn">
           <section

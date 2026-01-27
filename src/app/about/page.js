@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import mePhoto from '@/images/about/me.jpg'; // move `public/images/about/me.jpg` -> `src/images/about/me.jpg` for blur support
 import { useSpring } from '@react-spring/core';
 
 import Layout from '@/components/Layout';
@@ -20,7 +19,7 @@ export default function Page() {
       background: '#f0f0f0',
       fill: '#202020',
     },
-    [],
+    []
   );
 
   const facts = [
@@ -60,25 +59,22 @@ export default function Page() {
 
   return (
     <Layout fill={fill} isProjectPage={false}>
-      <div
-        className="container w-screen p-4 my-[14rem] mb-[6rem] max-w-screen-xl flex items-start  flex-col lg:flex-row gap-12 animate__animated animate__fadeIn">
+      <div className="container w-screen p-4 my-[14rem] mb-[6rem] max-w-screen-xl flex items-start  flex-col lg:flex-row gap-12 animate__animated animate__fadeIn">
         <div className="w-full lg:w-[45%]">
           <div
             aria-hidden="true"
             style={{
-              transition: 'opacity .36s ease, transform .36s ease',
-              opacity: loaded ? 1 : 0.01,
-              transform: loaded ? 'none' : 'scale(1.02)',
+              opacity: loaded ? 1 : 0,
+              transition: 'opacity .4s ease',
               borderRadius: 16,
             }}
           >
             <Image
-              src={mePhoto}
+              src="/images/about/img.webp"
               alt="Picture with me"
               width={420}
               height={580}
               priority
-              placeholder="blur"
               sizes="(max-width: 1024px) 100vw, 420px"
               onLoad={() => setLoaded(true)}
               style={{
