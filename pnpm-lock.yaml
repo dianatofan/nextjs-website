@@ -44,6 +44,9 @@ importers:
       cloudinary:
         specifier: ^2.9.0
         version: 2.9.0
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
       d3:
         specifier: ^7.9.0
         version: 7.9.0
