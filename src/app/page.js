@@ -19,6 +19,8 @@ const NoSSRCanvas = dynamic(() => import('@/components/Canvas'), {
 });
 
 export default function App() {
+  console.log('cloud name', process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME);
+
   const [{ background, fill }, set] = useSpring(
     {
       background: '#fff',

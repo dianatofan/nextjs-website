@@ -1,17 +1,26 @@
 'use client';
 
-import React, { useState } from 'react';
-import Image from 'next/image';
+import React from 'react';
 import { useSpring } from '@react-spring/core';
+import { CldImage } from 'next-cloudinary';
 
 import Layout from '@/components/Layout';
-
 import '@/styles/about.scss';
 import '@/styles/styles.scss';
 import LinkItem from '@/components/about/LinkItem';
 import 'animate.css';
 import { metropolis } from '@/app/utils/local-font';
 import CrosswordFact from '@/components/about/CrosswordFact';
+
+/**
+ * IMPORTANT:
+ * These `src` values must match Cloudinary PUBLIC IDs.
+ * From your example URL:
+ *   .../upload/.../minime.jpg
+ * means public_id is:
+ *   "minime"
+ * (no extension, no folders)
+ */
 
 export default function Page() {
   const [{ background, fill }, set] = useSpring(
@@ -24,12 +33,12 @@ export default function Page() {
 
   const facts = [
     {
-      imageSrc: '/images/about/minime.png',
+      imageSrc: 'minime', // was /images/about/minime.png
       alt: 'Fact 1',
       text: 'Curious about computers since day one',
     },
     {
-      imageSrc: '/images/about/run.jpg',
+      imageSrc: 'run', // was /images/about/run.jpg
       alt: 'Fact 2',
       text: 'Running is my therapy',
     },
@@ -40,51 +49,37 @@ export default function Page() {
       showBorder: true,
     },
     {
-      imageSrc: '/images/about/ride.jpg',
+      imageSrc: 'ride', // was /images/about/ride.jpg
       alt: 'Fact 4',
       text: '3 bikes and counting',
     },
     {
-      imageSrc: '/images/about/museum.png',
+      imageSrc: 'museum', // was /images/about/museum.png
       alt: 'Fact 5',
       text: 'Immersive art? Yes please',
     },
     {
-      imageSrc: '/images/about/datavis.png',
+      imageSrc: 'datavis', // was /images/about/datavis.png
       alt: 'Fact 6',
       text: 'Data visualization nerd',
     },
   ];
-  const [loaded, setLoaded] = useState(false);
 
   return (
     <Layout fill={fill} isProjectPage={false}>
-      <div className="container w-screen p-4 my-[14rem] mb-[6rem] max-w-screen-xl flex items-start  flex-col lg:flex-row gap-12 animate__animated animate__fadeIn">
+      <div className="container w-screen p-4 my-[14rem] mb-[6rem] max-w-screen-xl flex items-start flex-col lg:flex-row gap-12 animate__animated animate__fadeIn">
         <div className="w-full lg:w-[45%]">
-          <div
-            aria-hidden="true"
-            style={{
-              opacity: loaded ? 1 : 0,
-              transition: 'opacity .4s ease',
-              borderRadius: 16,
-            }}
-          >
-            <Image
-              src="/images/about/img.webp"
-              alt="Picture with me"
-              width={420}
-              height={580}
-              priority
-              sizes="(max-width: 1024px) 100vw, 420px"
-              onLoad={() => setLoaded(true)}
-              style={{
-                width: '100%',
-                height: 'auto',
-                objectFit: 'cover',
-                borderRadius: 16,
-              }}
-            />
-          </div>
+          <CldImage
+            src="img" // your about-me image public_id
+            alt="Picture with me"
+            width={420}
+            height={580}
+            priority
+            fetchPriority="high"
+            loading="eager"
+            sizes="(max-width: 1024px) 100vw, 420px"
+            className="w-full h-auto rounded-2xl object-cover"
+          />
         </div>
 
         <div className="w-full lg:w-[55%] leading-8 flex flex-col gap-6">
@@ -112,53 +107,55 @@ export default function Page() {
             stakeholders, regardless of their background, to ensure great
             output.
           </h1>
-          {/*<p className="text-gray-400 text-lg">/dee · uh · nah/</p>*/}
-          {/*<p className="text-3xl font-semibold">*/}
-          {/*  I'm a multi-disciplinary frontend engineer and product designer*/}
-          {/*  passionate about solving problems.*/}
-          {/*</p>*/}
+
           <div className="mt-2 text-lg flex flex-col gap-6">
             <h4 className={`${metropolis.className} font-semibold`}>
               Where I've worked
             </h4>
+
             <ul className="border border-dashed border-gray-200 rounded-xl">
+              {/* NOTE: LinkItem must render this using CldImage (public_id), not next/image or <img src="./images/..."> */}
               <LinkItem
                 title="Tactile Games"
                 description="Product Designer"
                 link="https://tactilegames.com/"
-                image="./images/logos/tactileLogo.jpeg"
+                image="tactileLogo" // upload + set public_id to this
               />
               <LinkItem
                 title="Google"
                 description="UX Engineer"
                 link="https://google.com/"
-                image="./images/logos/googleLogo.png"
+                image="googleLogo"
               />
               <LinkItem
                 title="Famly"
                 description="UX/UI Designer"
                 link="https://famly.co/"
-                image="./images/logos/famly.png"
+                image="Famly"
               />
               <LinkItem
                 title="Maersk"
                 description="Frontend Engineer"
                 link="https://maersk.com/"
-                image="./images/logos/maersk.png"
+                image="maersk"
               />
             </ul>
           </div>
         </div>
       </div>
+
       <section className="animate__animated animate__fadeIn animate__delay-1s container p-4 w-screen max-w-screen-xl ">
         <h2 className={`${metropolis.className} text-2xl font-semibold mb-8`}>
           Where I shine
         </h2>
+
         <div className="container mx-auto p-4 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="flex flex-col items-center text-center">
-            <img
-              src="./images/icons/squiggle.png"
-              alt="Profile"
+            <CldImage
+              src="squiggle"
+              alt="End-to-end expertise"
+              width={48}
+              height={48}
               className="w-12 h-12 mb-4"
             />
             <h2
@@ -171,11 +168,14 @@ export default function Page() {
               losing context.
             </p>
           </div>
+
           <div className="flex flex-col items-center text-center">
-            <img
-              src="./images/icons/rocket.png"
-              alt="Profile"
-              className="w-12 h-12  mb-4"
+            <CldImage
+              src="rocket"
+              alt="Rapid prototyping"
+              width={48}
+              height={48}
+              className="w-12 h-12 mb-4"
             />
             <h2
               className={`${metropolis.className} text-xl font-semibold mb-2`}
@@ -186,11 +186,14 @@ export default function Page() {
               I iterate fast, using real feedback to refine concepts quickly.
             </p>
           </div>
+
           <div className="flex flex-col items-center text-center">
-            <img
-              src="./images/icons/users.png"
-              alt="Profile"
-              className="w-12 h-12  mb-4"
+            <CldImage
+              src="users"
+              alt="Cross-functional collaboration"
+              width={48}
+              height={48}
+              className="w-12 h-12 mb-4"
             />
             <h2
               className={`${metropolis.className} text-xl font-semibold mb-2`}
@@ -203,12 +206,15 @@ export default function Page() {
             </p>
           </div>
         </div>
+
         <div className="container mx-auto p-4 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="flex flex-col items-center text-center">
-            <img
-              src="./images/icons/smile.png"
-              alt="Profile"
-              className="w-12 h-12  mb-4"
+            <CldImage
+              src="smile"
+              alt="Human-centered design"
+              width={48}
+              height={48}
+              className="w-12 h-12 mb-4"
             />
             <h2
               className={`${metropolis.className} text-xl font-semibold mb-2`}
@@ -220,10 +226,13 @@ export default function Page() {
               business constraints.
             </p>
           </div>
+
           <div className="flex flex-col items-center text-center">
-            <img
-              src="./images/icons/keyboard.png"
-              alt="Profile"
+            <CldImage
+              src="keyboard"
+              alt="Technical proficiency"
+              width={48}
+              height={48}
               className="w-12 h-12 mb-4"
             />
             <h2
@@ -235,11 +244,14 @@ export default function Page() {
               I build interactive prototypes that behave like real products.
             </p>
           </div>
+
           <div className="flex flex-col items-center text-center">
-            <img
-              src="./images/icons/bars.png"
-              alt="Profile"
-              className="w-12 h-12  mb-4"
+            <CldImage
+              src="bars"
+              alt="Data visualization"
+              width={48}
+              height={48}
+              className="w-12 h-12 mb-4"
             />
             <h2
               className={`${metropolis.className} text-xl font-semibold mb-2`}
@@ -252,31 +264,13 @@ export default function Page() {
           </div>
         </div>
       </section>
-      {/*<section className="animate__animated animate__fadeIn animate__delay-1s container p-4 mb-8 w-screen max-w-screen-xl ">*/}
-      {/*  <h2 className={`${metropolis.className} text-2xl font-semibold mb-8`}>*/}
-      {/*    Words I live by*/}
-      {/*  </h2>*/}
-      {/*  <svg*/}
-      {/*    className="w-8 h-8 mx-auto mb-3 text-gray-400 dark:text-gray-600"*/}
-      {/*    aria-hidden="true"*/}
-      {/*    xmlns="http://www.w3.org/2000/svg"*/}
-      {/*    fill="currentColor"*/}
-      {/*    viewBox="0 0 18 14"*/}
-      {/*  >*/}
-      {/*    <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />*/}
-      {/*  </svg>*/}
-      {/*  <div className="flex flex-col gap-4 w-full">*/}
-      {/*    <Quote quote="A prototype is worth 1000 meetings" />*/}
-      {/*    <Quote quote="The best UX is the least UX" />*/}
-      {/*    <Quote quote="Consistency for the sake of clarity" />*/}
-      {/*    <Quote quote="A problem well stated is a problem half solved" />*/}
-      {/*  </div>*/}
-      {/*</section>*/}
+
       <section className="w-full flex justify-center px-8 py-16 bg-white">
         <div className="w-full max-w-screen-xl">
           <h2 className={`${metropolis.className} text-2xl font-semibold mb-8`}>
             6 facts about me
           </h2>
+
           <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
             {facts.map((fact, i) => (
               <article key={i} className="bg-white">
@@ -288,7 +282,7 @@ export default function Page() {
                   {fact.media ? (
                     <div className="absolute inset-0">{fact.media}</div>
                   ) : (
-                    <Image
+                    <CldImage
                       src={fact.imageSrc}
                       alt={fact.alt ?? ''}
                       fill
@@ -311,32 +305,6 @@ export default function Page() {
           </div>
         </div>
       </section>
-      {/*<section className="animate__animated animate__fadeIn animate__delay-1s container p-4 mb-8 w-screen max-w-screen-xl ">*/}
-      {/*  <h2 className={`${metropolis.className} text-2xl font-semibold mb-8`}>*/}
-      {/*    My life in numbers*/}
-      {/*  </h2>*/}
-      {/*  <div className="flex flex-row flex-wrap gap-8 w-full">*/}
-      {/*    <div className="flex flex-col items-center gap-2">*/}
-      {/*      <CountUp className="text-5xl" from={0} to={31} />*/}
-      {/*      <span>laps around the sun</span>*/}
-      {/*    </div>*/}
-      {/*    <div className="flex flex-col items-center gap-2">*/}
-      {/*      <CountUp className="text-5xl" from={0} to={8} />*/}
-      {/*      <span>Danish winters survived</span>*/}
-      {/*    </div>*/}
-      {/*    <div className="flex flex-col items-center gap-2">*/}
-      {/*      <CountUp className="text-5xl" from={0} to={6} />*/}
-      {/*      <span>years of consistent Strava activity</span>*/}
-      {/*    </div>*/}
-      {/*    <div className="flex flex-col items-center gap-2">*/}
-      {/*      <CountUp className="text-5xl" from={0} to={92} />%*/}
-      {/*      <span>*/}
-      {/*        of my Figma files: “final_v3_FINAL_reallyfinal(FINAL).fig”*/}
-      {/*      </span>*/}
-      {/*    </div>*/}
-      {/*  </div>*/}
-      {/*</section>*/}
-      {/*<Carousel />*/}
     </Layout>
   );
 }
