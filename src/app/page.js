@@ -13,10 +13,15 @@ import '@/styles/styles.scss';
 // import '@/styles/fonts.scss';
 import 'animate.css';
 import { metropolis } from '@/app/utils/local-font';
+import { useUIStore } from '@/stores/uiStore';
 
 const NoSSRCanvas = dynamic(() => import('@/components/Canvas'), {
   ssr: false,
 });
+
+function getImagePath(name, mode) {
+  return `/images/${name}${mode ? '-dark' : ''}.png`;
+}
 
 export default function App() {
   console.log('cloud name', process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME);
@@ -28,9 +33,12 @@ export default function App() {
     },
     []
   );
+  const mode = useUIStore((s) => s.mode);
 
   // showMore state controls the collapsible area
   const [showMore, setShowMore] = useState(false);
+
+  console.log(getImagePath('thumbnail8', mode));
 
   return (
     <Layout fill={fill} isProjectPage={false}>
@@ -43,18 +51,14 @@ export default function App() {
           <Overlay fill={fill} />
         </section>
         <section className="animate__animated animate__fadeIn animate__delay-1s w-full h-[10vh] text-center flex items-center justify-center">
-          <a.span
-            className={`${metropolis.className} role inline-block mt-4 mb-2 text-sm md:mb-3 md:text-base font-normal text-primary`}
+          <span
+            className={`${metropolis.className} role inline-block mt-4 mb-2 text-sm md:mb-3 md:text-base font-normal`}
             id="scroll-to-explore"
-            style={{ color: fill }}
           >
-            <a.div
-              className="icon-scroll"
-              style={{
-                boxShadow: `inset 0 0 0 1.5px ${fill}`,
-              }}
+            <div
+              className={`icon-scroll ${mode ? 'icon-scroll-contrast' : ''}`}
             />
-          </a.span>
+          </span>
         </section>
 
         <section className="animate__animated animate__fadeIn animate__delay-1s w-full ml-8 mr-8 flex justify-center">
@@ -72,7 +76,7 @@ export default function App() {
                   title="LiveOps Alerting System"
                   description="A highlight of my recent work"
                   role="UX/UI DESIGN"
-                  image="./images/thumbnail8.png"
+                  image={getImagePath('thumbnail8', mode)}
                   url="featured"
                   label="2025"
                   company="Tactile Games"
@@ -104,7 +108,7 @@ export default function App() {
                   title="Game Setup Canvas Tool"
                   description="Making Google Search the most loved tool for travellers"
                   role="UX/UI DESIGN"
-                  image="./images/thumbnail9.png"
+                  image={getImagePath('thumbnail9', mode)}
                   url="explore"
                   label="2025"
                   company="Tactile Games"
@@ -116,7 +120,7 @@ export default function App() {
                   title="Google Search for Travellers"
                   description="Making Google Search the most loved tool for travellers"
                   role="UX/UI DESIGN"
-                  image="./images/thumbnail5.png"
+                  image={getImagePath('thumbnail5', mode)}
                   url="explore"
                   label="2024"
                   company="Google"
@@ -128,7 +132,7 @@ export default function App() {
                   title="Famly's Redesign"
                   description="Shaping a design system for a mature product"
                   role="UX/UI DESIGN | USER RESEARCH"
-                  image="./images/famlyThumbnail.png"
+                  image={getImagePath('famlyThumbnail', mode)}
                   url="famly"
                   label="2023"
                   company="Famly"

@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="721b2078-e459-4257-8e32-71ab93b9970a" name="Changes" comment="Remove image path">
       <change afterPath="$PROJECT_DIR$/src/api/cloudinary-signature/route.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/components/ImageUploader.tsx" afterDir="false" />
@@ -14,6 +15,9 @@
       <change beforePath="$PROJECT_DIR$/src/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/about/LinkItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/about/LinkItem.jsx" afterDir="false" />
     </list>
+=======
+    <list default="true" id="721b2078-e459-4257-8e32-71ab93b9970a" name="Changes" comment="Remove image path" />
+>>>>>>> Stashed changes
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -221,11 +225,14 @@
           <line>212</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+<<<<<<< Updated upstream
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/project/notifications-system/page.js</url>
           <line>161</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
+=======
+>>>>>>> Stashed changes
       </breakpoints>
     </breakpoint-manager>
   </component>
