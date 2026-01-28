@@ -70,13 +70,12 @@ export default function Page() {
       <div className="container w-screen p-4 my-[14rem] mb-[6rem] max-w-screen-xl flex items-start flex-col lg:flex-row gap-12 animate__animated animate__fadeIn">
         <div className="w-full lg:w-[45%]">
           <CldImage
-            src="img" // your about-me image public_id
+            src="img"
             alt="Picture with me"
-            width={420}
-            height={580}
+            width={840} // 2x of 420
+            height={1160} // 2x of 580
             priority
             fetchPriority="high"
-            loading="eager"
             sizes="(max-width: 1024px) 100vw, 420px"
             className="w-full h-auto rounded-2xl object-cover"
           />
