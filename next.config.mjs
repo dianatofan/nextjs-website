@@ -15,6 +15,9 @@ const nextConfig = {
   },
   assetPrefix: isProduction ? 'https://dianatofan.net/' : '',
   basePath: '',
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;
