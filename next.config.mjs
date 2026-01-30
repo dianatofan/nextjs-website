@@ -17,6 +17,7 @@ const nextConfig = {
   basePath: '',
   images: {
     unoptimized: true,
+    domains: ['res.cloudinary.com'],
   },
 };
 

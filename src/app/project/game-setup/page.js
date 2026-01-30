@@ -304,32 +304,25 @@ export default function Page() {
               <p
                 className={`mt-6 max-w-2xl text-base md:text-lg leading-relaxed text-gray-300 ${metropolis.className}`}
               >
-                Once the game’s identity is established, teams configure the
-                services the game depends on.
+                Once the game exists, teams configure the services it depends
+                on.
               </p>
 
               <p
                 className={`mt-6 max-w-2xl text-base md:text-lg leading-relaxed text-gray-300 ${metropolis.className}`}
               >
-                Services are shown as toggleable cards in a single overview and
-                behave like a dependency graph rather than a checklist. Each
-                service communicates its state, such as scheduled, available,
-                requiring configuration, partially configured, or failed.
+                Services are shown as toggleable cards that behave like a
+                dependency graph rather than a checklist. Each service
+                communicates its current state, such as scheduled, available,
+                partially configured, or failed.
               </p>
               <p
                 className={`mt-6 max-w-2xl text-base md:text-lg leading-relaxed text-gray-300 ${metropolis.className}`}
               >
-                Configuration is intentionally modular. Teams can enable and
-                configure services independently, allowing setup to progress
-                incrementally.
-              </p>
-              <p
-                className={`mt-6 max-w-2xl md:text-lg leading-relaxed  border-l-2 px-4 border-gray-500 text-gray-400  ${metropolis.className}`}
-              >
-                Some services, including the LiveOps Dashboard API and Game
-                Server, are provisioned automatically and remain expanded so
-                teams can copy credentials. Other services are configured
-                manually.
+                Some core services are provisioned automatically and remain
+                expanded so teams can copy credentials, while others require
+                manual configuration. Setup can progress incrementally without
+                blocking on every service.
               </p>
             </div>
           </section>
@@ -360,19 +353,17 @@ export default function Page() {
                 Access is managed through clear, game-level roles such as{' '}
                 <span className="font-medium">Viewer</span>,{' '}
                 <span className="font-medium">Editor</span>, and{' '}
-                <span className="font-medium">Publisher</span>, shown in a list
-                of users assigned to the game. Teams can add users directly from
-                this view, assign roles, and immediately see who has access and
-                at what level.
+                <span className="font-medium">Publisher</span>.
               </p>
 
               <p
                 className={`mt-6 max-w-2xl text-base md:text-lg leading-relaxed text-gray-300 ${metropolis.className}`}
               >
-                Platform-level roles are inherited automatically, while
-                guardrails prevent unsafe actions such as removing yourself from
-                a game. Missing permissions disable related features early
-                instead of failing later during provisioning.
+                Teams can add users, assign roles, and immediately see who has
+                access and at what level. Platform-level permissions are
+                inherited automatically, while guardrails prevent unsafe actions
+                like removing yourself from a game or proceeding with missing
+                permissions.
               </p>
             </div>
           </section>
@@ -410,8 +401,8 @@ export default function Page() {
                 <span className="font-medium">package names</span> and{' '}
                 <span className="font-medium">certificate fingerprints</span>{' '}
                 required by SDKs and authentication providers. These values are
-                strictly validated and protected by guardrails, since incorrect
-                changes can break live integrations.
+                strictly validated, since incorrect changes can break live
+                integrations.
               </p>
 
               <p

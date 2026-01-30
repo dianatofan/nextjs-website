@@ -70,7 +70,7 @@ export default function Page() {
             className="w-full h-full"
           >
             <Image
-              src="/images/notifications/cover.webp"
+              src="https://res.cloudinary.com/dzpdf5ygh/image/upload/f_auto,q_auto/v1769801877/coverv2.png"
               alt="cover"
               fill
               priority
@@ -335,7 +335,7 @@ export default function Page() {
           </section>
           <div className="w-full">
             <video
-              src="/images/notifications/homepage-video.mp4"
+              src="/images/notifications/homepage-video1.mp4"
               className="w-full h-auto rounded-lg"
               autoPlay
               loop
@@ -483,7 +483,7 @@ export default function Page() {
             </div>
           </section>
           <AlternatingVideos
-            video1="/images/notifications/transfer-ownership.mp4"
+            video1="/images/notifications/transfer-ownership1.mp4"
             video2="/images/notifications/adding-watcher.mp4"
             caption1="Transfering ownership of a resource"
             caption2="Adding watcher to a resource"
